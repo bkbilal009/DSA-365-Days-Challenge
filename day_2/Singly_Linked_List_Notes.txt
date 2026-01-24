@@ -1,0 +1,53 @@
+A linked list is a linear data structure consisting of a sequence of
+elements called nodes. Unlike arrays, which store elements in contiguous
+memory locations, linked list nodes are scattered throughout memory and
+connected using pointers or references.
+
+Core Concepts of a Linked List • The Node: The fundamental building
+block, typically divided into two partitions: one for data (values like
+integers, names, or objects) and another for the address/reference of
+the next node. • The Head: A reference variable that points to the first
+node in the list; it is the starting point for accessing any
+information. • Dynamic Nature: Linked lists can grow or shrink during
+runtime, meaning you can allocate memory only when needed without
+knowing the size in advance. • Sequential Access: You cannot jump
+directly to a specific index (random access) like you can with an array;
+you must traverse the list from the head, node by node.
+
+  -----------------------------------------------------------------------
+  Implementing a Singly Linked List in Python
+
+  1. The Node Class
+
+  class Node: def init(self, info, next_node=None): self.data = info
+  self.next = next_node
+
+  2. The Singly Linked List Class
+
+  class SinglyLinkedList: def init(self): self.head = None
+  -----------------------------------------------------------------------
+
+Key Operations Implementation
+
+Insertion at the End
+
+def insert_at_end(self, value): new_node = Node(value) if self.head is
+None: self.head = new_node return temp = self.head while temp.next is
+not None: temp = temp.next temp.next = new_node
+
+Insertion at the Beginning
+
+def insert_at_beginning(self, value): new_node = Node(value)
+new_node.next = self.head self.head = new_node
+
+Deletion
+
+def delete_node(self, value): temp = self.head if temp is not None and
+temp.data == value: self.head = temp.next return prev = None while temp
+is not None and temp.data != value: prev = temp temp = temp.next if temp
+is None: return prev.next = temp.next
+
+Traversal
+
+def print_list(self): temp = self.head while temp: print(temp.data,
+end=” -> “) temp = temp.next print(”None”)
