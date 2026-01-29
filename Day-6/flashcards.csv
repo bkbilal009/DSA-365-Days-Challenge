@@ -1,0 +1,56 @@
+"In LeetCode Problem 151, how is a 'word' defined?",A word is defined as a sequence of non-space characters.
+What is the specific requirement for the string returned in the 'Reverse Words in a String' problem?,The words must be in reverse order and concatenated by exactly one single space.
+"In 'Reverse Words in a String', how should leading or trailing spaces in the input be handled in the final output?",They should be removed entirely from the returned string.
+"If the input string contains multiple spaces between two words, how many spaces should separate them in the output?",Only one single space should separate them.
+What is the first step in the 'Brute Force' approach using programming language library functions?,Use a trim function to remove leading and trailing spaces.
+Which library function is used after trimming to isolate individual words in the brute force approach?,"The split function, typically using a regular expression for one or more spaces."
+"In Java, what regular expression identifies one or more spaces for the `split()` function?","`""\\s+""`"
+"After splitting the string into an array of words, what is the next step in the brute force approach?",Reverse the order of the words in the array.
+What common algorithmic technique is used to reverse an array or a list of words?,The two-pointer technique (using $i$ and $j$ pointers).
+"In a two-pointer reversal of an array, at what condition should the loop stop to prevent reversing it back to the original order?",The loop should stop when $i \ge j$.
+Which library function is used to convert the reversed word array back into a single string with space delimiters?,"The join function (e.g., `String.join("" "", array)`)."
+"In Approach 1 (Brute Force), why is the time complexity considered $O(n)$?","Each step (trim, split, reverse, join) processes the string or array elements in linear time relative to length $n$."
+What is the space complexity of the brute force approach in Java for a string of length $n$?,"$O(n)$ due to the creation of the trimmed string, the string array, and the final joined string."
+What does the term 'immutable' mean in the context of Java Strings?,It means the content of a String cannot be changed once it is created in memory.
+"How does Java handle modifications to a String, such as removing a character?",It creates a completely new String in memory rather than modifying the original.
+Why is a `StringBuilder` preferred over a `String` when performing multiple modifications in Java?,"`StringBuilder` is mutable, allowing for efficient character-level modifications without creating new objects repeatedly."
+"According to the source, why might an interviewer restrict the use of library functions like `trim()` or `split()`?",To evaluate the candidate's actual thought process and ability to implement logic from scratch.
+What is the three-step 'trick' strategy for the optimized manual approach to reversing words in a string?,"1. Clean spaces, 2. Reverse the entire string, 3. Reverse each individual word."
+"To manually trim a string, where should the 'Left' and 'Right' pointers initially be placed?",'Left' at index 0 and 'Right' at the last index (`length - 1`).
+"In the manual cleaning process, what is the condition to stop moving the 'Left' pointer inward?",Stop when the pointer encounters a non-space character.
+What is the logic for adding spaces in the manual cleaning step to ensure only single spaces remain?,Add a space only if the `StringBuilder` is not empty and its last character is not already a space.
+"During manual cleaning, which characters from the original string are always appended to the `StringBuilder`?",All non-space characters between the trimmed Left and Right pointers.
+"If the whole string 'hello world' is reversed, what does it become?",'dlrow olleh'
+"In the optimized approach, why is the entire string reversed before reversing individual words?","To place the last words at the beginning of the string, even though their internal character order is temporarily incorrect."
+"After reversing the entire string, what step corrects the character order of the individual words?",Reversing each word individually based on detected space boundaries.
+What two pointers are typically used in the third step to identify and reverse a single word within the `StringBuilder`?,A 'start' pointer and an 'end' pointer.
+"When iterating with the 'end' pointer to find a word, what two conditions indicate the end of a word has been reached?",The pointer reaches a space character or the end of the `StringBuilder` length.
+"If 'end' stops at a space character, what range of indices defines the word to be reversed?",From 'start' to 'end - 1'.
+"After reversing a word, where should the 'start' pointer be moved for the next iteration?",To the position immediately following the current 'end' pointer (`end + 1`).
+What is the Java `StringBuilder` method used to change a character at a specific index?,"`setCharAt(index, character)`"
+What is the Java `StringBuilder` method used to retrieve a character at a specific index?,`charAt(index)`
+"In the manual approach, what determines the final time complexity?","The multiple linear passes (cleaning, reversing whole, reversing words) result in a total time complexity of $O(n)$."
+"In C++, if strings are mutable, what is the potential space complexity of the manual approach?",$O(1)$ if the operations are performed in-place on the input string.
+"In Java, even with the manual approach, why is the space complexity still $O(n)$?","Because Java strings are immutable, a `StringBuilder` or similar structure of size $n$ must be used."
+"When swapping characters at $i$ and $j$ in a `StringBuilder`, why is a 'temp' variable necessary?",To temporarily hold the character at index $i$ so it isn't lost when overwritten by the character at index $j$.
+"If the `StringBuilder` contains 'eht dlrow olleh', what is the result after word-by-word reversal?",'the world hello'
+Why is the manual cleaning step essential before reversing the whole string in Approach 2?,It simplifies word reversal by ensuring words are separated by exactly one space and no extra spaces exist at the ends.
+The process of moving a pointer forward while it points to a space to find the start of a word is called _____.,Trimming
+"What does the expression `sb.setCharAt(i, sb.charAt(j))` accomplish?",It copies the character at index $j$ to the position at index $i$ in the `StringBuilder` named `sb`.
+Which LeetCode problems are recommended as homework to practice this specific string reversal trick?,Reverse Words in a String Part II and Part III.
+Why is $i < j$ used instead of $i \le j$ when swapping characters in a string for reversal?,"When $i = j$, the pointer is at the middle character, which does not need to be swapped with itself."
+"If the input is ""  a  b "", what is the result of the `trim()` operation?","""a  b"""
+"If the input is ""  a  b "", what is the result of the `split(""\\s+"")` operation on the trimmed string?","An array containing `[""a"", ""b""]`."
+Concept: String Immutability,"The characteristic of a data type where the value cannot be modified in place after creation, requiring new memory allocation for changes."
+Step: Reverse Word-by-Word,"Locate word boundaries using spaces, then apply a standard reversal algorithm to the characters within those boundaries."
+What is the purpose of the `sb.toString()` method at the end of the manual approach?,To convert the mutable `StringBuilder` object back into the required `String` format for the return value.
+"In the manual cleaning loop `while (left <= right)`, what is the purpose of the `right` pointer?",It marks the last non-space character of the original string to define the processing boundary.
+"In the manual reversal logic, what happens if you increment $i$ and decrement $j$ until $i$ passes $j$ completely?","The string would be reversed a second time, returning it to its original order."
+How does the manual approach handle a string that is already clean (no extra spaces)?,"It will still execute the reversal steps, but the cleaning step will simply copy the string as-is."
+Which step in Approach 2 consumes the most memory in a Java implementation?,The creation and maintenance of the `StringBuilder` to store the cleaned string.
+"In the logic `if (sb.charAt(sb.length() - 1) != ' ')`, what is being checked?","Whether the last character added to the `StringBuilder` was a space, used to prevent adding duplicate internal spaces."
+What is the primary advantage of the 'Reverse Whole then Reverse Words' trick over the Brute Force split approach?,It allows for more granular control and can be implemented with $O(1)$ extra space in languages with mutable strings.
+What is the time complexity of appending a character to a `StringBuilder` in Java on average?,Amortized $O(1)$.
+True or False: The brute force approach correctly handles leading and trailing spaces without using `trim()`.,False; `split()` might produce empty strings in the array if leading/trailing spaces are not removed first.
+"If an array of words is `[""sky"", ""is"", ""blue""]`, what is the state of the array after a two-pointer reversal?","`[""blue"", ""is"", ""sky""]`"
+"When implementing the manual word reversal, why must the 'start' pointer be reset to 'end + 1'?",To skip the space character that triggered the end of the previous word and begin at the first character of the next word.
