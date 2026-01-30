@@ -1,0 +1,55 @@
+What is the core mechanic of the Fast & Slow Pointer pattern?,"Two pointers traverse a data structure at different fixed speeds, typically one moving twice as fast as the other."
+Which three types of linear data structures are primarily used with the Fast & Slow Pointer pattern?,"Arrays, Strings, and Linked Lists."
+How does the starting position of Fast and Slow pointers typically differ from the standard Two Pointer technique?,"Fast and Slow pointers usually start at the same position, whereas standard Two Pointers often start at opposite ends."
+What is the standard movement rate for the 'slow' pointer in this pattern?,One step per iteration.
+What is the standard movement rate for the 'fast' pointer in this pattern?,Two steps per iteration.
+How does the 'relative speed' of the fast pointer compare to the slow pointer?,The fast pointer moves at twice the speed of the slow pointer.
+What is the primary diagnostic use of the Fast & Slow Pointer pattern for linear data structures?,Detecting structural properties such as cycles or intersections.
+Define a 'cycle' within the context of a Linked List.,A structure where the next pointer of the end node points back to a previously visited node in the list.
+"In the brute force approach to cycle detection, what data structure is used to track visited nodes?",A Set.
+What is the Time Complexity of detecting a cycle using a Set?,"$O(n)$, where $n$ is the number of nodes in the data structure."
+What is the Space Complexity of detecting a cycle using a Set?,"$O(n)$, as it requires storing references to all visited nodes."
+How does the Fast & Slow Pointer pattern indicate that a cycle exists in a Linked List?,The fast pointer eventually catches up to and meets the slow pointer at the same node.
+What is the Space Complexity of the Fast & Slow Pointer pattern for cycle detection?,$O(1)$ (Constant space).
+What is the Time Complexity of the Fast & Slow Pointer pattern for cycle detection?,$O(n)$ (Linear time).
+Why is a fast pointer speed of 3 steps discouraged for cycle detection?,The pointer might move too quickly and skip over the slow pointer repeatedly without ever landing on the same node.
+Which node is the slow pointer at when the fast pointer reaches the end of a linear Linked List?,The middle node of the structure.
+"When using the Fast & Slow Pointer pattern to find the midpoint, what is the 'fast' pointer's speed relative to the 'slow' pointer?",Two times faster ($2x$).
+What condition must be checked for the 'fast' pointer in each iteration to prevent null pointer exceptions?,Ensure both 'fast' and 'fast.next' are not null.
+"In the Fast & Slow Pointer template, what is the termination condition for the loop if no cycle exists?",The fast pointer (or its next pointer) reaches null.
+What does it mean if the Fast & Slow pointers move through the entire structure without ever meeting?,The data structure does not contain a cycle.
+How is the Two Pointer pattern different regarding pointer movement compared to Fast & Slow?,"Two Pointers move independently based on specific conditions, whereas Fast & Slow move at fixed relative speeds."
+What is 'structural discovery' in the context of Fast & Slow pointers?,"Analyzing the physical layout of a data structure, such as finding its midpoint or detecting loops."
+Explain the application of Fast & Slow pointers in finding the 'Cycle Length'.,"Once pointers meet, one pointer is kept stationary while the other traverses the loop to count the number of nodes."
+How can the pattern identify the 'Start of the Cycle'?,By resetting one pointer to the head and moving both at the same speed until they meet after the initial detection.
+"In an array-based cycle detection problem, what does the value at each index typically represent?",The index of the next position to visit.
+What logic governs the transition of the 'slow' pointer in an array cycle problem?,$slow = array[slow]$.
+What logic governs the transition of the 'fast' pointer in an array cycle problem?,$fast = array[array[fast]]$.
+Why is 'Relative Speed' important for cycle detection?,It ensures that the distance between the two pointers changes at a constant rate until it becomes zero within a loop.
+"If two cars move at $40\text{ km/h}$ and $100\text{ km/h}$ respectively, what is their relative speed?",$60\text{ km/h}$.
+"In a Linked List with no cycle, what happens to the fast pointer?",It reaches the end of the list (null) twice as fast as the slow pointer.
+Cloze: The Fast & Slow Pointer pattern is often used for _____ discovery in linear structures.,structural
+Cloze: Using a Set to detect a cycle uses _____ space complexity.,$O(n)$
+Cloze: Fast and slow pointers typically begin at the _____ node.,same (or head)
+What is the primary reason the Fast & Slow Pointer algorithm is preferred over the Set-based approach?,It reduces Space Complexity from $O(n)$ to $O(1)$.
+"If the distance between Fast and Slow pointers in a cycle is $k$, and Fast moves 2 steps while Slow moves 1, what is the distance after one iteration?",$k-1$.
+Why does a relative speed of 1 step guarantee the pointers will meet in a cycle?,The distance between them decreases by exactly one node each iteration until they collide.
+List three specific applications of the Fast & Slow Pointer pattern mentioned in the material.,"Cycle detection, finding the middle node, and cycle length calculation."
+"In the provided code template, what check is performed immediately after moving the pointers?",Check if 'slow == fast' to identify a meeting point.
+How is 'structural discovery' contrasted with 'comparison' tasks?,Structural discovery uses Fast/Slow pointers to find loops/midpoints; comparison tasks (like finding a target sum) use standard Two Pointers.
+What is the 'Full Circle' intuition described for Fast & Slow pointers?,"Even if one pointer moves much faster, they will eventually meet if the path is circular."
+"In cycle detection, why must we check 'fast != null' before 'fast.next != null'?",To avoid a null pointer exception when trying to access the 'next' property of a null object.
+Describe the movement of the 'fast' pointer in a 'Process/Sequence' format.,Node $\rightarrow$ Next Node $\rightarrow$ Next-Next Node (skipping one node).
+Identify the purpose of the statement 'fast = head.next.next' in a conceptual manual trace.,It moves the fast pointer forward by two nodes from the head.
+What happens in the 'Cycle Length' algorithm after the pointers meet?,"Keep one pointer at the meeting point and move the other node by node until it returns to the meeting point, counting steps."
+"When finding the midpoint of an even-length list, where does the slow pointer typically land?","At the end of the first half or the start of the second half, depending on the specific implementation."
+What terminology is used to describe the Set-based cycle detection approach?,Brute force logic.
+"In the Fast & Slow Pointer algorithm, why can we not compare pointers immediately at initialization?","Because they both start at the same node, making the 'slow == fast' condition true before they have actually moved."
+What is the consequence of the fast pointer's speed being twice that of the slow pointer for midpoint finding?,"When Fast reaches $N$, Slow is at $\frac{N}{2}$."
+Define 'Linear Data Structure' in the context of pointer traversal.,"A sequence of data elements where elements are connected one after another, like Linked Lists or Arrays."
+How does the algorithm handle the end of a Linked List without a cycle?,"The fast pointer encounters a null value, terminating the loop."
+What specific phrase describes the goal of identifying where a loop begins?,Start of the cycle.
+Why is the Fast & Slow Pointer pattern categorized as a DSA 'Pattern'?,It provides a reusable template to solve a broad class of problems involving linear data structure analysis.
+"In the array cycle detection example, what is the 'next node' of index $i$?",The value stored at $array[i]$.
+What is the relative change in distance between pointers per step if $V_{fast} = 2$ and $V_{slow} = 1$?,The distance decreases by 1 node per iteration.
+"In a Linked List with an intersection, how could Fast & Slow pointers theoretically assist?",By helping detect where the two paths converge into a shared segment.
