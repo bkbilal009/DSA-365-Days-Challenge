@@ -1,0 +1,55 @@
+What defines a 'Happy Number' in the context of the process described in LeetCode 202?,A number that eventually reaches 1 when replaced by the sum of the squares of its digits.
+How does an 'Unhappy Number' behave during the sum of squares process?,It enters an endless cycle that does not include the number 1.
+"In the Happy Number algorithm, what is the next value if the current number is 19?",82 (calculated as $1^{2} + 9^{2}$).
+Which data structure can be used in a brute-force approach to detect a cycle in Happy Number calculations?,A Set (to store and check for previously seen numbers).
+"When using Fast and Slow Pointers for Happy Number detection, what does it mean if the pointers meet at a value other than 1?",The number is not a Happy Number because it has entered a cycle.
+Why is the sum of squares of digits for any integer guaranteed to eventually stay below a specific threshold like 243?,Large numbers reduce significantly in size because the sum of squares of their digits is much smaller than the numbers themselves.
+"What is the maximum sum of squares for any 3-digit number (e.g., 999)?",243.
+What is the Time Complexity of the Happy Number algorithm using the pointer-based approach?,$O(\log n)$.
+Why is the Time Complexity of the Happy Number process $O(\log n)$?,"The number of digits in a number $n$ is proportional to $\log_{10} n$, and each step processes these digits."
+What is the Space Complexity of the Happy Number algorithm when using Fast and Slow Pointers?,$O(1)$ (Constant Space).
+"In a Linked List, what is the 'Middle of the Linked List' problem (LeetCode 876) asking for?",To return the middle node of a given singly linked list.
+"If a Linked List has two middle nodes, which one should be returned according to LeetCode 876?",The second middle node.
+What is the 'Brute Force' approach for finding the middle of a Linked List?,"Count the total length in one pass, then traverse half that length in a second pass."
+How does the Fast and Slow Pointer pattern find the middle of a Linked List in a single pass?,The fast pointer moves two steps for every one step the slow pointer moves.
+At what point does the algorithm stop when finding the middle of a Linked List with an odd number of nodes?,When the fast pointer's next node is null.
+At what point does the algorithm stop when finding the middle of a Linked List with an even number of nodes?,When the fast pointer itself becomes null.
+What is the Time Complexity of finding the middle of a Linked List using pointers?,$O(n)$.
+What is the Space Complexity of finding the middle of a Linked List using pointers?,$O(1)$.
+How is a 'cycle' defined in a Linked List?,A condition where a node's next pointer points back to a previously visited node in the list.
+What is the name of the algorithm used for Linked List Cycle detection (LeetCode 141)?,Floyd's Cycle-Finding Algorithm (Fast and Slow Pointers).
+What is the 'Brute Force' method for Linked List Cycle detection?,Using a Hash Set to store node references and checking if a node is revisited.
+Why do the fast and slow pointers eventually meet if a cycle exists?,"The relative speed of the fast pointer compared to the slow pointer is 1, reducing the gap by one node per iteration."
+"In cycle detection, if the fast pointer reaches _____, the list has no cycle.",Null.
+What is the Time Complexity of Linked List Cycle detection if no cycle is present?,$O(n)$.
+"In the mathematical proof for cycle detection time complexity, what does $m$ represent?",The number of nodes outside the cycle.
+"In the mathematical proof for cycle detection time complexity, what does $K$ represent?",The total number of nodes inside the cycle.
+What is the worst-case number of iterations for the pointers to meet inside a cycle of length $K$?,$K - 1$ iterations.
+What is the Space Complexity of Linked List Cycle detection using Floyd's Algorithm?,$O(1)$.
+What is the objective of the 'Linked List Cycle II' problem (LeetCode 142)?,To find the specific node where the cycle begins.
+"In Cycle II derivation, what does the variable $a$ represent?",The distance from the cycle's start to the point where the pointers first meet.
+What is the distance traveled by the slow pointer when it first meets the fast pointer in a cycle?,$m + a$.
+What is the distance traveled by the fast pointer when it first meets the slow pointer in a cycle?,$m + xc + a$ (where $x$ is the number of full loops).
+What is the mathematical relationship derived for Cycle II that helps find the cycle start?,$m = xc - a$.
+"After the slow and fast pointers meet, what is the next step to find the cycle's starting node?",Move one pointer to the head and advance both pointers one step at a time until they meet again.
+At what speed should pointers move to find the starting node after a cycle is detected?,Both pointers must move at a speed of one step per iteration.
+What is the Time Complexity of the Linked List Cycle II algorithm?,$O(n)$.
+What is the Space Complexity of the Linked List Cycle II algorithm?,$O(1)$.
+How can you calculate the 'Length of a Loop' in a Linked List once the starting node is found?,Traverse the cycle from the starting node and count nodes until you return to the same starting node.
+What value should be returned for the length of a loop if no cycle exists?,0.
+"To calculate the loop length, if you start a 'current' pointer at `start.next`, what should be the initial length value?",1.
+"In the 'Find Length of Loop' problem, the Time Complexity is dominated by _____.",The initial cycle detection and the traversal of the loop nodes ($O(n)$).
+Java Code: How do you extract the last digit of a number `n` for the Happy Number sum of squares calculation?,`n % 10`.
+Java Code: How do you remove the last digit of a number `n` after processing it?,`n = n / 10`.
+"In the Happy Number implementation, what condition stops the `while` loop for extracting digits?",When the number `n` becomes 0.
+"In the standard Floyd's Cycle Template, what is the `while` loop condition for the fast pointer?",`fast != null && fast.next != null`.
+"If `fast == null` or `fast.next == null` is true after the detection loop, what can be concluded?",There is no cycle in the linked list.
+Which LeetCode problem number corresponds to 'Happy Number'?,202.
+Which LeetCode problem number corresponds to 'Middle of the Linked List'?,876.
+Which LeetCode problem number corresponds to 'Linked List Cycle' (detection)?,141.
+Which LeetCode problem number corresponds to 'Linked List Cycle II' (find entry point)?,142.
+Concept: Floyd's Cycle-Finding Algorithm,Definition: A pointer-based algorithm using two pointers moving at different speeds to detect loops in a sequence or data structure.
+Concept: Relative Speed in DSA Pointers,"Definition: The speed difference between a fast pointer ($2x$) and a slow pointer ($1x$), ensuring the fast pointer gains one position per step on the slow pointer."
+What happens if you try to advance `fast.next.next` without checking `fast.next != null`?,The program will crash due to a NullPointerException.
+"In finding the loop length, when do you stop the counter loop?",When the traversal pointer reaches the starting node of the cycle again.
+What is the significance of the mathematical explanation for Happy Number convergence in an interview?,It proves the algorithm will always terminate and prevents concerns about the number growing infinitely.
