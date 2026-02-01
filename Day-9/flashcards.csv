@@ -1,0 +1,44 @@
+What is the primary objective of the 'Split a Circular Linked List' problem?,To divide a circular linked list into two separate circular linked lists.
+"In a circular linked list, what does the 'next' pointer of the last node point to?",The head node of the list.
+"If a circular linked list has an odd number of nodes ($N$), how are the nodes distributed between the two resulting halves?",The first list receives one more node than the second list ($\%frac{N+1}{2}$ nodes in the first half).
+"If a circular linked list has an even number of nodes, how are they split into two halves?",The nodes are divided equally between the two resulting circular lists.
+Which algorithmic pattern is used to find the split point in a circular linked list efficiently?,The Fast and Slow Pointers pattern (Tortoise and Hare).
+"In the circular linked list split problem, why is the 'fast' pointer initialized to `head.next` instead of `head`?",To ensure the 'slow' pointer stops exactly at the end of the first half for both even and odd lengths.
+"During the split of a circular linked list, what is the 'slow' pointer's purpose?",To identify the last node of the first resulting circular linked list.
+"In the circular split problem, if the 'fast' pointer reaches the end, what node does 'fast' typically point to?",The last node of the second resulting circular linked list.
+Which pointer modification turns the first half of a split circular list into its own circular list?,Setting `slow.next` equal to the original `head`.
+Which pointer modification turns the second half of a split circular list into its own circular list?,Setting `fast.next` equal to the node that followed the original 'slow' pointer (`slow.next`).
+What is the time complexity of splitting a circular linked list using the Fast and Slow pointers approach?,"$O(N)$, where $N$ is the number of nodes in the list."
+What is the space complexity of splitting a circular linked list into two halves in-place?,$O(1)$ constant space.
+What are the core constraints of the 'Find the Duplicate Number' problem (LeetCode 287)?,"You cannot modify the array, and you must use only constant $O(1)$ extra space."
+"In 'Find the Duplicate Number', if an array has $n+1$ integers and each is in the range $[1, n]$, how many numbers are guaranteed to repeat?",At least one number is guaranteed to repeat.
+What is the space complexity of the 'Set-based' approach for finding a duplicate number?,"$O(N)$, because the set may store up to $n$ unique elements before finding the duplicate."
+Why can the 'Find the Duplicate Number' problem be treated as a cycle detection problem?,"Because the values in the array point to indices, and a duplicate value creates multiple pointers to the same index, forming a cycle."
+What specific algorithm is used for the optimal $O(1)$ space solution to 'Find the Duplicate Number'?,Floyd's Cycle-Finding Algorithm (Tortoise and Hare).
+"In Floyd's Algorithm for duplicate detection, why is a `do-while` loop used in the first phase?","To ensure the slow and fast pointers move at least once before the 'equal' condition is checked, as both start at index 0."
+What is the movement rule for the 'slow' pointer in Floyd's Cycle-Finding Algorithm?,It moves one step at a time: `slow = nums[slow]`.
+What is the movement rule for the 'fast' pointer in Floyd's Cycle-Finding Algorithm?,It moves two steps at a time: `fast = nums[nums[fast]]`.
+What is the objective of the first phase of Floyd's Cycle-Finding Algorithm in the duplicate number problem?,To find an intersection point where the slow and fast pointers meet inside the cycle.
+"Once an intersection is found in Floyd's algorithm, how do you find the entrance to the cycle (the duplicate)?",Reset one pointer to index 0 and move both pointers one step at a time until they meet.
+"In the context of array-based cycle detection, what does the 'entrance' to the cycle represent?",The duplicate number in the array.
+Why is the time complexity of the optimized duplicate detection algorithm $O(N)$?,The algorithm involves two linear traversals: one to find the intersection and one to find the cycle entrance.
+What is the space complexity of Floyd's Cycle-Finding Algorithm for the duplicate number problem?,$O(1)$ as only two pointer variables are used.
+What defines a 'Palindrome Linked List'?,A linked list where the sequence of values is the same whether read forwards or backwards.
+What is the primary limitation when checking for palindromes in a singly linked list compared to an array?,Singly linked lists can only be traversed in one direction (forwards).
+What is the $O(N)$ space brute-force approach to check if a linked list is a palindrome?,Copy the linked list values into an array/list and use the two-pointer technique to check for symmetry.
+What are the three main steps in the optimized $O(1)$ space Palindrome Linked List algorithm?,1. Find the middle. 2. Reverse the second half. 3. Compare the first and second halves.
+Which pattern is used to find the middle of a linked list to check for a palindrome?,The Fast and Slow Pointers pattern.
+"In the optimized palindrome check, where does the 'slow' pointer stop after the first phase?",At the midpoint of the linked list.
+"After finding the midpoint of a linked list, what must be done to the nodes following the midpoint to allow $O(1)$ comparison?",The second half of the linked list must be reversed.
+"When comparing the first half of a linked list with the reversed second half, when should the loop terminate?",When the pointer for the reversed second half becomes `null`.
+Why is reversing the second half of the linked list necessary for the optimized palindrome check?,It allows us to traverse 'backwards' from the end toward the middle using the reversed pointers.
+How does the palindrome comparison logic handle linked lists with an odd number of nodes?,"The loop terminates when the shorter reversed second half reaches `null`, effectively ignoring the central node which doesn't affect the palindrome property."
+What is the time complexity of the optimized Palindrome Linked List algorithm?,"$O(N)$, involving finding the middle, reversing half, and comparison."
+What is the space complexity of the 'Reverse Second Half' approach for palindrome checking?,$O(1)$ constant space.
+How does 'Find the Duplicate Number' differ from 'Linked List Cycle II'?,"Duplicate number uses array values as indices to simulate a linked list, whereas Cycle II operates on actual `ListNode` objects."
+"In the circular split logic, why do we store `fast.next` as the head of the second list?","Because after the loop, `fast` points to the last node, and its original `next` (before modification) was the start of the second half."
+Concept: Floyd's Cycle-Finding Algorithm,A pointer algorithm that uses two pointers moving at different speeds to detect cycles and find their starting points.
+"In the palindrome problem, what happens to the original linked list structure during the optimized check?","The structure is modified (the second half is reversed), but it can be restored by reversing it again after the check."
+Formula: Movement of 'Fast' pointer in cycle detection,$fast = fast.next.next$ (or $fast = nums[nums[fast]]$ in an array context).
+Procedure: Finding the starting point of a cycle after intersection,Move one pointer to the start; move both pointers at a speed of 1; the node where they meet is the start.
+Why is the Fast and Slow Pointers pattern often called the 'Tortoise and Hare' algorithm?,Because it involves a slow-moving pointer (tortoise) and a fast-moving pointer (hare).
