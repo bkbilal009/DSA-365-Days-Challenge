@@ -1,0 +1,62 @@
+What is the primary limitation of a Singly Linked List mentioned in the material?,It only allows forward traversal because nodes lack the address of the previous location.
+How many partitions or parts are contained in a Doubly Linked List (DLL) node?,Three partitions.
+What are the specific functions of the three partitions in a DLL node?,"One stores data/information, one points to the next location, and one points to the previous location."
+Which real-world software feature is a direct application of the Doubly Linked List structure?,The Undo and Redo features in text editors.
+How do web browsers utilize the concept of a Doubly Linked List?,They provide backward and forward navigation using references to previous and next pages.
+What is the identification mark of the first node in a Doubly Linked List?,Its previous pointer is set to `None`.
+What is the identification mark of the last node in a standard Doubly Linked List?,Its next pointer is set to `None`.
+What indicates that a Doubly Linked List is currently empty?,The head pointer is set to `None`.
+"In a DLL with only one node, what are the values of its previous and next pointers?",Both pointers are set to `None`.
+What is the benefit of creating a separate class for the Linked List itself rather than just the Node class?,"It allows the creation of multiple list instances, each with its own independent head pointer."
+"In the provided Python implementation, what are the default values for `next` and `prev` in the Node constructor?",Both are initialized to `None`.
+"When inserting the very first node into an empty DLL, what must the `head` pointer be set to?",The address of the newly created node.
+"When appending a node at the end of a DLL, which node's `next` pointer must be updated to point to the new node?",The current last node (where `next` was previously `None`).
+"In the 'insert at end' procedure, what must the new node's `previous` pointer be set to?",The address of the previous last node.
+"To find the end of a DLL for insertion, the traversal loop should continue as long as `T.next` is _____.",Not equal to `None`.
+Why is it important to use a temporary pointer like `T` during traversal instead of moving the `head` pointer?,Moving the `head` pointer during traversal would result in losing the reference to the start of the list.
+"When inserting at the beginning of a non-empty DLL, what should the new node's `next` pointer initially point to?",The current `head` node.
+What must the current `head` node's `previous` pointer be updated to during a front insertion?,The address of the new node being inserted at the front.
+What is the final step when inserting a node at the beginning of a Doubly Linked List?,Updating the `head` pointer to the address of the new node.
+Why does a Doubly Linked List remove the need for a 'previous node' tracker variable during middle deletion compared to SLL?,"DLL nodes already store the address of the previous node, allowing direct back-tracking."
+"To insert a node `temp` after node `T`, what should `temp.next` be set to first to avoid losing data?",The current value of `T.next`.
+"When inserting `temp` between nodes `T` and `T.next`, what should `T.next.prev` be updated to?",The address of the new node `temp`.
+"When inserting node `temp` after node `T`, what should `temp.prev` be set to?",The address of node `T`.
+"When inserting node `temp` after node `T`, what is the final pointer update for node `T`?",Its `next` pointer is set to `temp`.
+How many pointer updates are required to insert a node in the middle of a Doubly Linked List?,Four pointer updates.
+What is the first condition to check before attempting a deletion in any Linked List?,Whether the list is empty (head is `None`).
+"If the first node is deleted in a DLL, what must the new head's `previous` pointer be set to?",It must be set to `None`.
+"To delete a middle node `T`, what must the `next` pointer of `T.prev` be changed to?",It must be changed to `T.next`.
+"To delete a middle node `T`, what must the `previous` pointer of `T.next` be changed to?",It must be changed to `T.prev`.
+"In the provided deletion logic, how is the end of the list reached if the target value isn't found early?",The pointer `T` is updated using `T = T.next` inside a while loop.
+"When deleting the last node `T`, which pointer of the second-to-last node must be updated?",The `next` pointer of `T.prev` must be set to `None`.
+What is the key defining feature of a Singly Circular Linked List?,The `next` pointer of the last node points back to the `head` instead of `None`.
+"In a Circular Linked List, what replaces `None` as the standard loop termination condition?",The address of the `head` node.
+How does a Doubly Circular Linked List handle the `previous` pointer of the `head` node?,It points to the last node of the list.
+How does a Doubly Circular Linked List handle the `next` pointer of the last node?,It points to the `head` node.
+"Which Operating System problem involves philosophers sitting in a circular arrangement, often modeled with Circular Linked Lists?",The Dining Philosophers Problem.
+What CPU scheduling algorithm uses Circular Linked Lists to give each process a small unit of time in turns?,The Round Robin Algorithm.
+"In a Doubly Circular Linked List, how many pointer updates are needed when the last node is modified?",Two: the `next` of the last node and the `prev` of the head node.
+Concept: CRUD operations,"Definition: The four basic functions of persistent storage: Create, Read, Update, and Delete."
+What logic change is required to traverse a Circular Linked List using a while loop?,The loop must check if `T.next \ne head` instead of `T.next \ne None`.
+"To effectively practice DLL logic, the instructor suggests imagining a node with how many pointers?","Four (Top, Bottom, Forward, Backward)."
+"In a DLL node deletion, why is the `T.next.prev = T.prev` step potentially risky if `T` is the last node?","Because if `T` is the last node, `T.next` is `None`, and accessing `None.prev` will cause an error."
+What does `head.next` represent in a linked list?,The address of the second node in the list.
+"In Python code, if you want to access the previous node's data from node `T`, what syntax is used?",`T.prev.data`.
+"When the deletion function targets the first node, what instruction moves the starting point of the list?",`self.head = self.head.next`.
+What is the default value of the head pointer when a `DoublyLinkedList` object is first instantiated?,`None`.
+"In a Singly Linked List, can you move from the third node back to the second node directly?","No, because there is no backward pointer."
+"In a Doubly Linked List, can you move from the third node back to the second node directly?","Yes, by using the `previous` pointer."
+"When implementing a DLL search, what condition confirms the target value `x` is found at current node `T`?",`T.data == x`.
+"In the provided code, what happens if the `while` loop finishes and the data to delete still isn't found?","The function checks if the last node matches the value; if not, no deletion occurs."
+"In a Circular Linked List, does the traversal ever naturally hit a `None` value?","No, it will loop back to the start infinitely unless a stop condition is set."
+What is the 'Broad Perspective Thinking' mentioned by the instructor regarding DLLs?,Visualizing edge cases and multi-directional data relationships rather than just memorizing code.
+"If `temp` is a new node, what does `temp.data = value` accomplish?",It assigns the input information to the data partition of the node.
+"When iterating to the end of a DLL to append a node, which pointer is typically returned to the user or updated?",The `next` pointer of the final node found.
+"In the 'insert in middle' function, if the search value is not found, what is the default behavior described?",The node is typically inserted at the end of the list.
+Why is `T = self.head` used before starting a `while` loop for printing the list?,To ensure the traversal begins at the first node of the list.
+What is the purpose of the `return` statement after a successful deletion in the provided code?,To exit the function immediately so no further logic or loops are executed.
+"In a DLL, if you are at node `T` and want to access the node two positions ahead, what is the syntax?",`T.next.next`.
+How does the 'Forward' button in a browser relate to Linked Lists?,It follows the `next` pointer in the Doubly Linked List of history nodes.
+How does the 'Backward' button in a browser relate to Linked Lists?,It follows the `prev` pointer in the Doubly Linked List of history nodes.
+"In a DLL, what is the result of `head.prev` for the first node?",`None`.
+What does a circular list prevent that a standard list allows at its boundaries?,It prevents reaching a termination point (None).
