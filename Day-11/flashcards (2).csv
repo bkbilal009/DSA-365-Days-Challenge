@@ -1,0 +1,55 @@
+What is the core data structure property followed by a Stack?,"LIFO (Last In, First Out)."
+What does the acronym LIFO stand for in the context of data structures?,"Last In, First Out."
+"In a Stack, which element is the first to be removed?",The element that was most recently inserted.
+What real-world analogy is used in the material to explain the Stack structure?,A pile of books placed on a table.
+Why is it preferable to remove the top book from a pile rather than one from the middle?,To avoid disturbing the other books in the arrangement.
+How do 'Undo' and 'Redo' features in software utilize the Stack data structure?,They store actions in a sequence where the last action performed is the first one reversed.
+Which browser feature typically relies on a Stack to manage navigation history?,The back and forward navigation buttons.
+What is a 'Stack Trace' in the context of programming and debugging?,A report showing the active function calls at a specific point in time.
+How do programming languages use stacks to manage functions?,They use a stack to mount functions and store their local variables during execution.
+Mastering the foundation of Stacks is essential for gaining command over which programming concept?,Recursion.
+Why might a developer choose to implement a Stack instead of using a standard Python list directly?,To restrict access and ensure elements can only be added or removed from the top.
+"In a Stack, what does it mean for the internal elements to remain 'untouched'?","It means the elements below the top cannot be viewed, accessed, or modified directly."
+What is the 'Push' operation in a Stack?,The process of inserting a new element onto the stack.
+What is the 'Pop' operation in a Stack?,The process of removing and returning the top element from the stack.
+What is the 'Peak' (or Peep) operation in a Stack?,Viewing the top element without removing it from the stack.
+What is the purpose of the `is_empty` function in a Stack implementation?,To determine if the stack contains no elements.
+What does the `length` function return in a Stack class?,The total number of elements currently present in the stack.
+"In the Python implementation provided, which built-in data structure is used to store the Stack's elements?",A list.
+"In the demo implementation, which index of the internal list is treated as the 'Top' of the stack?",Index $0$.
+Which Python list method is used in the demo to add an element to the 'Top' at index $0$?,"`.insert(0, value)`."
+What is a major difference between Python lists and C++/Java arrays regarding Stack overflow?,"Python lists grow dynamically, so manual overflow checks are generally not required."
+"In the demo's `push` function, what two parameters are required?",`self` (the instance) and the `value` to be inserted.
+How is the `length` of the stack calculated internally in the provided Python class?,By calling the built-in `len()` function on the internal list.
+"Before performing a `peak` or `pop` operation, what condition must be checked to avoid errors?",Whether the stack is empty.
+What action does the demo code take if a user tries to `peak` at an empty stack?,It raises an exception with the message 'Stack is Empty'.
+"In Python, which keyword is used to trigger an error when a stack underflow occurs?",`raise`.
+"In the demo implementation, how is the top element accessed for the `peak` operation?",By returning the element at `self.s[0]`.
+Why does the `pop` operation in the demo include the code `self.s.pop(0)`?,To remove and return the element located at the start of the list (the designated top).
+What is the benefit of the `pop` function returning the deleted element?,It allows the user to know exactly which value was removed from the stack.
+"If elements $10$, $20$, and $30$ are pushed in that order using the demo logic, which element is at index $0$?",$30$.
+"In the demo implementation, what happens to the existing elements when a new value is 'pushed'?",They are automatically shifted to higher indices to make room at index $0$.
+What alternative Python list method can be used for the `push` operation to add elements to the end of the list?,`.append()`.
+"If a Stack uses `.append()` to push, what is the most efficient way to 'pop' the top element?",Using `.pop()` without any arguments to remove the last item.
+"How does the 'Top' of the stack change if a developer switches from using `.insert(0, v)` to `.append(v)`?",The Top moves from the beginning of the list (index $0$) to the end of the list.
+Term: Stack Trace,"Definition: A report of the active stack frames during program execution, used primarily for debugging errors."
+"In the provided `pop` method, what is the first step before removing an item?",Checking if the stack is empty to prevent errors.
+Why is the `__init__` method necessary in the `Stack` class implementation?,To initialize an empty list that will hold the stack's data for that specific object.
+What is the internal variable `self.s` (or `self.l`) representing in the class implementation?,The underlying list that stores the stack elements.
+Concept: Dynamic Growth,"Definition: The ability of a data structure, like a Python list, to automatically increase its memory capacity as more elements are added."
+"In the code example `stk = Stack()`, what does `stk` represent?",An instance (object) of the Stack class.
+"If you push $A$ then $B$ into a stack, which element must be popped first?",$B$.
+The function `len(self.s) == 0` is a logic check for which Stack operation?,`is_empty`.
+"When implementing a stack with a list, why is `self` required as the first parameter for methods like `push` and `pop`?",To reference the internal list and attributes of the specific stack instance being used.
+"What is the expected output if you `peak` at a stack after pushing $10$, $20$, and $30$ in the demo's index-0 implementation?",$30$.
+What happens to the stack's size after a successful `pop` operation?,The size decreases by $1$.
+Why is it important for the `peak` function to *not* use `.pop()`?,"Because `peak` is only meant to view the top element, not remove it."
+Which software mechanism ensures that parentheses in code are correctly balanced using a Stack?,Auto-parenthesis/Validation logic in compilers or editors.
+"In Python, what does `list.pop(0)` specifically do?",It removes and returns the element at the first position of the list.
+What is the 'Homework' task mentioned at the end of the lesson?,To re-implement the Stack using `.append()` and `.pop()` at the end of the list instead of index $0$.
+True or False: A stack allows you to access any element by its index directly in its standard definition.,False (access is typically restricted to the top element).
+How does the 'LIFO' behavior relate to the priority of elements in a Stack?,The most recently added element has the highest priority for removal.
+"If a stack is initialized as `self.s = []`, what is its initial `length`?",$0$.
+What error occurs if you try to access `self.s[0]` when `self.s` is an empty list?,An `IndexError` (though the code manually raises a 'Stack is Empty' exception first).
+"In the demo, what is the code for the `is_empty` method?",`return len(self.s) == 0`.
+Which operation is used to check the current count of items in the stack?,The `length` (or `size`) operation.
