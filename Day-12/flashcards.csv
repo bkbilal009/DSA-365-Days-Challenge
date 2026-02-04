@@ -1,0 +1,50 @@
+What fundamental property defines a Queue data structure?,First In First Out (FIFO).
+How does the element access policy of a Queue differ from a Stack?,"A Queue follows FIFO (First In First Out), while a Stack follows LIFO (Last In First Out)."
+"In the context of Queues, what does the term 'NQ' (Enqueue) refer to?",The operation of inserting an element into the Queue.
+"In the context of Queues, what does the term 'DQ' (Dequeue) refer to?",The operation of deleting an element from the Queue.
+Where does the insertion of a new element always occur in a standard Queue?,"At the end, known as the Rear."
+From which position is an element always removed in a standard Queue?,"From the beginning, known as the Front."
+The real-world scenario of a ticket counter line represents which data structure?,A Queue.
+List three system-level processes that typically utilize Queue systems.,"API calls, printer tasks, and OS schedulers (or cron jobs)."
+How is element accessibility restricted in Stacks and Queues compared to Arrays?,Access is restricted to specific ends (Front/Rear or Top) rather than allowing random access by index.
+"In a traditional array-based Queue implementation, what are the starting values of the Front and Rear pointers?",$-1$.
+Why is the Front pointer initialized to $-1$ instead of $0$ in an empty array-based Queue?,To indicate that no elements currently exist at index $0$.
+What happens to the Front and Rear pointers when the very first element is inserted into a Queue?,Both pointers are incremented to $0$.
+"In a non-empty standard Queue, which pointer is incremented during an Enqueue operation?",The Rear pointer ($Rear + 1$).
+"In a non-empty standard Queue, which pointer is incremented during a Dequeue operation in traditional array implementation?",The Front pointer ($Front + 1$).
+What is the primary limitation of implementing a Queue using a standard array in languages like C++ or Java?,"The array has a fixed size, leading to potential overflow."
+Define 'Overflow' in the context of a Queue.,A condition where an insertion is attempted but the memory allocated for the Queue is full.
+Define 'Underflow' in the context of a Queue.,A condition where a deletion is attempted on a Queue that contains no elements.
+Why does a Python List serve as a dynamic array for implementing a Queue?,"It automatically resizes as elements are added, preventing traditional overflow issues."
+Which Python List method is most efficient for performing an Enqueue operation at the Rear?,The `append()` method.
+"In a Python List implementation of a Queue, why is the Front always maintained at index $0$?",Because Python's `pop(0)` automatically shifts subsequent elements forward.
+What is the code snippet used in Python to delete and return the Front element of a list named `items`?,`items.pop(0)`
+"In a Queue class, what is the purpose of the `is_empty()` method?",To check if the length of the underlying list is $0$ before performing deletions.
+What occurs behind the scenes in Python when `pop(0)` is called on a list?,"The element at index $0$ is removed, and all remaining elements are shifted one position to the left."
+Why is 'Front' and 'Rear' pointer maintenance simpler in Python than in C++?,Python handles memory management and element shifting internally via list methods.
+What does the term 'DQ' or 'Deque' stand for?,Double Ended Queue.
+How does a Deque differ from a standard Queue regarding element operations?,A Deque allows insertion and deletion at both the Front and the Rear ends.
+What is the specific restriction on element access in a Deque?,Accessing or modifying elements in the middle of the structure is not allowed.
+"In a fixed-size array, what condition must be met to insert an element at the Front of a Deque?",The Front pointer must be greater than $0$ ($Front > 0$).
+"In a traditional array-based Deque, what is the logic for inserting an element at the Front?",Decrement the Front pointer ($Front - 1$) and place the value at that index.
+"In a traditional array-based Deque, what is the logic for deleting an element from the Rear?",Decrement the Rear pointer ($Rear - 1$).
+Which Python List method is used to insert an element at the Front (index $0$) of a Deque?,"`insert(0, value)`"
+"In Python, which list method is used to remove an element from the Rear of a Deque?",The `pop()` method (with no arguments).
+"To implement a Deque in Python, which method handles 'Insert at End'?",`append(value)`
+"To implement a Deque in Python, which method handles 'Delete at Front'?",`pop(0)`
+The standard Python implementation of a Queue class typically initializes the storage as ____.,An empty list (`[]`).
+"Why does Python's `insert(0, value)` facilitate Deque implementation?",It inserts the value at the beginning and shifts existing elements to the right automatically.
+Concept: Circular Queue,A Queue variation mentioned as a topic for advanced study after standard and Double Ended Queues.
+"In a Queue implementation, what should a program do if `is_empty()` returns True during a delete request?",Raise an exception or print an 'Underflow' error message.
+"When implementing a Queue class, why is `self` used as the first parameter in methods?",To reference the specific instance (object) of the class being operated upon.
+"In an array-based Queue, if $Front$ and $Rear$ point to the same index (not $-1$), how many elements are in the Queue?",One element.
+What is the main benefit of using a Deque in performance-critical problems like 'Min-Max Window' problems?,Efficient $O(1)$ access and modification at both ends of the data structure.
+"In Python, if `q_list` is `[10, 20, 30]`, what is the result of `q_list.pop(0)`?","$10$ is returned, and the list becomes `[20, 30]`."
+What is the purpose of the `__init__` method in the Queue class implementation?,To initialize the object with an empty container for items.
+"In a Deque, which method combination would emulate a Stack behavior?",`append()` and `pop()` (both at the Rear).
+"In a Deque, which method combination would emulate standard Queue behavior?",`append()` (at Rear) and `pop(0)` (at Front).
+Why is it important to check for 'Underflow' but not always 'Overflow' in Python DSA implementations?,"Underflow causes errors when popping from empty lists, whereas Python lists dynamically expand to prevent overflow."
+"In the provided code example, what happens when `delete()` is called on an empty Queue?",The program prints 'Queue is Empty' and does not return an element.
+What is the index of the last element in a Python list-based Queue if the length is $n$?,$n - 1$.
+"If a Queue contains `[50, 20, 10]` where $50$ is at index $0$, which element was inserted first?",$50$.
+"True or False: In a Deque, you can delete an element from the middle if the Queue is half-full.",False.
