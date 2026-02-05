@@ -1,0 +1,53 @@
+What is the fundamental definition of an array data structure?,A collection of elements stored in contiguous memory locations.
+How does memory allocation typically work for an array?,Memory is allocated continuously for all elements.
+"In general programming (like C or Java), what type of elements are stored in an array?",Homogeneous (similar) types of elements.
+How does Python's implementation of arrays differ from languages like C++ regarding element types?,Python arrays can store both homogeneous and heterogeneous (different) types of elements.
+What is the difference between a static array and a dynamic array in terms of size?,"Static arrays require a fixed size at declaration, while dynamic arrays can change size automatically."
+"According to the source, what percentage of DSA questions are estimated to involve arrays?",Approximately $90\%$.
+Which two techniques are mentioned as being closely related to array implementations?,Two-pointer techniques and sliding window techniques.
+What are the two primary options for using arrays in Python?,The built-in `array` module and the `NumPy` library.
+What is a major advantage of using `NumPy` over the Python `array` module?,It provides more functionality and supports multi-dimensional arrays.
+"In the Python `array` module, what does a 'type code' define?",The specific data type and byte size of the elements allowed in the array.
+Which type code is used for a $2$-byte signed integer in the Python `array` module?,The character 'i'.
+Which type code represents a $4$-byte integer in the Python `array` module?,The characters 'l' or 'L'.
+What type code is used to store Unicode characters in an array?,The character 'u'.
+Which type code is used for a floating-point number (float) in the `array` module?,The character 'f'.
+What is the starting index of any array?,$0$
+Syntax: How do you access a specific element in an array named `A` using its index?,"`A[index]` (e.g., `A[0]` for the first element)."
+"When using `range(0, 6)` in a for loop, which index is the last one actually processed?",Index $5$ (the end value is excluded).
+How can you print array elements on a single line separated by spaces in Python?,"Use the `end` parameter in the `print()` function (e.g., `print(val, end=' ')`)."
+What is an 'enhanced' for loop in the context of Python arrays?,"A loop that iterates directly over the array's values (e.g., `for x in arr:`) without using indices."
+Which Python function returns the total number of elements in an array?,`len()`
+What is the benefit of using an alias like `import array as arr`?,"It provides an alternate, shorter name to reference the module, saving time."
+What is the most concise way to import all functions from the `array` module?,`from array import *`
+Which array method allows you to reverse the order of elements in-place?,`.reverse()`
+What is the difference between `.append()` and `.insert()` in the `array` module?,"`.append()` adds an element to the end, while `.insert()` places an element at a specific index."
+"When using `.insert(index, value)`, what happens to the existing elements at or after that index?",They are shifted to the right.
+How do you overwrite or replace an element at index $2$ with the value $200$?,Assign the value directly: `arr[2] = 200`.
+What is the result of calling the `.pop()` method without any arguments?,It removes and returns the last element of the array.
+Which method should be used to delete a specific value from an array when the index is unknown?,`.remove(value)`
+What does the `.typecode` property of an array object return?,The character code used to define the array's data type.
+"In the `array` module, what error occurs if you try to insert a float into an array initialized with an integer type code?",A `TypeError` (specifically stating a float cannot be interpreted as an integer).
+What is 'Slicing' in Python arrays?,A technique to extract a specific portion or 'slice' of an array to create a new one.
+"In the slice syntax `arr[start:end]`, which index is inclusive and which is exclusive?","The `start` index is inclusive, and the `end` index is exclusive."
+"What does a negative value in a slice (e.g., `arr[2:-3]`) represent?",It counts backward from the end of the array.
+What is the slicing syntax used to create a reversed copy of an entire array?,`arr[::-1]`
+Which method is used to find the index of the first occurrence of a specific value in an array?,`.index(value)`
+What happens if you use the `.index()` method for a value that is not present in the array?,Python throws a `ValueError` exception.
+Which command is used to install the `NumPy` library via the terminal?,`pip install numpy`
+"In `NumPy`, what happens to integer elements if one floating-point number is added to the array during creation?",They are automatically upcast to floats (homogeneous conversion).
+Which `NumPy` function creates an array by dividing a range into a specific number of equal parts?,"`linspace(start, end, num_parts)`"
+"In `NumPy`'s `linspace`, are the start and end points included in the resulting array?","Yes, both the start and end values are included."
+Which `NumPy` function is similar to Python's `range()` and excludes the end value?,`arange()`
+What is the purpose of the `logspace()` function in `NumPy`?,To create an array with elements spaced evenly on a log scale (powers of $10$).
+Which function creates an array of a specific size where every element is initialized to $0$?,`zeros()`
+Which function creates an array where every element is initialized to $1$?,`ones()`
+How do you create an array of size $10$ where every element is exactly $5$ using `NumPy`?,"`full(10, 5)`"
+How is a zero-dimensional ($0$D) array defined in `NumPy`?,An array containing a single scalar element.
+What is the conceptual definition of a $2$D array?,A collection of one-dimensional arrays.
+What is the conceptual definition of a $3$D array?,A collection of two-dimensional arrays.
+How can you specify a custom data type (like float) for a `NumPy` array during creation?,"Use the `dtype` parameter (e.g., `array([1, 2], dtype=float)`)."
+What syntax represents a $2$D array with two rows and three columns in `NumPy`?,"A nested list: `[[1, 2, 3], [4, 5, 6]]`."
+"When taking user input to fill an array, why is an empty list or array initialized first?",To provide a structure that can be dynamically expanded using `.append()` as the user enters values.
+Why is it important to wrap Python's `input()` function in `int()` when collecting array data from a user?,"Because `input()` returns data as a string by default, and `int()` converts it to a numeric type for the array."
+"According to the source, what is a 'classic' exercise to test your command of arrays in any language?",Implementing array operations using only basic loops (for/while) instead of built-in methods.
