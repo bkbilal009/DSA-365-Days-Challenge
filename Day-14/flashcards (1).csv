@@ -1,0 +1,67 @@
+What is the primary prerequisite for an array to be searched using the Binary Search algorithm?,"The array must be sorted (e.g., in ascending order)."
+"In the context of searching an array, what is the 'Linear Search' approach also known as?",The Brute Force approach.
+What is the time complexity of a standard Linear Search algorithm?,$O(n)$
+What is the required runtime complexity for the LeetCode Binary Search problem discussed in the material?,$O(\log n)$
+"In Binary Search, what index does the 'Left' pointer typically start at?",Index 0.
+"In Binary Search, what formula is used to initialize the 'Right' pointer to the end of an array named 'nums'?",$len(nums) - 1$
+What is the standard formula to calculate the midpoint ($mid$) in Binary Search given $left$ and $right$ pointers?,$mid = (left + right) // 2$
+Why is the double forward slash ($//$) used in the Python midpoint formula $mid = (left + right) // 2$?,To perform integer division and round down the result to avoid float indices.
+"In Python, what does the single forward slash ($/$) return when dividing 5 by 2?",A float value of 2.5.
+"During Binary Search, if the target value is found at the midpoint, what should the function return?",The index of the midpoint ($mid$).
+"If Binary Search concludes and the target value was never found, what value is typically returned?",-1
+Under what condition should the 'Left' pointer be moved to $mid + 1$ during Binary Search?,When the value at the current midpoint is less than the target value.
+Under what condition should the 'Right' pointer be moved to $mid - 1$ during Binary Search?,When the value at the current midpoint is greater than the target value.
+What is the purpose of the condition `while left <= right` in a Binary Search implementation?,To continue the search as long as the range is valid and pointers haven't crossed.
+How does Binary Search optimize the search process compared to Linear Search?,It divides the search space in half during every iteration.
+"In Linear Search, if the target is not at the current index, the algorithm moves to the _____ index.",Next (consecutive)
+What Python function can be used in a `for` loop to retrieve both the index and the value of array elements simultaneously?,`enumerate()`
+Why is it necessary to use `left <= right` instead of `left < right` in the Binary Search loop condition?,To ensure the algorithm checks the final remaining element when both pointers converge on the same index.
+What happens to the elements to the left of the midpoint if `nums[mid]` is less than the target in a sorted array?,They are discarded from the search because the target must be in the right half.
+What happens to the elements to the right of the midpoint if `nums[mid]` is greater than the target in a sorted array?,They are discarded from the search because the target must be in the left half.
+True or False: Binary Search is more efficient than Linear Search for very small datasets.,False (Linear Search is often sufficient and simpler for very small datasets).
+Concept: Two Pointers,"Definition: A technique using two indices (left and right) to process an array, often used in Binary Search."
+"In Python's `range(len(nums))`, what does `len(nums)` represent?",The total number of elements in the array.
+"If an array has 6 elements, what is the index of the last element?",5
+Why is it helpful to join an 'Intro to Python' session while learning Advanced DSA?,To better understand the syntax and built-in functions required to implement algorithmic logic.
+"In the provided code, where is the `return -1` statement placed in relation to the `while` loop?","Outside the loop, after the loop has finished executing."
+"When implementing Linear Search, what Python loop structure is typically used to iterate through the entire array index by index?",A `for` loop using `range(len(nums))`.
+"If `left = 0` and `right = 5`, what is the $mid$ value using integer division?",2
+"If `left = 3` and `right = 5`, what is the $mid$ value using integer division?",4
+"In the LeetCode example, if `nums = [-1, 0, 3, 5, 9, 12]` and `target = 9`, what is the expected output index?",4
+"In the LeetCode example, if `nums = [-1, 0, 3, 5, 9, 12]` and `target = 2`, what is the expected output?",-1
+How does Binary Search handle an array with only one element if that element is the target?,"The loop runs once (because $left = right$), calculates $mid$, identifies the match, and returns the index."
+"What is the primary advantage of Binary Search when dealing with extremely large datasets (e.g., millions of elements)?",It significantly reduces the number of comparisons compared to checking every element.
+"If a Linear Search loop completes without hitting a `return` statement inside an `if` condition, what does that imply?",The target value does not exist in the array.
+What is the effect of the statement `right = mid - 1`?,It shifts the upper bound of the search area to just below the current midpoint.
+What is the effect of the statement `left = mid + 1`?,It shifts the lower bound of the search area to just above the current midpoint.
+"In the Python code `if nums[mid] == target:`, what is being compared?",The value stored at the $mid$ index of the `nums` array and the `target` integer.
+"In the context of algorithm optimization, what does 'O' stand for in $O(\log n)$?",Big O notation (representing the upper bound of runtime).
+Why does Binary Search require the array to be sorted?,The algorithm relies on the order to decide which half of the array to discard.
+What happens if you try to use Binary Search on an unsorted array?,The algorithm will likely return an incorrect result or fail to find the target.
+"In Python, if `i` is an index, what does `nums[i]` represent?",The actual value or element located at that specific index in the array.
+What is the result of $1 // 2$ in Python?,0
+"If `left` becomes greater than `right`, what happens to the `while left <= right` loop?",The loop terminates.
+"In the Binary Search process, which pointer is modified if the target is larger than the value at the midpoint?",The 'Left' pointer.
+"In the Binary Search process, which pointer is modified if the target is smaller than the value at the midpoint?",The 'Right' pointer.
+Which search algorithm is preferred for a 'Sorted' array when efficiency is a priority?,Binary Search.
+The technique of checking every element from the start to find a target is called _____ Search.,Linear
+"Code Snippet: `for i in range(len(nums)):` 
+What does `i` represent in this loop?",The current index of the array during iteration.
+"In Binary Search, $mid$ is calculated _____ the loop to update it in every iteration.",inside
+What is the space complexity of the iterative Binary Search algorithm discussed?,$O(1)$ (constant space).
+"If an array is sorted in descending order, can the standard Binary Search logic be used?","No, the logic for updating the left and right pointers must be reversed."
+"In a sorted array, if $nums[mid] < target$, the target must be located in the _____ indices.",higher (or right-side)
+"In a sorted array, if $nums[mid] > target$, the target must be located in the _____ indices.",lower (or left-side)
+What error might occur if you divide by two using `/` and then use that result as an array index?,"TypeError (indices must be integers, not floats)."
+"The _____ approach refers to a simple, straightforward, but often less efficient way to solve a problem.",Brute Force
+"In Binary Search, the search range is reduced by _____ percent in each step.",50
+"If `nums = [10]` and `target = 10`, what is the initial value of `right`?",0
+"If `nums = [10]` and `target = 10`, what is the calculated `mid` during the first iteration?",0
+What keyword is used in Python to create a conditional branch if the initial `if` statement is false?,`elif` (or `else` for the final branch).
+True or False: Linear search can be used on both sorted and unsorted arrays.,True
+"In Binary Search, does the `mid` index itself get included in the new search range after an update?","No, the new range starts at $mid+1$ or ends at $mid-1$."
+The runtime of Linear Search grows _____ with the size of the input.,linearly
+The runtime of Binary Search grows _____ with the size of the input.,logarithmically
+"In Python, which built-in function returns the number of items in an object?",`len()`
+"If `nums = [2, 4, 6, 8]` and `target = 5`, what happens to the `left` and `right` pointers eventually?","They will cross each other, making the `left <= right` condition false."
+Why is $O(\log n)$ complexity considered better than $O(n)$ for large $n$?,Because the number of operations increases much more slowly as the input size grows.
