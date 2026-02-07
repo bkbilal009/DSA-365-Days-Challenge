@@ -1,0 +1,66 @@
+What is the primary goal of LeetCode problem #448 'Find All Numbers Disappeared in an Array'?,"To identify all integers in the range $[1, n]$ that do not appear in an input array of length $n$."
+"In the HashSet approach for finding disappeared numbers, what is the purpose of the first iteration through the input array?",To store all existing numbers from the array into a `HashSet` for $O(1)$ lookup.
+"In the HashSet approach for finding disappeared numbers, what range is checked in the second loop to find missing values?",The loop iterates from $1$ to $n$ (where $n$ is the length of the array).
+What is the time complexity of the HashSet approach for LeetCode problem #448?,$O(n)$
+What is the space complexity of the HashSet approach for LeetCode problem #448?,$O(n)$ because an additional `HashSet` is used to store up to $n$ elements.
+"In the in-place marking approach for LeetCode #448, how is the presence of a number $x$ recorded?",By negating the value located at index $x - 1$.
+Why is the absolute value of a number taken before using it as an index in the in-place marking approach?,"To ensure the value is positive, as it might have been negated previously to mark another number's presence."
+"In the in-place marking approach, if a value $2$ exists in the array, which index should be negated?",Index $1$ ($2 - 1$).
+What condition is checked during the first pass of the in-place approach to avoid double-negating a number?,Check if the value at the target index is already less than zero (or use a conditional to only negate if positive).
+"In the second pass of the in-place approach for LeetCode #448, what does a positive value at `nums[i]` indicate?",It indicates that the number $i + 1$ was not present in the original array.
+What is the space complexity of the in-place negation approach for finding disappeared numbers (excluding the result list)?,$O(1)$
+What is the time complexity of the in-place negation approach for LeetCode #448?,$O(n)$
+"In the in-place approach, if the input is $[1, 1]$, what will the array look like after the first pass of negations?","The array will be $[-1, 1]$ (only the value at index 0 is negated)."
+Term: Binary Array,Definition: An array where every element is either $0$ or $1$.
+What does LeetCode problem #487 'Max Consecutive Ones II' ask for?,The maximum number of consecutive 1s achievable by flipping at most one 0 to a 1.
+What is the maximum constraint for the length of the array in problem #487 according to the source?,$10^5$
+"In the brute force approach for 'Max Consecutive Ones II', how many nested loops are used?",Two nested loops (an outer loop $i$ and an inner loop $j$).
+"In the brute force approach for problem #487, when does the inner loop break?",When a second $0$ is encountered in the current subarray.
+What is the time complexity of the brute force approach for 'Max Consecutive Ones II'?,$O(n^2)$
+What is the space complexity of the brute force approach for 'Max Consecutive Ones II'?,$O(1)$
+"In the sliding window approach for problem #487, what is the 'valid state' for a window?",A window that contains at most one $0$.
+"In a sliding window algorithm, what does the 'fast' or 'right' pointer generally represent?",The leading edge of the current window being expanded.
+"In a sliding window algorithm, what does the 'slow' or 'left' pointer generally represent?","The trailing edge of the window, used to contract the window when the state becomes invalid."
+"In the sliding window approach for 'Max Consecutive Ones II', when should the left pointer be incremented?",When the number of 0s in the current window exceeds one.
+What is the formula used to calculate the length of the current window between pointers $i$ (right) and $j$ (left)?,$i - j + 1$
+How is the global maximum updated in the sliding window approach for consecutive ones?,By taking the maximum of the current global max and the current window size ($i - j + 1$).
+What is the time complexity of the sliding window approach for problem #487?,$O(n)$
+Why is the sliding window approach for problem #487 considered $O(n)$ even though there is a nested movement of the left pointer?,"Because each pointer (left and right) traverses the array at most once, resulting in approximately $2n$ operations."
+What is the space complexity of the sliding window approach for 'Max Consecutive Ones II'?,$O(1)$
+"In the sliding window approach, if the right pointer moves past a $0$ and the window becomes invalid, how many times is the left pointer moved?",It is moved forward until exactly one $0$ is removed from the window.
+How many total problems were covered in the Arrays playlist mentioned in the source material?,16
+What is the next data structure topic the 'CTO Bhaiya' channel plans to cover after the Arrays playlist?,LinkedList
+"In the context of problem #487, what does 'at most one zero' flip mean?",You can choose to flip zero $0$s or one $0$ to maximize the count of consecutive $1$s.
+"If the input to problem #487 is $[1, 0, 1, 1, 0]$, what is the maximum number of consecutive 1s after flipping one 0?","4 (by flipping the first 0 to get $1, 1, 1, 1, 0$)."
+"In LeetCode #448, why is the range of numbers $1$ to $n$ significant?",It matches the indices of an array of length $n$ when shifted by $1$ ($0$ to $n-1$).
+The method `Math.abs()` is crucial in the in-place marking strategy because the same element might be accessed as an _____ multiple times.,index
+Sliding window is often more efficient than brute force because it avoids recomputing _____ for every possible starting position.,subsequences (or subarrays)
+"In problem #448, if the input is $[4, 3, 2, 7, 8, 2, 3, 1]$, which indices will remain positive after the first pass?",Indices $4$ and $5$ (corresponding to missing numbers $5$ and $6$).
+True or False: The sliding window approach for problem #487 requires a secondary array to track zero positions.,False (it only requires pointers and a counter for the number of 0s).
+What specific Java data structure is recommended for the first approach of 'Find Disappeared Numbers' for simplicity?,`HashSet`
+"In the sliding window logic, when the window is 'invalid', the process of moving the left pointer is called _____ the window.",contracting
+"In the in-place marking algorithm, why is $x - 1$ used instead of $x$ as the index?",Because the array is 0-indexed and the numbers are in the range $1$ to $n$.
+How does the 'Max Consecutive Ones II' problem differ from the basic 'Max Consecutive Ones' problem?,"The basic version doesn't allow flipping a $0$, while version II allows flipping at most one $0$."
+"In the brute force code for #487, what variable is reset before starting the inner loop?",The counter for the number of $0$s.
+What is the outcome of the sliding window if the input array contains no $0$s?,The result is simply the length of the entire array.
+"In the code for #448, after negating indices, what loop condition identifies the missing numbers?",`if (nums[i] > 0)`
+"If `nums[i]` is $-5$ in the in-place approach for #448, what does the negative sign signify?",That the number $i + 1$ exists in the array.
+"In the sliding window approach, if the current element is $1$, does the `zeroCount` change?",No.
+"In the sliding window approach, if the right pointer moves to an element that is $0$, what is the immediate next step?",Increment the count of $0$s (`zeroCount`).
+"What is the value of `maxLen` for the array $[0, 0]$ in problem #487?",1 (as you can flip one $0$ to $1$).
+"Process: In-place marking (LC #448)
+Step 1: Iterate and negate `nums[Math.abs(nums[i]) - 1]`.
+Step 2: ?",Iterate through the array again and add all indices `i` where `nums[i] > 0` to the result as `i + 1`.
+"Process: Sliding Window (LC #487)
+Step 1: Expand right pointer and update state.
+Step 2: If state is invalid, ?",Contract the window by moving the left pointer until the state becomes valid again.
+"In problem #448, the result must be returned as what type of collection?",A `List` (specifically an `ArrayList` in the implementation).
+Is the in-place approach for LC #448 destructive to the original array data?,"Yes, it modifies the values to negative, though the original magnitudes are preserved."
+What is the 'at most' condition in problem #487 often referred to in algorithm patterns?,A constraint on the window's properties (Sliding Window constraint).
+What is the primary advantage of the $O(n)$ solution over the $O(n^2)$ solution for large datasets?,"Significantly faster execution time as $n$ grows, preventing 'Time Limit Exceeded' errors."
+"Does flipping a $0$ in problem #487 actually change the array, or is it just simulated during calculation?",It is just simulated by allowing one $0$ to exist within the consecutive sequence count.
+"In the HashSet approach for #448, does the order of adding elements to the set matter?","No, because a `HashSet` does not maintain order and is only used for existence checks."
+"In the sliding window approach for #487, when is the `zeroCount` decremented?",When the left pointer moves past an element that is $0$ while contracting the window.
+What is the range of indices for an array of length $n$?,$0$ to $n - 1$.
+Why is problem #448 considered the '16th question' in the CTO Bhaiya playlist?,It is the final problem concluding the Arrays sequence before moving to a different topic.
+How is the 'correct number' retrieved in the second pass for LC #448?,By taking the current index $i$ and calculating $i + 1$.
