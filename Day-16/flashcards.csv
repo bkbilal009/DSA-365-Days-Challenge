@@ -1,0 +1,56 @@
+Why is the Singly Linked List (SLL) a common topic in technical interviews?,It allows interviewers to test a candidate's logic and reasoning over simple syntax.
+Name a real-world application of Singly Linked Lists in music streaming apps.,"Managing song queues, such as the 'Play Next' feature in Spotify."
+How does a web browser utilize the concept of linked lists?,"To manage navigation history, allowing users to go back and forward between pages."
+Singly Linked Lists serve as a foundation for which complex data structures?,Graphs and Hashmap chaining.
+What is the primary difference between Array and Linked List memory allocation?,"Arrays use continuous memory allocation, while Linked Lists use non-continuous allocation."
+What is a limitation of array size in languages like $C$ or $C++$?,The size is fixed at the time of declaration and cannot be changed dynamically.
+Why is a Python array (list) considered more flexible than a $C++$ array?,"Python arrays are dynamic, meaning their size can increase or decrease during runtime."
+What problem does a Linked List solve regarding fixed memory allocation?,"It allows for runtime memory allocation, adding memory blocks only when needed."
+Concept: Node,The basic building block of a linked list containing an information part and a reference to the next location.
+What are the two standard partitions within a Singly Linked List node?,The Data (or Information) part and the Next (address/reference) part.
+What can be stored in the 'Information' part of a Node besides simple values?,"A complete object containing a collection of information like name, roll number, and phone number."
+"In a Linked List, how is a memory location identified if it does not have a variable name?",By its unique memory address.
+Why is it difficult to assign unique variable names to nodes created at runtime?,Naming dynamically generated addresses is a cumbersome task that the program cannot easily track.
+Definition: Pointer (or Reference Variable),A variable that points to a specific memory location by storing its address.
+What is the purpose of the 'Head' pointer in a Singly Linked List?,To point to and identify the first node of the list.
+"If the Head points to a node at address $100$, how do you access the address of the second node?",By accessing the 'next' attribute of the head node ($head.next$).
+"In Python, what keyword represents the absence of a reference at the end of a list?",The keyword $None$.
+What is the primary limitation of a Singly Linked List regarding navigation?,It only supports one-way (forward) traversal; you cannot move backward to a previous node.
+Which data structure allows both forward and backward traversal?,A Doubly Linked List.
+Why shouldn't the 'Head' pointer be moved during list traversal?,"If Head moves forward, the reference to the beginning of the list is lost, making previous nodes inaccessible."
+How is a traversal pointer moved from the current node to the next node in Python?,By using the assignment: $temp = temp.next$.
+What is the standard loop condition to traverse until the very last node of an SLL?,While $temp.next$ is not $None$.
+"In Python, which method acts as a constructor to initialize node attributes?",The $\text{\_\_init\_\_}$ method.
+What does the $self$ parameter represent in a Python class method?,It refers to the specific instance (object) that is calling the method.
+"Code Snippet: `self.next = next`. If no second argument is passed to the Node constructor, what is the default value of `next`?",It defaults to $None$.
+Why is it beneficial to create a separate class for the Singly Linked List itself?,It allows for cleaner management of the head pointer and the creation of multiple independent list objects.
+What logic is used to insert a node at the end of an empty list?,The $Head$ pointer is directly assigned the address of the new node.
+What are the two initial steps when inserting a node at the end of a non-empty list?,1. Create a new node. 2. Use a temporary pointer to traverse to the current last node.
+How do you link a new node ($temp$) to the end of a list once the last node ($T1$) is found?,Assign the new node to the last node's next: $T1.next = temp$.
+"When printing a list, why is an extra print statement often needed after the `while T1.next is not None` loop?",To print the data of the very last node where the loop terminates.
+What is the first step in the logic for 'Insertion at the Beginning' of an SLL?,Set the new node's 'next' pointer to point to the current $Head$.
+"After pointing a new node to the current $Head$, what is the final step for 'Insertion at the Beginning'?",Update the $Head$ pointer to point to the new node.
+"In 'Insertion in the Middle', why must you link the new node to the next node *before* linking the previous node to the new node?",To prevent losing the address of the subsequent nodes in the list.
+"To insert a node after a specific value $X$, what part of the current node must be checked during traversal?",The data part ($T1.data$).
+What is the specific code to link a new node ($temp$) to the node following the current node ($T1$)?,$temp.next = T1.next$.
+What is the role of a 'Previous' pointer during the deletion process in an SLL?,To keep track of the node immediately preceding the one to be deleted so they can be re-linked.
+What single line of code effectively removes a node ($T1$) from a list using a $Previous$ pointer?,$Previous.next = T1.next$.
+How is the 'Head' node deleted from a Singly Linked List?,By moving the $Head$ pointer to the second node: $self.head = self.head.next$.
+"In the deletion logic, what must be done immediately after re-linking the pointers to stop the traversal?",Execute a $break$ statement to exit the loop.
+What is the corner case for deleting the last node in an SLL?,The $Previous$ node's 'next' must be set to $None$.
+Array indices allow direct access to elements. What is required to access the $n$-th element in a Linked List?,Sequential traversal from the $Head$ through $n-1$ nodes.
+"In Python, why is it said that 'pointers don't exist' in the $C/C++$ sense?",Python manages memory automatically using object references rather than manual memory addresses.
+"If $temp.next$ is $None$ during an insertion attempt, what does it indicate about the pointer's position?",The pointer is currently at the last node of the list.
+What happens if a programmer tries to traverse a Singly Linked List without a temporary pointer?,They risk moving the $Head$ pointer and losing access to the start of the data structure.
+Why is Singly Linked List considered efficient for insertions and deletions compared to arrays?,It doesn't require shifting all subsequent elements; only a few pointers need to be updated.
+What is the purpose of the `while T1.next is not None` condition in the delete function?,To ensure the traversal stops at the last node to prevent 'NoneType' attribute errors.
+What is 'Non-Continuous Memory Allocation'?,Storing data in fragmented parts of the RAM rather than in one single contiguous block.
+"In Python OOP, what is the role of `__init__` in the `SinglyLinkedList` class?",To initialize the $Head$ pointer to $None$ when a new list is created.
+How does the 'Search' logic integrate into 'Insertion in the Middle'?,The list is traversed comparing node data to a target value $X$ until the correct insertion point is found.
+Which specific check handles the 'Empty List' scenario in the `insert_at_end` function?,Checking if $self.head$ is equal to $None$.
+"In the deletion function, what is initialized to the same position as the $T1$ traversal pointer at the start?",The $Previous$ pointer.
+What code handles moving the $Previous$ pointer forward during deletion traversal?,$Previous = T1$ followed by $T1 = T1.next$.
+How is a new Node object instantiated in Python using the class `Node`?,"By calling the class name as a function, e.g., $temp = Node(value)$."
+"If you have $50$ nodes, why is writing $head.next.next...$ $50$ times bad practice?","It is hardcoded, prone to errors, and does not account for lists of varying lengths."
+What is the outcome of the code $self.head = temp$ if $self.head$ was previously $None$?,"The list now contains one node, which is the $Head$."
+Why are diagrams used before coding Linked List operations in interviews?,To visualize pointer movements and ensure no links are broken or memory is lost.
