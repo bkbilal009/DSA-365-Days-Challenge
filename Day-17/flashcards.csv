@@ -1,0 +1,60 @@
+"In the 'Add Two Numbers' problem, how are the digits of the numbers stored within the linked lists?",The digits are stored in reverse order.
+What type of integers are represented by the linked lists in the 'Add Two Numbers' problem?,Two non-negative integers.
+The problem assumes that each node in the linked list contains exactly _____ digit(s).,single
+"According to the problem description, what is the only number allowed to have a leading zero?",The number 0 itself.
+"If a linked list is given as $2 \rightarrow 4 \rightarrow 3$, what numerical value does it represent?",342
+What is the maximum number of nodes allowed in a single linked list for this problem?,100 nodes
+What is the range of values that can be stored in each node of the linked lists?,0 to 9
+Which elementary mathematical concept is used as the primary strategy to solve the 'Add Two Numbers' problem?,Sum and carry.
+Under what three conditions should the addition loop continue to execute?,"$L1$ is not null, $L2$ is not null, or the carry is not zero."
+Term: Dummy Head,Definition: A placeholder node used to simplify the process of building the result linked list.
+Concept: $Sum$ Calculation,Formula: $Sum = x + y + \text{carry}$ (where $x$ and $y$ are values from current nodes).
+"When traversing the lists, if $L1$ becomes null while $L2$ still has nodes, what value should be used for $x$ in the sum?",0
+"In the context of the addition algorithm, how is the new digit for the current node extracted from the total sum?",By calculating $Sum \pmod{10}$.
+How is the carry for the next iteration calculated from the current sum?,By performing integer division: $Sum / 10$.
+What is the primary role of the 'current' pointer during the construction of the result list?,It tracks the last node added to the new list to facilitate linking the next node.
+Why is the reverse order storage in the linked lists advantageous for the addition algorithm?,It allows the algorithm to start addition from the least significant digit (units place) immediately.
+"If $L1 = 9 \rightarrow 9$ and $L2 = 1$, what will be the final node of the result linked list?",1 (representing the carried 1 in 100).
+Process: Final step after the loop finishes,Return the node pointed to by $\text{dummyHead.next}$.
+What is the time complexity of the 'Add Two Numbers' algorithm where $N$ and $M$ are lengths of the lists?,"$O(\max(N, M))$"
+"Excluding the space used by the result list, what is the space complexity of this algorithm?",$O(1)$
+How is the 'current' pointer initialized at the start of the code?,It is set equal to the dummy head node.
+"What logical operator is used between the conditions (L1 != null), (L2 != null), and (carry != 0) in the while loop?",The logical OR operator (||).
+The problem states that no list will represent a number like $0 \rightarrow 3 \rightarrow 8 \rightarrow 2$ because _____ are not allowed.,leading zeros
+"If the sum of two digits and a carry is 15, what value is stored in the node, and what is the new carry?",Node value is 5; Carry is 1.
+Sequence: What must happen to the $L1$ pointer after its value is added to the sum?,It must be moved to $L1.\text{next}$ if it is not currently null.
+Sequence: What must happen to the 'current' pointer after a new node is attached to its 'next'?,It must be moved forward to the newly created node.
+"If $L1$ is null and $L2$ is null, but the carry is 1, will the loop run again?","Yes, to create a node for the final carry."
+"When calculating the value for variable 'a' (from $L1$), what is the condition used to decide between $L1.val$ and 0?",Check if $L1$ is not equal to null.
+"Formula: If $Sum = 18$, identify the result of $Sum \pmod{10}$.",8
+What specific node is returned to the caller to represent the sum list?,The next node after the dummy head.
+"In the code, the line `curr.next = new ListNode(sum % 10)` performs what action?",It creates a new node with the current digit and links it to the result list.
+"Why is the space complexity often cited as $O(\max(N, M))$ instead of $O(1)$?",Because the algorithm requires creating a new linked list to store the sum.
+"In the example $L1 = [9,9,9]$ and $L2 = [9,9,9,9]$, which list determines the minimum number of iterations?",The longer list ($L2$).
+True or False: The problem guarantees that input linked lists are non-empty.,True
+Which pointer is responsible for iterating through the second input linked list?,$L2$
+"If $L1$ represents 342 and $L2$ represents 465, what number is represented by the resulting linked list $7 \rightarrow 0 \rightarrow 8$?",807
+What is the initial value assigned to the carry variable before entering the loop?,0
+"If the sum of $x$, $y$, and $carry$ is 9, what will be the new carry value?",0
+The 'current' pointer's next property (`curr.next`) is used to _____.,link the newly created sum-digit node to the result list
+How does the algorithm handle lists of unequal lengths?,By treating the exhausted list as having nodes with a value of 0.
+What is the result of adding $L1 = [0]$ and $L2 = [0]$?,$[0]$
+"Process Step: After calculating `sum = carry + a + b`, what is the very next logical step regarding the carry?",Update the carry for the next iteration using `sum / 10`.
+Cloze: The algorithm solves 'Add Two Numbers' by simulating _____ addition.,column-wise (or digit-by-digit)
+"In Java/C++, what operation does `sum / 10` represent if `sum` is an integer?",Integer division (discarding the remainder).
+Why must the loop check `carry != 0` even if both $L1$ and $L2$ are null?,"To ensure a final carry-over digit is not lost (e.g., $9+1=10$, where '1' is the final carry)."
+What does the code $L2 = L2.next$ do?,Advances the pointer to the next digit in the second number.
+The value stored in `dummyHead` is usually _____ because it is never part of the actual result.,0
+The digits in each node are restricted to the range _____.,0 to 9
+"If $L1 = [5]$ and $L2 = [5]$, what is the value of the node created in the first iteration?",0
+"In the case $L1 = [5]$ and $L2 = [5]$, what is the value of the carry after the first iteration?",1
+Identify the logic error: Adding numbers from the head of a linked list that stores digits in *standard* (non-reversed) order.,It would be incorrect because addition must begin from the least significant digit to handle carries properly.
+Cloze: A _____ pointer is used to move through the result list as nodes are added.,current (or temp)
+"If $L1$ has $N$ nodes and $L2$ has $M$ nodes, the resulting list will have either $\max(N, M)$ or _____ nodes.","$\max(N, M) + 1$"
+"When writing the code, why is `a = (l1 != null) ? l1.val : 0` preferred over `a = l1.val`?",To prevent a NullPointerException when lists are of different lengths.
+Concept: Time Complexity,"The complexity is linear, $O(N)$, because we visit each node in both lists exactly once."
+"Example: $L1 = [9, 9]$, $L2 = [1]$. The first sum is $9+1=10$. What is the node value and the carry?","Node value = 0, Carry = 1."
+"Example: $L1 = [9, 9]$, $L2 = [1]$. In the second iteration, what is the sum ($x + y + carry$)?",10 ($9 + 0 + 1$).
+"Sequence: If $Sum = 13$, what digit is placed in the linked list node?",3
+"If the algorithm terminates correctly, what should the `carry` variable be?",0
+What is the maximum value the `sum` variable can hold in any iteration ($9 + 9 + 1$)?,19
