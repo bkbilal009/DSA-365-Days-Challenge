@@ -1,0 +1,57 @@
+What is the primary purpose of using asymptotic notations in algorithm analysis?,"To represent the time complexity of a function in a simple, communicable symbolic form."
+Which asymptotic notation represents the upper bound of a function?,Big $O$ notation.
+Which asymptotic notation represents the lower bound of a function?,Big $\Omega$ (Omega) notation.
+Which asymptotic notation represents the average bound of a function?,$\Theta$ (Theta) notation.
+"According to the formal definition, $f(n) = O(g(n))$ if there exist positive constants $c$ and $n_0$ such that $f(n) \le c \cdot g(n)$ for all _____.",$n \ge n_0$
+What is the mathematical condition for the Big $\Omega$ notation?,"$f(n) \ge c \cdot g(n)$ for all $n \ge n_0$ and positive constants $c, n_0$."
+"In $\Theta$ notation, the function $f(n)$ must be sandwiched between _____.",$c_1 \cdot g(n)$ and $c_2 \cdot g(n)$.
+"If a function $f(n) = 2n + 3$ is compared to $g(n) = n$, why is it considered $O(n)$?","Because for a constant like $c=5$, $2n+3 \le 5n$ for all $n \ge 1$."
+Why is $f(n) = 2n + 3$ technically considered $O(n^2)$ even if it is not the closest bound?,"Because Big $O$ represents an upper bound, and $n^2$ grows faster than $2n+3$."
+What is the recommended practice when choosing a function $g(n)$ for Big $O$ notation?,Use the closest possible function to the original function $f(n)$.
+True or False: Big $O$ notation is strictly reserved for the worst-case analysis of an algorithm.,False.
+What type of data structure is a Stack?,A linear data structure.
+What does the acronym LIFO stand for in the context of Stacks?,"Last In, First Out."
+Which Stack operation is used to insert a value into the structure?,The `push` operation.
+Which Stack operation is used to remove the most recently added element?,The `pop` operation.
+What is the purpose of the `peek` or `top` operation in a Stack?,To return the value of the most recently added element without removing it.
+Which function check identifies if a Stack contains any elements?,The `isEmpty` function.
+How does a browser's 'Back' button represent a Stack-like mechanism?,"It returns the user to the most recently visited page, removing it from the top of the history."
+How is $O(1)$ time complexity defined?,The execution time is constant and does not change with the size of the input.
+What identifies $O(n)$ time complexity in a program?,"The execution time grows linearly with the input size $n$, often due to a single loop."
+What characterizes $O(n^2)$ time complexity?,"The execution time grows with the square of the input size, typically caused by nested loops."
+What is the main challenge of the LeetCode 'Min Stack' problem?,Retrieving the minimum element of the stack in constant time ($O(1)$).
+Why is using a loop to find the minimum value in a stack considered inefficient for the Min Stack problem?,"A loop results in $O(n)$ complexity, while the problem requires $O(1)$."
+"In the Min Stack implementation, what is the role of the auxiliary 'Min Stack'?",To store the minimum value present in the main stack at every level of its depth.
+"In a Min Stack, if we push a new value that is greater than the current minimum, what is pushed onto the auxiliary 'Min Stack'?",The current minimum value is pushed again to maintain consistent state synchronization.
+Why must both the Main Stack and the auxiliary Min Stack be popped simultaneously?,To ensure both stacks maintain the same length and correctly represent the minimum for each state.
+"In Python, which list index is used to access the 'top' of a stack?",The index `-1`.
+What logic is applied to the auxiliary Min Stack when it is currently empty and the first value is pushed into the Main Stack?,The value is automatically pushed into the auxiliary stack as the initial minimum.
+Concept: $n_0$ in Asymptotic Notation,Definition: The threshold value of the input size beyond which the functional inequality must strictly hold.
+Why is $\Theta$ notation often preferred over Big $O$ or Big $\Omega$?,It provides a tight bound that defines the function from both above and below.
+How does the 'Plate Bundle' analogy explain the Stack's LIFO property?,A plate is added to the top and must be removed from the top; you cannot remove the bottom plate first.
+"In the Min Stack Python implementation, which method is used to add values to the internal list?",The `.append()` method.
+"What is the purpose of a constructor (e.g., `__init__`) in the Min Stack class?",To initialize the main stack and auxiliary stack objects when a new instance is created.
+Under what condition is a new value pushed into the auxiliary stack as the new minimum?,When the value is less than or equal to the current top of the auxiliary stack.
+"If the main stack contains $[5, 3, 7, 2]$, what is the top element of the corresponding auxiliary Min Stack?",$2$
+"If the main stack is $[5, 3, 7, 2]$ and a `pop` operation is performed, what becomes the new top of the auxiliary Min Stack?",$3$
+How does an `if` statement compare to a `for` loop in terms of time complexity?,An `if` statement is constant time ($O(1)$) because it performs a single comparison rather than repeating steps.
+What is the mathematical notation for a 'Lower Bound'?,$\Omega(g(n))$
+What is the mathematical notation for an 'Average Bound'?,$\Theta(g(n))$
+"If $f(n) = 2n + 3$, what is a valid Big $\Omega$ bound for this function?",$\Omega(n)$ or $\Omega(1)$ or $\Omega(\log n)$.
+Why is $O(\log n)$ an invalid Big $O$ bound for $2n + 3$?,"Because $2n+3$ grows faster than $\log n$, so $\log n$ cannot be an upper bound."
+"In the context of the Min Stack, what does the `getMin` function return?",The value at the top (index `-1`) of the auxiliary Min Stack.
+How is a stack different from a standard array regarding element access?,"An array allows access at any index, whereas a stack only allows access at the top index."
+Process: Retrieving the top element of a Stack.,"The `top()` or `peek()` function is called, returning `stack[-1]` in Python without altering the stack."
+Process: Removing an element from a Min Stack.,Call `pop()` on the main stack and `pop()` on the auxiliary min stack simultaneously.
+What does the variable 'n' represent in $O(n)$ complexity?,The total number of input elements or the size of the input.
+"Which notation uses two constants, $c_1$ and $c_2$, in its formal definition?",$\Theta$ (Theta) notation.
+"In recursion, why are items 'popped'?",Items are popped from the call stack as each function call finishes printing or processing and returns.
+What happens if you attempt to use $\Theta(n^2)$ to represent a linear function $2n+3$?,"It would be incorrect because $n^2$ only acts as an upper bound, not a lower or average bound for a linear function."
+"In the Min Stack dry run, if the current min is 3 and the new pushed value is 7, what value is appended to the Min Stack?",3
+True or False: Asymptotic notation originates from algorithm theory.,False; it originates from mathematical functions.
+Term: Linear Data Structure.,"Definition: A data structure where elements are arranged in a sequence, such as a Stack or an Array."
+"In the Big $O$ definition $f(n) \le c \cdot g(n)$, what type of numbers must $c$ and $n_0$ be?",Positive constants.
+"If the auxiliary Min Stack is $[5, 3, 3, 2]$, what is the current minimum of the main stack?",2
+What determines if $O(1)$ complexity is achieved in the `push` function of a Min Stack?,The use of simple comparisons and stack appends instead of iterating through the entire stack.
+"In algorithm analysis, why is it impractical to write out a 'lengthy function' every time for time complexity?",It is difficult to communicate and compare; a simple notation like $O(n)$ is more efficient.
+The function $f(n)$ is $\Theta(g(n))$ if and only if $f(n)$ is both $O(g(n))$ and _____.,$\Omega(g(n))$
