@@ -1,0 +1,60 @@
+What is the title of LeetCode problem 901 discussed in the source material?,Online Stock Span.
+"The stock span is defined as the maximum number of _____ days, including the current day, where the price was less than or equal to the current price.",consecutive
+In what direction should you look to calculate the stock span for a given day?,Backward from the current day.
+A previous day's price is included in the current day's span only if it is _____ the current day's price.,less than or equal to
+"If a stock's prices for four days are $[7, 2, 1, 2]$ and today's price is $2$, what is today's span?",4
+What is the default span value for any stock on its very first day of recording?,1
+Why is the default span for every individual stock price at least 1?,Every day includes itself in the consecutive count.
+Which data structure is primarily used to solve the Online Stock Span problem efficiently?,Stack.
+What is the time complexity of the Brute Force approach for calculating stock spans for $N$ days?,$O(N^2)$
+What is the total time complexity for processing $N$ prices using the stack-based approach?,$O(N)$
+The stack-based solution for Online Stock Span results in an amortized time complexity of _____ per call.,$O(1)$
+Problems that involve finding the 'next greater' or 'next smaller' element typically utilize a _____.,Stack.
+What specific two pieces of information are stored as a pair in the stack for each entry?,The stock price and its calculated span.
+"In the Python implementation, how is the internal storage for prices and spans initialized?",As an empty list (stack) within the class constructor.
+What is the first step when the `next(price)` function is called for a new stock price?,Initialize the current day's span to 1.
+Under what condition should you pop an element from the stack when a new price arrives?,The stack is not empty and the current price $\ge$ stack top's price.
+"When popping an element from the stack during a `next(price)` call, what do you do with the popped element's span?",Add it to the current day's span.
+"After processing all smaller or equal elements in the stack, what is the final step before returning the span?","Push the pair of current (price, span) onto the stack."
+"If the prices are $[100, 80, 60, 70]$, what is the span for the price $70$?",2
+"In the price sequence $[100, 80, 60, 70, 60, 75]$, why is the span for $75$ equal to $4$?","The prices $60, 70, 60$ are all $\le 75$ and consecutive with it."
+How does the stack-based approach avoid recalculating previous spans?,By storing previously calculated spans and adding them to the current span when popping.
+What happens to the calculation if the current price is strictly smaller than the price at the top of the stack?,No elements are popped and the current span remains 1.
+"Which Python programming paradigm is used by LeetCode for this problem, requiring the use of the `self` keyword?",Object-Oriented Programming (OOP).
+What is the purpose of the `__init__` function in the `StockSpanner` class?,To initialize the stack that will store the price-span pairs.
+"In a Python list-based stack, which index represents the 'top' element's price if pairs are stored as `[price, span]`?",stack[-1][0]
+"In a Python list-based stack, which index represents the 'top' element's span if pairs are stored as `[price, span]`?",stack[-1][1]
+"If the prices provided are $[100, 80, 60, 70, 60, 75, 85]$, what is the final span returned for $85$?",6
+Concept: Monotonic Stack,Definition: A stack where elements are kept in a specific sorted order (increasing or decreasing) by popping elements that violate the order.
+Why is it unnecessary to traverse the entire history of prices for every new input in the stack approach?,Each element in the stack already encapsulates the count of consecutive smaller elements behind it.
+"In the sequence $[100, 80, 60]$, what are the contents of the stack before the price $70$ is processed?","[(100, 1), (80, 1), (60, 1)]"
+"When processing price $70$ against stack top $(60, 1)$, what is the result of the comparison $70 \ge 60$?","True, so $(60, 1)$ is popped and the current span becomes $1 + 1 = 2$."
+"After popping $(60, 1)$ for current price $70$, why does the popping stop at $(80, 1)$?",$70$ is not greater than or equal to $80$.
+True or False: The 'Online' nature of the problem means we must return the span immediately after each new price is added.,True
+"In the OOP structure of this LeetCode problem, which function is called repeatedly to process incoming prices?",The `next` function.
+"If the current day's price is $85$ and it pops a stack top with span $4$ and then a stack top with span $1$, what is the final span?",6 (calculated as $1 + 4 + 1$).
+The logic of adding previous spans instead of single increments is a form of _____ optimization.,dynamic programming (or memoization within the stack).
+What error in complexity would occur if you used a nested loop to check all previous days for every new day?,The time complexity would rise to $O(N^2)$.
+"If the stock prices are strictly decreasing, what will the span be for every day?",1
+"If the stock prices are strictly increasing, what will the span of the $i$-th day be?",$i$ (where $i$ is the count of days processed so far).
+What is the result of `stack.pop()` in the algorithm logic?,It removes the top price-span pair that is no longer needed as a 'boundary'.
+The condition `while stack and stack[-1][0] \le price` targets _____ knowledge of the stack state.,procedural
+"When a price is popped from the stack, it means that price will _____ be the 'next greater' for any future incoming prices.",never
+Why is the stack approach considered 'amortized' $O(1)$?,Each price is pushed once and popped at most once across all calls.
+The input to the `next` function is an integer representing the _____.,price of the stock for the current day.
+The output of the `next` function is an integer representing the _____.,span of the stock's price for the current day.
+"In the transcript example, what is the span for the price $80$ if it follows $100$?",1
+"If the stack contains $[(100, 1), (80, 1)]$ and the new price is $80$, will the existing $(80, 1)$ be popped?","Yes, because the current price $80$ is equal to the stack top $80$."
+How does the algorithm handle consecutive prices that are identical?,It pops the previous identical price and adds its span to the current one.
+Which specific LeetCode environment constraint requires returning one value at a time for this problem?,The 'Online' requirement.
+"What does `self.stack.append([price, span])` do in the context of the solution?",It stores the current price and its calculated span for use by future `next` calls.
+Is the memory complexity of this stack-based solution $O(1)$ or $O(N)$?,$O(N)$ (in the worst case of a decreasing price sequence).
+Why does the algorithm use a `while` loop instead of an `if` statement to check the stack?,To pop multiple consecutive elements that are all smaller than or equal to the current price.
+What is the primary goal of the 'Online Stock Span' algorithm?,To find how many recent days had a price $\le$ today's price.
+"In the context of the problem, 'consecutive' means the count must stop as soon as a _____ price is encountered going backward.",larger
+The algorithm effectively maintains a stack of _____ values.,decreasing
+The Python list method used to remove the last element from the stack is _____.,pop()
+The Python list method used to add a new pair to the stack is _____.,append()
+"If the prices are $[100, 110, 120]$, what is the span of the price $120$?",3
+How does the stack pair approach optimize the 'Going Backward' requirement of the problem?,It allows 'jumping' over blocks of smaller prices using the stored span values.
+"If the current price is $75$ and it pops $(60, 1)$ and $(70, 2)$, what total value is added to the initial span of $1$?",3
