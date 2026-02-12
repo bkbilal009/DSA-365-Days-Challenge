@@ -1,0 +1,55 @@
+What acronym describes the fundamental operating principle of a Stack data structure?,"LIFO (Last-In, First-Out)"
+"In the context of a Stack, what is the purpose of the 'Push' operation?",To add a new element to the top of the stack.
+Which Stack operation is used to remove the most recently added element?,Pop
+What does the 'Top' or 'Peek' function do in a Stack?,It allows you to view the last element added without removing it.
+The 'IsEmpty' function in a Stack returns a boolean value to indicate _____.,Whether the stack contains any elements or is empty.
+"In the 'Baseball Game' LeetCode problem, what action is taken when an integer $x$ is encountered in the operations list?",The value $x$ is recorded as a new score by pushing it onto the stack.
+Baseball Game Rule: What does the '+' operation signify?,Recording a new score that is the sum of the previous two scores.
+Baseball Game Rule: What does the 'D' operation signify?,Recording a new score that is double the value of the previous score.
+Baseball Game Rule: What does the 'C' operation signify?,Invalidating the previous score by removing it from the record.
+"In the 'Baseball Game' problem, what is the final value that must be returned after all operations are applied?",The sum of all scores remaining in the record.
+"In Python, which list index is used to access the top element of a stack?",Index $-1$ ($stack[-1]$).
+"In Python, which list index is used to access the element immediately below the top of the stack?",Index $-2$ ($stack[-2]$).
+Why is the `int()` function used when pushing scores from the operations list to the stack in the 'Baseball Game' solution?,To convert the score from a string format into an integer for mathematical operations.
+What is the time complexity of the 'Push' and 'Pop' operations in a standard Stack implementation?,$O(1)$ (Constant Time).
+"According to the 'Baseball Game' constraints, what is the maximum number of operations that can be provided?",1000 operations.
+What does the constraint 'intermediate calculations fit in a 32-bit integer' imply for the programmer?,The scores and their sums will not exceed the standard memory limits of a 32-bit system.
+"In the 'Baseball Game' problem, what is guaranteed about the '+' operation in terms of previous scores?",There will always be at least two previous scores available in the record.
+"In the 'Baseball Game' problem, what is guaranteed about the 'C' and 'D' operations?",There will always be at least one previous score available in the record.
+What acronym describes the fundamental operating principle of a Queue data structure?,"FIFO (First-In, First-Out)"
+"In a Queue, the term 'Enqueue' refers to which action?",Inserting or adding an element to the back of the queue.
+"In a Queue, the term 'Dequeue' refers to which action?",Removing the element from the front of the queue.
+What is the real-world analogy used to explain the Queue data structure?,A line of people waiting at an ATM (the first person to arrive is the first to leave).
+"When using Python's `collections.deque` for a queue, which function removes the first element added?",`popleft()`
+"In a Queue, the term 'Peak' refers to viewing the element at which position?",The front (the first element).
+Why is `collections.deque` preferred over a standard Python list for implementing a Queue?,It provides $O(1)$ time complexity for adding and removing elements from both ends.
+What is the time complexity of the 'Dequeue' operation when using an optimized Queue like `deque`?,$O(1)$ (Constant Time).
+What is the time complexity of accessing the front element ('Peak') in a Queue?,$O(1)$ (Constant Time).
+How does the 'Pop' operation in a Stack differ from the 'Dequeue' operation in a Queue?,"Pop removes the most recently added item, while Dequeue removes the item that has been there the longest."
+Can you perform operations on middle elements in a standard Stack or Queue?,"No; they are designed to only allow operations at the ends (Top for Stack, Front/Back for Queue)."
+"Which data structure allows modifications in the middle of the collection, unlike a Stack or Queue?",Linked List.
+"In the provided solution for 'Baseball Game', what happens if the current operation is NOT '+', 'D', or 'C'?",The operation is assumed to be an integer and is converted to `int` and pushed to the stack.
+Why are constraints like 'All operations are valid' important when solving LeetCode problems?,They simplify the logic by removing the need for extensive error handling for invalid inputs.
+"Scenario: Stack contains [5, 10]. Operation 'D' is applied. What is the new state of the Stack?","[5, 10, 20]"
+"Scenario: Stack contains [5, 10, 15]. Operation 'C' is applied. What is the new state of the Stack?","[5, 10]"
+"Scenario: Stack contains [5, 10]. Operation '+' is applied. What is the new state of the Stack?","[5, 10, 15]"
+"In a Queue, where are new elements added?",At the rear or back of the queue.
+"In a Queue, from where are elements removed?",From the front of the queue.
+"What is the significance of the term 'Last In, First Out'?",The last element added to the data structure is the first one to be removed.
+"What is the significance of the term 'First In, First Out'?",The first element added to the data structure is the first one to be removed.
+"In the 'Baseball Game' problem, how is the sum of the last two scores calculated in Python code?",`stack[-1] + stack[-2]`
+"If a Stack has [10, 20, 30] where 30 is at the top, what is the result of `sum(stack)`?",60
+What does the 'Front' of a Queue represent?,The position of the element that will be removed next.
+What does the 'Rear' of a Queue represent?,The position where the next new element will be inserted.
+Which Python library must be imported to use the `deque` object?,`collections`
+True or False: A standard Stack allows you to access the bottom-most element with $O(1)$ complexity.,False (You can only access the Top element with $O(1)$ complexity).
+"In the Python code provided, which keyword is used to iterate through the list of operations?",`for` (as in `for i in operations`).
+How does the size of a Stack change after a 'Pop' operation?,The size decreases by 1.
+How does the size of a Queue change after an 'Enqueue' operation?,The size increases by 1.
+What is the term for adding an element to a Queue?,Enqueue
+What is the term for removing an element from a Queue?,Dequeue
+"In the context of the Baseball Game, if the record is empty and we encounter '5', what is the stack after the operation?",[5]
+How is the 'D' (Double) operation implemented in the code using multiplication?,`stack.append(stack[-1] * 2)`
+What is the outcome if you call 'Pop' on an empty Stack?,An error occurs (often called Stack Underflow).
+"What is the result of `stack.pop()` if the stack is `[5, 10, 15]`?",15
+Which data structure is most appropriate for reversing a sequence of items?,Stack (due to LIFO property).
