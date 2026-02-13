@@ -1,0 +1,61 @@
+What fundamental data structure mechanism does a Queue follow?,"FIFO (First In, First Out)."
+How does the FIFO mechanism in a Queue differ from the LIFO mechanism in a Stack?,"In a Queue, the first element added is the first to be removed, whereas in a Stack, the last element added is removed first."
+"In the context of a Queue, what is the 'Rear' (or Tail) position used for?",It is the position where new elements are inserted into the structure.
+"In the context of a Queue, what is the 'Front' position used for?",It is the position from which existing elements are removed or deleted.
+What is the primary function of the 'nQ' (enqueue) operation in a Queue?,To insert a new value at the rear position of the Queue.
+What is the primary function of the 'dQ' (dequeue) operation in a Queue?,To remove a value from the front position of the Queue.
+"In a Queue, which specific element is accessed during a 'Front' or 'Peek' operation?",The element currently at the top or beginning of the Queue (the oldest element).
+"According to the source material, which real-world scenario perfectly illustrates the FIFO mechanism?",A bank line where the person who arrives first is served first.
+How does a printer handle multiple print jobs arriving from different computers?,It uses a Queue mechanism to execute print jobs in the order they were received.
+What is the purpose of the 'isEmpty' operation in a Queue?,To check whether the Queue contains any elements or is currently empty.
+Where do insertion and deletion occur in a Stack compared to a Queue?,"In a Stack, both occur at a single point (the Top), while in a Queue, they occur at two different ends (Rear and Front)."
+Term: Front,Definition: The position in a Queue where the first element is located and from which deletions occur.
+Term: Rear,Definition: The position in a Queue where the last element is located and where new insertions are made.
+Which index in an array typically represents the 'Front' of a Queue after the first element is added?,Index $0$.
+What is the goal of the LeetCode problem discussed in the session?,To implement a FIFO Queue using only two LIFO Stacks.
+"In the two-stack Queue implementation, what is the specific role of the 'inStack'?",To handle and store all incoming 'push' (insertion) operations.
+"In the two-stack Queue implementation, what is the specific role of the 'outStack'?",To facilitate 'pop' and 'peek' operations by holding elements in a reversed order.
+Why is it necessary to transfer elements from 'inStack' to 'outStack' in the implementation?,To reverse the LIFO order of the stack into the FIFO order required for a queue.
+"During a 'pop' operation in a two-stack Queue, what must happen if the 'outStack' is empty?",All elements from 'inStack' must be popped and pushed into 'outStack' one by one.
+"If you push $10, 20, 30$ into a Stack, which value is removed first?",$30$ (the last one in).
+"If you enqueue $10, 20, 30$ into a Queue, which value is removed first?",$10$ (the first one in).
+"In Python, what index is used to 'peek' at the top of a stack without removing the element?",Index $-1$.
+"When implementing `pop()` for a Queue using two stacks, what is the final step after moving elements to 'outStack'?",Pop the top element from 'outStack' and return it.
+How is the 'isEmpty' operation typically implemented for a Queue built with an 'inStack' and an 'outStack'?,"By checking if the length of the primary storage stack (e.g., 'inStack') is equal to $0$."
+What happens to the order of elements when they are moved from one stack to another?,The order of the elements is reversed.
+"In the two-stack implementation, after a value is popped from 'outStack', what happens to the remaining elements to maintain the state?",The remaining elements in 'outStack' are pushed back into 'inStack' to await the next operation.
+Which standard Stack operation is used to add an element to the 'inStack'?,The `append` (or push) operation.
+Which standard Stack operation is used to move an element out of the 'inStack'?,The `pop` operation.
+"If 'inStack' contains $[10, 20, 30]$ (where $30$ is top), what will be the top element after moving all to 'outStack'?",$10$.
+The method of using two stacks to implement a queue relies on the fact that reversing a reversed order results in the _____ order.,Original (or FIFO).
+What is the result of a 'peek' operation in a Queue implementation?,"The value of the front element is returned, but the element is not removed from the Queue."
+"In the provided code logic, which stack is checked to determine the overall 'length' or 'empty' status of the MyQueue class?",The `self.inSt` (inStack).
+Process: Implementing Queue `push(x)` using two stacks.,Directly append the value $x$ to the 'inStack'.
+Concept: Double Ended Queue (DQ),Definition: A queue where elements can be added or removed from both the front and the back.
+Which operation is synonymous with 'nQ' in the context of the LeetCode MyQueue class?,The `push` operation.
+Which operation is synonymous with 'dQ' in the context of the LeetCode MyQueue class?,The `pop` operation.
+"In the provided Python implementation, what specific list method is used to remove the last item from a stack?",The `.pop()` method.
+Why does the two-stack implementation transfer elements back to 'inStack' after a 'pop' or 'peek'?,To maintain the 'inStack' as the primary source of truth for the current state of the Queue.
+How is a 'stack' simulated in Python if a native stack class is not used?,By using a standard list or a 'deque' (double-ended queue) while only using stack-standard operations.
+What are the four functions a normal Queue should support according to the LeetCode problem description?,"Push, Peak, Pop, and Empty."
+"In a Queue implemented with an array, if the first element is at index $0$, where is the second element?",At index $1$.
+What is the purpose of using a `while` loop when transferring elements between stacks?,To ensure that every single element is moved until the source stack is empty.
+"If a Queue is empty and you call the 'Empty' function, what boolean value is returned?",True.
+"When $10, 20, 30$ are pushed into 'inStack', in what order do they exist from bottom to top?","$10, 20, 30$."
+"When $10, 20, 30$ are transferred from 'inStack' to 'outStack', in what order do they exist from bottom to top?","$30, 20, 10$."
+Which stack operation retrieves the top element but does not remove it?,The `peek` operation.
+"In the session's example, after popping $10$ from the Queue $[10, 20, 30]$, which element becomes the new 'Front'?",$20$.
+What does the term 'Front' specifically refer to in the context of queue removal?,The position of the element that has been in the queue the longest.
+"True or False: In a Queue, the Rear and Front can be the same position if only one element exists.",True.
+What is the primary characteristic of a 'Fundamental Data Structure' like a Queue?,"It stores and manages data in a specific, predictable order."
+What specific terminology did the speaker use to describe the 'Rear' in the context of a Queue?,The 'Back' or the 'Tail'.
+"In the provided logic, why is a variable named `value` used during the `pop` function?",To temporarily store the front element removed from 'outStack' before returning it at the end of the function.
+What is the purpose of the code `self.inSt = []` and `self.outSt = []` in the class constructor?,To initialize two empty lists that will function as the 'inStack' and 'outStack'.
+Which operation checks the 'top' of the 'outStack' to implement the Queue's 'peek' functionality?,Accessing `self.outSt[-1]`.
+"If the Queue operations are `push(1), push(2), pop()`, what value does `pop()` return?",$1$.
+"If the Queue operations are `push(1), push(2), peek()`, what value does `peek()` return?",$1$.
+"After `push(1), push(2), peek()`, what is the current state of the Queue?","The Queue still contains $[1, 2]$ because `peek` does not remove elements."
+How does the 'standard operation of a stack' limit the implementation of a queue?,"You can only add or remove from the top of the stack, forcing the use of two stacks to access the bottom."
+What does the 'MyQueue' class represent in the LeetCode problem?,A custom implementation of a Queue data structure using Stack primitives.
+"In the bank line example, who is considered at the 'Rear' of the queue?",The person who just joined the line most recently.
+"In the bank line example, who is considered at the 'Front' of the queue?",The person who is currently being served or is next in line.
