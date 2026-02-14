@@ -1,0 +1,60 @@
+What is the primary structural difference between a Singly Linked List (SLL) and a Doubly Linked List (DLL)?,"A DLL node contains an additional pointer to the previous node, allowing bidirectional traversal."
+Name the three distinct partitions of a Doubly Linked List node.,"Data (or information), the Next pointer, and the Previous pointer."
+Which real-world browser feature is a common application of a Doubly Linked List?,The forward and backward navigation buttons.
+How are 'Undo' and 'Redo' features in text editors typically implemented using data structures?,They utilize a Doubly Linked List to move back and forth through state changes.
+Why does a Doubly Linked List simplify the process of thinking about edge cases in programming?,It requires managing complex relations between nodes in both forward and backward directions.
+What is the default value of the Previous and Next pointers when a new node is first created in a DLL?,Both pointers are typically initialized to $None$ (or $null$).
+"In a Doubly Linked List, what is the value of the $prev$ pointer for the first node ($head$)?",The value is $None$.
+"In a Doubly Linked List, what is the value of the $next$ pointer for the last node?",The value is $None$.
+"When a Doubly Linked List is completely empty, what does the $head$ pointer point to?",It points to $None$.
+What is the identifying characteristic of a middle node in a standard Doubly Linked List?,Neither its $previous$ nor its $next$ pointer is $None$.
+Why is it beneficial to separate the `Node` class from the `DoublyLinkedList` class?,"It allows for the creation of multiple independent linked list objects, each with its own $head$ pointer."
+"In Python, what is the result of executing `head.data` if $head$ points to a Doubly Linked List node?",It accesses the information stored in the second (middle) partition of that node.
+What occurs when inserting the very first node into an empty Doubly Linked List?,"The $head$ pointer is updated to point to the new node, while the node's $next$ and $prev$ remain $None$."
+"To insert a node at the end of a DLL, what condition must be met by the traversal pointer $T$?",$T$ must point to a node where $T.next$ is $None$.
+"When appending a new node ($temp$) to the end of a DLL, what must $T.next$ be updated to point to?",It must point to the new node $temp$.
+"When appending a new node ($temp$) to the end of a DLL, what must $temp.prev$ be updated to point to?",It must point to the previous last node $T$.
+"When inserting a node at the beginning of a DLL, why is it critical to link the new node to the list before updating the $head$ pointer?",Updating $head$ first would cause the program to lose the address of the rest of the list.
+What is the first pointer update required when inserting a new node ($temp$) at the beginning of a non-empty DLL?,$temp.next$ must be set to point to the current $head$.
+"During insertion at the beginning of a DLL, what does $head.prev$ need to be set to before the $head$ pointer itself is moved?",It must be set to point to the new node $temp$.
+"In a DLL, what is the final step in the 'Insert at Beginning' procedure?",Updating the $head$ pointer to the address of the new node ($temp$).
+How does searching in a DLL differ from an SLL when preparing for a middle insertion or deletion?,"In a DLL, you do not need a separate 'previous' pointer variable because the node itself contains its predecessor's address."
+How many pointer updates are generally required to insert a node in the middle of a Doubly Linked List?,Four pointer updates are required.
+"In a middle insertion after node $T$, why should $temp.next$ be set to $T.next$ first?",To ensure the address of the succeeding node is preserved before $T.next$ is overwritten.
+Which pointer connects the new node ($temp$) to the node that was originally after $T$ during a middle insertion?,$temp.next$.
+Which pointer update connects the succeeding node back to the newly inserted $temp$ node?,$T.next.prev = temp$ (or $node\_after\_T.prev = temp$).
+Which pointer update connects the original node $T$ forward to the new node $temp$?,$T.next = temp$.
+Which pointer update connects the new node $temp$ back to the original node $T$?,$temp.prev = T$.
+What is the first check performed in a deletion function for a Doubly Linked List?,"Checking if the $head$ is $None$, indicating the list is empty."
+"When deleting the first node of a DLL, what is the new value of $head.next.prev$?",It becomes $None$.
+"To delete a middle node $T$, how is the preceding node's forward link updated?",$T.prev.next$ is set to $T.next$.
+"To delete a middle node $T$, how is the succeeding node's backward link updated?",$T.next.prev$ is set to $T.prev$.
+"When deleting the last node $T$ of a DLL, which pointer in the previous node must be updated?",$T.prev.next$ must be set to $None$.
+Why is the `return` statement used immediately after a successful deletion inside a search loop?,To terminate the function and prevent unnecessary further iterations or logic execution.
+What is the core concept of a Circular Linked List?,The last node of the list points back to the first node ($head$) instead of $None$.
+"In a Singly Circular Linked List, what does the $next$ pointer of the final node contain?",The address of the $head$ node.
+How does the termination condition of a traversal loop change in a Circular Linked List?,The loop stops when $T.next$ equals $head$ instead of $None$.
+Name an Operating System problem that is modeled using a Circular Linked List.,The Dining Philosophers problem.
+Which CPU scheduling algorithm relies on the cyclic nature of Circular Linked Lists?,The Round Robin algorithm.
+How does the Round Robin algorithm utilize a Circular Linked List?,"It cycles through processes, giving each a small amount of time before returning to the first process."
+"In a Circular Doubly Linked List, what does $head.prev$ point to?",It points to the last node of the list.
+"In a Circular Doubly Linked List, what does the $next$ pointer of the last node point to?",It points to the $head$ node.
+"When converting a standard DLL to a Circular DLL, how many total pointers must be modified at the boundaries?",Two: $last.next$ (to $head$) and $head.prev$ (to $last$).
+"To convert a standard Singly Linked List code to Circular, which keyword in the while loop is replaced by `self.head`?",The keyword $None$ (or $null$).
+"In the context of the video, what is the ultimate goal of learning steps and logic before writing code?","To master the algorithm, which makes writing the actual code trivial."
+"What logic handles deletion from the beginning, middle, and end in the provided DLL implementation?",A single function that uses conditional checks for $head$ and boundary positions to handle all cases.
+"During a middle deletion, if $T$ is the node to be removed, what does $T.prev.next$ represent?",The forward pointer of the node immediately preceding the one being deleted.
+What is the primary drawback of a Singly Linked List mentioned in the source?,The inability to backtrack or traverse in the reverse direction.
+"If a user wants to practice DLL logic further, what modification to the node structure is suggested?","Increasing the number of pointers to four (e.g., Forward, Backward, Top, Bottom)."
+What is the purpose of a temporary pointer like `T` in linked list operations?,To traverse the list without losing the reference to the $head$ node.
+"In a DLL, what identifies a node as NOT being the last node?",Its $next$ pointer is not equal to $None$.
+"True or False: In a Circular Linked List, the list has a definite starting node but no definite 'null' termination.",True.
+"When traversing a Circular Linked List, why must you use $T.next \ne head$ instead of $T \ne head$ as a loop condition?",Using $T \ne head$ would prevent the loop from starting if $T$ is initialized to $head$.
+"In the deletion logic, if the data is not found at the current node $T$, what is the next step?",Advance the pointer using $T = T.next$.
+"In a DLL, if you are at node $N$, how do you access the data of the node immediately before it?",Using the expression $N.prev.data$.
+What identifies the beginning of a Doubly Linked List in a traversal from right to left?,Reaching a node where the $previous$ pointer is $None$.
+The process of visiting every node in a linked list is known as _____.,Traversing.
+Which part of the DLL node is updated to link a list in the reverse direction?,The $previous$ (or $prev$) pointer.
+"In the provided Python code, what does `self.head = temp` accomplish?",It reassigns the list's entry point to the node referenced by `temp`.
+What is the visual indicator used in the video to distinguish a DLL in print output?,"Double-sided arrows (e.g., `<->`) between node values."
+"In a Circular DLL, if you move backward from the $head$ node, which node do you reach?",The last node of the list.
