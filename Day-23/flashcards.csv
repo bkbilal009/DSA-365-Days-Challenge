@@ -1,0 +1,59 @@
+"In the context of computer science, what is the definition of 'Data'?",Data is a set of information or a collection of raw facts used to build software.
+What is the primary purpose of a 'Data Structure'?,A data structure is a method or container used to store and organize information in memory for efficient access.
+Concept: Algorithm,Definition: A specific set of instructions or steps followed to perform a task or solve a problem.
+Why is measuring code performance with a physical clock considered unreliable?,"Physical time varies based on background processes, computer hardware configurations, and system performance at that moment."
+Why is the number of lines of code an inaccurate measure for program efficiency?,"A single line involving a loop can execute thousands of times, making it more intensive than multiple lines of simple code."
+How is 'Time Complexity' formally defined in algorithm analysis?,It is a mathematical method used to calculate and compare the execution time of an algorithm as the input size grows.
+What does the variable $n$ typically represent in time complexity notations?,The variable $n$ represents the size of the input provided to the algorithm.
+"When calculating overall time complexity, which part of the mathematical equation is retained?","Only the most dominant term (the highest order of growth) is kept, while lower-order terms and constants are ignored."
+Which notation is used to represent the 'Best Case' scenario of an algorithm's time complexity?,The $\Omega$ (Omega) notation is used to denote the lower bound or best case performance.
+Which notation is used to represent the 'Average Case' scenario of an algorithm's time complexity?,The $\Theta$ (Theta) notation is used to denote the average execution time.
+Which notation is used to represent the 'Worst Case' scenario of an algorithm's time complexity?,The Big $O$ notation is used to denote the upper bound or worst case performance.
+Why do developers prioritize 'Worst Case' analysis over other scenarios?,Worst case analysis ensures that the software is prepared for the most demanding conditions possible.
+A program consisting only of simple print statements and assignments has what time complexity?,"The time complexity is $O(1)$, also known as constant time."
+Under what condition is an algorithm said to have $O(n)$ time complexity?,"An algorithm has $O(n)$ complexity when the execution time increases linearly with the input size, typically seen in a single loop."
+"What is the time complexity of a program containing two independent, sequential loops that both run $n$ times?",The time complexity remains $O(n)$ because lower constants are neglected in asymptotic analysis.
+How does a loop running $n/2$ times compare to a loop running $n$ times in Big $O$ notation?,Both are considered $O(n)$ because constant multipliers or divisors do not change the linear growth rate.
+What time complexity is associated with a single nested loop (a loop inside a loop) where both run $n$ times?,"The time complexity is $O(n^2)$, also known as quadratic time."
+What time complexity is associated with triple nested loops where each loop runs up to $n$?,"The time complexity is $O(n^3)$, also known as cubic time."
+A loop that repeatedly divides the input size $n$ by 2 until it reaches 1 has what time complexity?,The time complexity is $O(\log n)$.
+"How does multiplying a loop counter by a constant (e.g., $i = i * 2$) affect time complexity compared to addition?","Multiplicative or divisive changes to the counter result in $O(\log n)$ complexity, whereas addition results in $O(n)$."
+"If an algorithm contains one $O(n^2)$ block and one $O(n)$ block, what is the total Big $O$ complexity?",The total complexity is $O(n^2)$ because the most dominant term defines the upper bound.
+"Order the following growth rates from slowest to fastest: $n^2$, $1$, $2^n$, $n$, $\log n$.",$1 < \log n < n < n^2 < 2^n$
+What is the primary characteristic of an 'Array' data structure?,An array is a collection of elements stored in continuous memory locations.
+How do standard Python lists differ from arrays in languages like C or Java regarding data types?,"Standard Python lists can be heterogeneous (storing different data types), while arrays in C or Java are typically homogeneous."
+"Which Python module is required to create a basic, homogeneous array?",The `array` module must be imported.
+"In the Python `array` module, what does the 'type code' represent?",The type code is a single character that specifies the data type and size of the elements allowed in the array.
+What is the purpose of the type code 'i' in a Python array?,The type code 'i' represents a signed integer.
+What is the purpose of the type code 'd' in a Python array?,The type code 'd' represents a double-precision floating-point number.
+At what number does indexing begin for arrays in Python?,Array indexing in Python starts at $0$.
+What is the function used to find the total number of elements in a Python array?,The `len()` function is used to determine the length of an array.
+How does the `append()` method modify an array?,The `append()` method adds a single new element to the very end of the array.
+How does the `insert()` method differ from the `append()` method?,"The `insert()` method adds an element at a specific index, whereas `append()` only adds to the end."
+What is the effect of the `reverse()` method on an array?,The `reverse()` method flips the order of all elements in the array in place.
+Which array method is used to remove an element by specifying its index?,The `pop()` method is used to remove an element at a given index.
+"If no index is provided to the `pop()` method, which element is removed from the array?",The very last element of the array is removed.
+Which array method is used to remove an element by specifying its actual value rather than its index?,The `remove()` method is used to delete the first occurrence of a specific value.
+"In array slicing, what does the syntax `array[2:5]` represent?","It creates a new sub-array containing elements from index 2 up to, but not including, index 5."
+"What is the purpose of a negative index, such as `-1`, in Python array operations?","A negative index refers to elements starting from the end of the array, with `-1` being the last element."
+What specific slicing syntax is used to create a reversed copy of an array?,The syntax `[::-1]` is used to reverse an array via slicing.
+Which method is used to find the index of the first occurrence of a specific value in an array?,The `index()` method is used to search for a value's position.
+Why might a programmer choose the `numpy` library over the standard `array` module for arrays?,`numpy` provides more advanced functionality and better support for multi-dimensional arrays.
+What is the fundamental difference between an Array and a Linked List regarding memory allocation?,"Arrays use continuous memory, while Linked Lists use non-continuous memory connected by pointers."
+What are the two basic components of a 'Node' in a Singly Linked List?,A Node consists of a 'Data' field to store information and a 'Next' field to store the address of the following node.
+What is the purpose of the 'Head' pointer in a Linked List?,"The Head pointer stores the address of the first node, serving as the entry point to the list."
+How is the end of a Singly Linked List identified during traversal?,The end is identified when the 'Next' pointer of a node is `None` (or null).
+"In Python, which keyword is used to represent the absence of a value in a node's 'Next' pointer?",The keyword `None` is used.
+What is a major disadvantage of a Singly Linked List compared to a Doubly Linked List?,A Singly Linked List only allows for forward traversal; it is impossible to move backward to a previous node.
+"When implementing a Singly Linked List in Python, why is a separate 'Node' class created?","A class is required to define a custom, user-defined data type that can hold both data and a reference to another object."
+What is the standard time complexity for inserting a node at the beginning of a Singly Linked List?,The time complexity is $O(1)$ because it only involves updating the Head and the new node's Next pointer.
+What is the standard time complexity for inserting a node at the end of a Singly Linked List with only a Head pointer?,The time complexity is $O(n)$ because the entire list must be traversed to find the last node.
+Why is it important to never move the 'Head' pointer during list traversal?,"Moving the Head pointer would result in losing the reference to the start of the list, making previous nodes inaccessible."
+How does 'Slicing' an array differ from 'Indexing'?,"Indexing retrieves a single element, while slicing extracts a range of elements as a new sub-array."
+Process: Linked List Traversal,"Step: Initialize a temporary pointer to Head, then repeatedly update it to `pointer.next` until it reaches `None`."
+What happens when an algorithm uses a loop where the counter $i$ is divided by a factor in each step?,"The number of iterations is reduced exponentially, resulting in a logarithmic time complexity of $O(\log n)$."
+True or False: $O(n \log n)$ is more efficient than $O(n)$.,False ($O(n)$ is more efficient because it grows at a slower rate than $O(n \log n)$).
+"When using `array.pop(3)` in Python, what specific action is taken?",The element at the fourth position (index 3) is removed and returned.
+"In a Python class, what is the role of the `self` parameter in a method?","It represents the instance of the object itself, allowing access to its attributes and other methods."
+Concept: Dynamic Array,Definition: An array that can automatically resize itself during runtime to accommodate more elements.
+Which specific Linked List operation requires searching for a specific value before performing a modification?,Insertion in the middle (after a specific element) requires an initial search operation.
