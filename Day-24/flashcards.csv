@@ -1,0 +1,55 @@
+"In function comparison, what is the 'sampling method'?","Testing specific values for $n$ (e.g., $n=2, 3, 4$) to observe which function grows faster."
+What is the primary mathematical tool used to compare complex functions like $n^2 \log n$ and $(n \log n)^{10}$?,Applying logarithms to both sides of the comparison.
+Complete the logarithmic property: $\log(a \cdot b) = \dots$,$\log a + \log b$
+Complete the logarithmic property: $\log(\frac{a}{b}) = \dots$,$\log a - \log b$
+Complete the logarithmic property: $\log(a^b) = \dots$,$b \log a$
+How is the equation $a^b = n$ expressed in logarithmic form?,$b = \log_a n$
+"According to the logarithmic identity used for function simplification, $a^{\log_a b}$ is equal to _____.",$b$
+"When comparing $n^2 \log n$ and $(n \log n)^{10}$, applying $\log$ to $n^2 \log n$ yields what expression?",$2 \log n + \log(\log n)$
+"When comparing $n^2 \log n$ and $(n \log n)^{10}$, applying $\log$ to $(n \log n)^{10}$ yields what expression?",$10 \log n + 10 \log(\log n)$
+"Between $2 \log n + \log(\log n)$ and $10 \log n + 10 \log(\log n)$, which function is greater?",$10 \log n + 10 \log(\log n)$
+How does the function $2^{\sqrt{n} \log_2 n}$ simplify using logarithmic properties?,$n^{\sqrt{n}}$
+How do $3n^{\sqrt{n}}$ and $n^{\sqrt{n}}$ relate asymptotically?,They are asymptotically equal ($O(n^{\sqrt{n}})$).
+"In Big $O$ notation, why are $3n^{\sqrt{n}}$ and $n^{\sqrt{n}}$ considered equal?",Constant coefficients are ignored in asymptotic analysis.
+What is the objective of the 'Array Partition' problem (LeetCode 561)?,Maximize the sum of the minimums of $n$ pairs created from $2n$ integers.
+"In the array $\{1, 4, 3, 2\}$, what pairing results in the maximum sum of minimums?","$(1, 2)$ and $(3, 4)$"
+Why is it suboptimal to pair the smallest element with the largest element in the Array Partition problem?,The largest value is 'wasted' because the minimum of the pair will always be the smallest element.
+"To maximize the sum of minimums in Array Partition, each element should be paired with its _____.",Next smallest neighbor (after sorting).
+What is the first step in the basic algorithmic approach to solve Array Partition?,Sort the input array in ascending order.
+"After sorting the array for Array Partition, which indices are summed to find the result?","All even indices ($0, 2, 4, \dots$)."
+What is the time complexity of the sorting-based approach for Array Partition?,$O(n \log n)$
+What is the space complexity of the sorting approach when using an in-place sort like QuickSort?,$O(\log n)$ (due to recursion stack) or $O(1)$.
+Under what condition is 'Counting Sort' a better alternative for Array Partition than standard sorting?,When the range of the integer values in the array is small.
+What is the value range for elements in the LeetCode 561 problem?,$-10^4$ to $10^4$.
+Why is an offset needed when using Counting Sort for the Array Partition problem?,To map negative integer values to valid non-negative array indices.
+"What offset value is added to each element to map the range $[-10^4, 10^4]$ to a frequency array?","$10,000$"
+"What is the size of the frequency array required for the range $[-10^4, 10^4]$?","$20,001$ ($2 \cdot 10^4 + 1$)."
+"In the Counting Sort approach, if an element $x$ is $-10,000$, what is its index in the frequency array?",$0$
+"In the Counting Sort approach, if an element $x$ is $10,000$, what is its index in the frequency array?","$20,000$"
+"In the Counting Sort implementation, what does the `isEvenIndex` boolean flag track?",Whether the current occurrence of an element should be added to the sum.
+How does the algorithm handle frequencies greater than 1 for a single index in the Counting Sort approach?,"It uses a loop to process the element multiple times, toggling the 'even index' flag for each instance."
+"If `isEvenIndex` is true and we encounter an element at index $i$ in the Counting Sort array, what value is added to the sum?","$i - 10,000$"
+What is the time complexity of the Counting Sort approach for Array Partition?,"$O(n + k)$, where $k$ is the range of values."
+What is the space complexity of the Counting Sort approach for Array Partition?,"$O(k)$, where $k$ is the range of values."
+"In the Counting Sort implementation, what happens to the `isEvenIndex` flag after every element processed?","It is flipped (e.g., from `true` to `false`)."
+Why does the frequency array in Counting Sort effectively sort the elements?,"Iterating through the array from index $0$ to $20,000$ visits elements in non-decreasing order."
+"If the input array is $\{1, 2, 2, 5\}$, what indices in the Counting Sort array (offset $10^4$) will have non-zero frequencies?","$10001$, $10002$, and $10005$."
+"In the counting sort approach, which element is retrieved from index $10000$?",$0$
+Concept: Asymptotic Equality,"Definition: Two functions grow at the same rate as $n$ approaches infinity, differing only by a constant factor."
+Formula: Mapping an element $x$ to a frequency index $i$ with offset $K$.,$i = x + K$
+Formula: Retrieving the original value $x$ from frequency index $i$ with offset $K$.,$x = i - K$
+"In the Array Partition problem, if the array length is $2n$, how many pairs are formed?",$n$
+"For the function comparison $n^2$ vs $n^3$, which function acts as the upper bound for the other?",$n^3$ is the upper bound for $n^2$.
+"If $\log_a n = b$, then the base of the logarithm is _____.",$a$
+"In complexity analysis, $\log n$ usually refers to a logarithm with base _____.",$2$
+Why is the sorting approach for Array Partition considered $O(n \log n)$?,The bottleneck of the algorithm is the sorting step.
+"In the sorting approach for Array Partition, why is the loop increment `i += 2`?","To skip the second element of each pair, as we only need the minimum (the first element of the sorted pair)."
+"When using Counting Sort for LC 561, what is the value of $k$ in $O(n+k)$?","$20,000$ (the range of possible values)."
+Is the Array Partition problem solvable with an odd number of elements?,"No, the problem specifies $2n$ integers to ensure distinct pairs can be formed."
+"If an array is $\{6, 2, 6, 5, 1, 2\}$, what is the maximized sum of minimums?","$9$ (from pairs $(1,2), (2,5), (6,6)$)."
+What is the purpose of the 'lower bound' in function comparison?,To identify a function that stays below or equal to another function's growth rate.
+"In the expression $3 \log n + \log(\log n)$, which term dominates as $n$ becomes very large?",$3 \log n$
+Applying $\log$ to $2^{\sqrt{n}}$ results in _____.,$\sqrt{n} \log 2$
+"True or False: Asymptotically, $n^2$ is smaller than $n^2 \log n$.",True
+"If the range of numbers in an array is $10^9$, why is Counting Sort avoided?",The space complexity $O(k)$ would require an excessively large array ($10^9$ elements).
+"In Java, what is the default sorting algorithm for primitive arrays used in `Arrays.sort()`?",Dual-Pivot Quicksort.
