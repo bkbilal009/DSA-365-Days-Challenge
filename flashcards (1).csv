@@ -1,0 +1,45 @@
+"In the brute force approach for finding the intersection of two linked lists, how is each node of the first list checked against the second?",A nested loop is used to compare the current node of the first list with every node in the second list.
+What is the time complexity of the nested loop approach to find the intersection of two linked lists with lengths $m$ and $n$?,$O(m \times n)$
+What is the space complexity of the nested loop approach for the intersection of two linked lists problem?,$O(1)$
+How does the Hash Set approach (Approach 2) identify the intersection of two linked lists?,It stores all nodes of the first list in a set and then checks if any node from the second list exists in that set.
+What is the time complexity of the Hash Set approach for finding the intersection of two linked lists?,$O(m + n)$
+What is the space complexity of the Hash Set approach for the intersection of two linked lists?,"$O(m)$ or $O(n)$, depending on which list is stored in the set."
+"In the two-pointer switching approach (Approach 3) for intersection, what happens when a pointer reaches the end of its current list?",It is reassigned to the head of the other linked list.
+Why do the two pointers in Approach 3 eventually meet at the intersection point or null?,Both pointers travel the same total distance of $x + y + z$ nodes before meeting.
+What is the space complexity of the two-pointer switching approach for finding the intersection of two linked lists?,$O(1)$
+"If two linked lists do not intersect, where will the two pointers in the switching approach (Approach 3) meet?",They will both eventually become null at the same time.
+What is the first step in the length-difference approach (Approach 4) for finding a linked list intersection?,Calculate the lengths of both linked list $A$ and linked list $B$.
+"In Approach 4 for intersection, what is done with the pointer of the longer list after calculating the length difference $D$?",The pointer is moved forward $D$ steps so both pointers start from an equal distance to the ends.
+Why should node references be compared instead of node values when finding an intersection?,"Two different nodes can have the same value, but only identical memory addresses indicate a shared node."
+"In the Palindrome Linked List problem, why is an ArrayList used in Approach 1?","It allows for constant-time access to elements by index, making the two-pointer comparison efficient."
+How is the list compared in the ArrayList approach for checking a palindrome?,"A 'left' pointer starts at index $0$ and a 'right' pointer starts at the last index, moving toward the middle."
+What is the space complexity of copying a linked list into an ArrayList to check for a palindrome?,$O(n)$
+What are the three high-level steps for the optimal $O(1)$ space palindrome check?,"1. Find the middle, 2. Reverse the second half, 3. Compare the first and second halves."
+Which technique is used to find the middle of a linked list efficiently?,The slow and fast pointers approach (Tortoise and Hare).
+"In the palindrome middle-finding logic, how many steps does the fast pointer take for every one step the slow pointer takes?",Two steps.
+"When finding the middle of a linked list, what is the loop condition for the fast pointer?",While `fast != null` and `fast.next != null`.
+From which node should the reversal of the second half begin in the palindrome problem?,It should begin from the node immediately following the slow pointer (`slow.next`).
+"In the linked list reversal logic, what three pointers are typically managed in each iteration?","Previous, current, and a temporary next pointer."
+"During the palindrome comparison step, what determines that the list is a palindrome?",The values in the first half and the reversed second half are identical for all corresponding nodes.
+What is the space complexity of the approach that reverses the second half to check for a palindrome?,$O(1)$
+Why is it recommended to reverse the second half of the linked list back to its original state after a palindrome check?,To ensure the function does not have side effects that permanently modify the input data structure.
+"In the 'Delete Node in a Linked List' problem (LeetCode 237), what key piece of information is missing?",The head of the linked list is not provided.
+What is the primary constraint regarding the node to be deleted in LeetCode 237?,The node to be deleted is guaranteed not to be the tail node.
+How is the value of the node to be deleted updated in LeetCode 237?,It is replaced with the value of the next node: `node.val = node.next.val`.
+"After copying the next node's value, how is the 'deletion' completed in LeetCode 237?",The current node is linked directly to the node after its next: `node.next = node.next.next`.
+What is the time complexity of deleting a node when given only a pointer to that node?,$O(1)$
+What is the space complexity of the node deletion logic described in the source?,$O(1)$
+Why is a temporary pointer (`curr`) used instead of moving the `head` during linked list traversal?,To preserve the original reference to the start of the list for future use.
+"In the `reverseList` function, what does the `previous` pointer point to after the loop finishes?",The new head of the reversed portion of the linked list.
+What is the edge case check for the palindrome problem involving a single node?,"If the head or `head.next` is null, the list is considered a palindrome (return true)."
+"In the length-difference approach, why is a null-safety check used in the final comparison loop?",To prevent null pointer exceptions if one list is shorter or if no intersection exists.
+What is the purpose of the line `node.next = node.next.next` in the delete node logic?,It effectively removes the next node from the list by skipping over its reference.
+"In the switching heads approach for intersection, what is the maximum number of nodes visited by each pointer?",$m + n$ nodes.
+"In the reversal logic, why is the next node stored in a temporary variable before changing `curr.next`?",To maintain the link to the rest of the list so traversal can continue after reversing the current node's pointer.
+The technique of using a slow and fast pointer to find the middle is sometimes called _____.,The Tortoise and Hare algorithm.
+Why is the brute force approach for linked list intersection often considered inefficient?,Its quadratic time complexity ($O(m \times n)$) makes it slow for large lists compared to $O(m + n)$ alternatives.
+What code line resets the `head` pointer in Approach 4 of the intersection problem?,`currA = headA;` and `currB = headB;` after the lengths are calculated.
+"In the Palindrome check, what happens to the `isPalindrome` flag if a mismatch is found?",It is set to `false` and the comparison loop is terminated.
+How is the 'current' pointer updated in a standard linked list reversal loop?,It moves to the previously stored temporary 'next' node.
+"In the deletion logic, what happens to the node that originally followed the target node?",It is bypassed by the target node's `next` pointer and eventually garbage collected.
+What is the time complexity of the length-difference approach (Approach 4) for intersection?,$O(m + n)$
