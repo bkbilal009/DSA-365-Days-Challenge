@@ -1,0 +1,50 @@
+"In the problem where a node is deleted from a singly linked list without access to the head, what is the guaranteed property of the node to be deleted?",The node to be deleted is guaranteed not to be the last node (tail) in the list.
+"In a singly linked list deletion where the head is unknown, what information is transferred from the next node to the current node?",The value of the next node is assigned to the current node's value.
+What is the specific Python line used to copy the value from the following node during a 'head-less' node deletion?,`node.val = node.next.val`
+"After copying the value from the next node in a linked list deletion, how is the original next node bypassed?",The current node's next pointer is set to the node following the next node (`node.next = node.next.next`).
+"Deleting a node by skipping its address in memory means the node's value no longer exists in the list, though it may still be in _____.",Memory
+"If a linked list has 4 elements and one is successfully deleted using the 'skip-address' method, the resulting count of nodes will be _____.",3
+"When deleting a node in the middle of a list without the head, what happens to the order of elements located before the deleted node?",The order of elements before the deleted node remains unchanged.
+What must happen to the order of elements located after the deleted node in a linked list deletion?,The relative order of all subsequent elements must remain the same.
+Why is the 'node.next.val' approach not used if the node to be deleted is the last node in the list?,The last node does not have a next node from which to copy a value.
+What is the primary goal of the 'Reverse Linked List' problem?,To reverse the direction of all pointers in the list and return the new head.
+"To reverse a singly linked list iteratively, how many pointers are typically required to track nodes?",Three pointers are required.
+"In a linked list reversal, which pointer is initialized to 'None' (or 'null') at the start?",The 'Previous' pointer ($prev$).
+Which pointer is initially set to the 'head' node at the beginning of a linked list reversal?,The 'Current' pointer ($curr$).
+Why is a 'Temporary' pointer necessary during the reversal of a singly linked list?,It stores the address of the next node before the current node's pointer is redirected.
+"During one step of list reversal, after saving the next node, to what is '$curr.next$' assigned?",It is assigned to the '$prev$' pointer.
+"In the iterative reversal process, what is the next step for the '$prev$' pointer after updating '$curr.next$'?",The '$prev$' pointer moves forward to the position of the '$curr$' node.
+"In the iterative reversal process, what is the final step of the loop for the '$curr$' pointer?",The '$curr$' pointer moves forward to the position stored in the 'Temporary' ($temp$) pointer.
+What is the termination condition for the loop in an iterative linked list reversal?,The loop continues as long as the 'Current' pointer is not null (None).
+"Once the reversal loop finishes, which pointer represents the new head of the list?",The 'Previous' ($prev$) pointer.
+What is the time complexity ($O$) for reversing a singly linked list with $n$ nodes?,The time complexity is $O(n)$.
+What is the space complexity ($O$) of an iterative linked list reversal?,The space complexity is $O(1)$ because it uses a constant amount of extra memory.
+"In the 'Removing Stars From a String' problem, what two things are removed when a star is encountered?",The star itself and the closest non-star character to its left.
+Which data structure is most efficient for solving the 'Removing Stars' problem due to its LIFO nature?,A stack.
+"When processing a string for stars, what action is taken if the current character is NOT a star?",The character is pushed (appended) onto the stack.
+"When processing a string for stars, what action is taken when a star character ('*') is encountered?",The top element is popped from the stack.
+"In Python, which list method is used to remove the last added element from a stack?",The `pop()` method.
+"In Python, which list method is used to add a new character to the top of a stack?",The `append()` method.
+How are the remaining characters in a stack converted back into a single string in Python?,By using the `''.join(stack)` method.
+What is the time complexity of removing stars from a string of length $n$ using a stack?,The time complexity is $O(n)$.
+"In the problem 'Remove All Adjacent Duplicates In String', what defines a pair that should be removed?",Two adjacent letters that are equal.
+"When using a stack to remove adjacent duplicates, what is the condition for popping the stack?",The stack must not be empty and the current character must equal the character at the top of the stack.
+"In Python, how do you access the 'top' (last element) of a list-based stack without removing it?","By using the index `-1` (e.g., `stack[-1]`)."
+What is the purpose of the condition `if stack:` before checking the top value during duplicate removal?,"It ensures the stack is not empty, preventing an index error."
+"If the current character does not match the top of the stack in the duplicate removal problem, what is the next step?",The current character is appended to the stack.
+What is the definition of 'LIFO' in the context of a stack?,"Last-In, First-Out."
+How does the 'Removing Stars' problem guarantee that the operation is always possible?,The input is generated such that there will always be a non-star character to the left of every star.
+"In the removal of adjacent duplicates, why is the process repeated until no more removals are possible?",Removing one pair may create a new adjacent duplicate pair that was not adjacent before.
+What is 'Brute Force' in algorithm design?,"A straightforward approach that tries every possibility, often resulting in higher time complexity."
+What is an 'Optimized' approach in DSA?,An algorithm designed to solve a problem with the minimum possible time or space complexity.
+"In LeetCode, what is the purpose of the `Solution` class and its methods?",They provide a pre-structured environment using Object-Oriented Programming for the user to implement their logic.
+Which Python framework is mentioned as a 'fully functionalized' option for web backends?,Django.
+Which two Python frameworks are recommended for smaller or more optimized web API development?,FastAPI and Flask.
+True or False: Python is typically used for the front-end (visual layout) of a website.,"False (Languages like HTML, CSS, and JavaScript are used for front-end)."
+"In Python's `''.join(list)` method, what does the empty string `''` represent?","It represents the separator, meaning characters will be joined with no spaces or characters between them."
+"If a stack contains `['l', 'e', 'e', 't']` and we apply `''.join(stack)`, what is the output?","""leet"""
+"When reversing a linked list, what value is returned if the input head is empty?",None (or null).
+"In the stack-based star removal logic, what is the 'indicator' that tells the program to pop?",The presence of a star character (`*`).
+How does a singly linked list differ from a doubly linked list regarding movement?,"A singly linked list only allows forward movement, while a doubly linked list allows both forward and backward movement."
+What is the space complexity of the stack-based string cleaning algorithms if we consider the output storage?,$O(n)$ because the stack stores up to $n$ characters.
+"In the adjacent duplicate removal example with string ""abbaca"", why is 'a' eventually removed?","After 'bb' is removed, the two 'a' characters become adjacent and are then removed."
