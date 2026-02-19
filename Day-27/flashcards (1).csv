@@ -1,0 +1,64 @@
+"In Data Structures and Algorithms, what does 'Time Complexity' represent?",The relationship between the number of operations performed and the input size.
+Why is 'run time' measured in seconds considered an unreliable standard for algorithm efficiency?,"It depends on machine-specific factors like RAM, CPU, GPU, and internet speed."
+"In a Time Complexity graph, what is typically represented on the $x$-axis?",The number of operations or input size ($n$).
+"In a Time Complexity graph, what does the $y$-axis represent?",The number of executions or the time taken to process the input.
+Big O notation ($O$) specifically denotes the _____ case scenario for an algorithm.,Worst
+Which asymptotic notation is used to describe the 'best case' scenario?,Omega ($\Omega$)
+Which asymptotic notation is used to describe the 'average case' scenario?,Theta ($\Theta$)
+"When calculating Big O, what should be done with constant values (e.g., $5n + 100$)?",They should be ignored to focus on the highest-order term.
+"If a function is defined as $f(n) = n^3 + n^2 + n$, what is its Big O complexity?",$O(n^3)$
+"When analyzing the efficiency of a system for 'unlimited users,' which case scenario must be prioritized?",The worst-case scenario (Big O).
+"To properly assess Big O, input values ($n$) should be assumed to be in the range of _____.",Millions or billions
+What is the name for $O(1)$ complexity?,Constant Time
+Why does a single `print` statement inside a loop that does not depend on the loop index have $O(1)$ complexity?,Because the execution of that specific operation remains fixed regardless of input size.
+What is the name for $O(n)$ complexity?,Linear Time
+Provide a common example of an algorithm with $O(n)$ complexity.,Linear search (traversing an array element by element).
+What is the name for $O(n^2)$ complexity?,Quadratic Time
+Which programming structure most commonly results in $O(n^2)$ complexity?,Nested loops (a loop within a loop).
+What is the name for $O(\log n)$ complexity?,Logarithmic Time
+Under what condition does a loop typically result in $O(\log n)$ complexity?,When the loop index is doubled or halved in every iteration.
+What is the common Big O complexity for efficient sorting algorithms?,$O(n \log n)$
+What is the name for $O(2^n)$ complexity?,Exponential Time
+The recursive calculation of the Fibonacci sequence with branching typically results in _____ complexity.,$O(2^n)$
+Approximately how many operations can a standard modern computer perform per second?,$10^8$
+How is the total complexity calculated for sequential code blocks (one loop followed by another)?,"By adding the complexities (e.g., $n + n = 2n$, simplified to $O(n)$)."
+How is total complexity calculated for nested code blocks (a loop inside another)?,"By multiplying the complexities (e.g., $n \times n = n^2$)."
+How does $O(\log n)$ compare to $O(n)$ as input size increases significantly?,$O(\log n)$ is significantly more efficient because the number of operations grows very slowly.
+Why is $O(n^2)$ often considered the 'danger zone' for large datasets?,"The number of operations grows quadratically, potentially leading to system hangs or crashes."
+"What is the primary goal of LeetCode Problem 50 (Pow(x, n))?",To implement a function that calculates $x$ raised to the power $n$ ($x^n$).
+What is the time complexity of the 'Naive' approach to calculating $x^n$?,$O(n)$ (multiplying $x$ by itself $n$ times).
+"Which algorithmic strategy is used to optimize the Power(x, n) calculation to $O(\log n)$?",Divide and Conquer
+"In the optimized Power algorithm, what is the result if the exponent $n$ is $0$?",1
+How should a negative exponent ($n < 0$) be handled when calculating $x^n$?,By calculating the reciprocal: $(1/x)^{-n}$ (where $-n$ is positive).
+"In the Divide and Conquer Power algorithm, what is the logic for an 'even' exponent $n$?",Calculate $Half = x^{n/2}$ and return $Half \times Half$.
+"In the Divide and Conquer Power algorithm, what is the logic for an 'odd' exponent $n$?",Calculate $Half = x^{n/2}$ and return $x \times Half \times Half$.
+What programming technique involves a function calling itself to solve smaller sub-problems?,Recursion
+"In recursion, what is the 'base case'?",The condition under which the function stops calling itself to prevent infinite loops.
+How does the space complexity of a recursive solution compare to a simple iterative one?,Recursion typically has higher space complexity due to the recursive call stack.
+Why is the Divide and Conquer approach for $x^n$ categorized as $O(\log n)$?,Because the problem size ($n$) is reduced by half in every recursive step.
+"If $n = 10$, how many multiplications are required in the Naive approach versus the Divide and Conquer approach?","The Naive approach requires 10, while Divide and Conquer requires approximately 4."
+What is 'Space Complexity' in DSA?,The amount of memory an algorithm uses relative to the input size.
+Define 'Linear Search' in the context of Time Complexity.,"A search where every element is checked once, resulting in $O(n)$ complexity."
+What is a 'Matrix' traversal's typical complexity if it has $n$ rows and $n$ columns?,$O(n^2)$
+"In the context of scaling, why would Google require $O(\log n)$ search over $O(n)$?","With billions of web pages, $O(n)$ would take seconds/minutes, while $O(\log n)$ takes milliseconds."
+The process of 'ignoring constants' and 'ignoring smaller powers' is known as _____ analysis.,Asymptotic
+What happens to the graph of an algorithm as its complexity moves from $O(n)$ to $O(n^2)$?,"The line begins to bend or curve upward more sharply, indicating worse performance."
+How is $x^{-2}$ mathematically expressed to make the exponent positive?,$\frac{1}{x^2}$
+"If an algorithm's complexity is $O(n + \log n)$, what is its simplified Big O?",$O(n)$
+"If an algorithm's complexity is $O(n \times \log n)$, what is its simplified Big O?",$O(n \log n)$
+"Which approach to $x^n$ is better for a very large $n$ (e.g., $n = 10^9$)?",Divide and Conquer ($O(\log n)$).
+What term describes a function where the number of operations is independent of the input size?,Constant Time ($O(1)$).
+What is 'Brute Force' in algorithm design?,"A straightforward, unoptimized approach that tries all possibilities, often resulting in high complexity."
+"In the recursive Power function, if $n$ is an integer, how is the decimal result of $n/2$ (like $2.5$) handled?","It is typically truncated or 'floored' to the nearest integer (e.g., $2$)."
+What is the complexity of a loop that runs from $1$ to $n$ but increments by $i = i \times 2$?,$O(\log n)$
+What is the complexity of a loop that runs from $1$ to $n$ but decrements by $i = i / 2$?,$O(\log n)$
+Why is $O(n \log n)$ generally acceptable for sorting but not for simple searching?,Sorting is a more complex task than searching; $O(n \log n)$ is the theoretical best for comparison-based sorts.
+A recursive function with two branches at each step (like Fibonacci) results in a _____ structure.,Tree
+"If $n=1000$ and an algorithm is $O(n^2)$, how many operations are performed?","$1,000,000$ (One million)"
+"If $n=1000$ and an algorithm is $O(\log_2 n)$, approximately how many operations are performed?",10
+What does the 'standardization' of Time Complexity allow engineers to do?,Compare the efficiency of different algorithms regardless of the hardware they run on.
+"In LeetCode 50, if $x=2.0$ and $n=-2$, what is the output?",0.25
+The term 'Divide and Conquer' refers to breaking a problem into _____ of the same type.,Sub-problems
+Which complexity is more efficient: $O(n \log n)$ or $O(n^2)$?,$O(n \log n)$
+Which complexity is more efficient: $O(1)$ or $O(\log n)$?,$O(1)$
+How do constraints like 'n is an integer' and 'x is a float' affect algorithm implementation?,They dictate the data types used for variables and the precision required for the output.
