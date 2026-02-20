@@ -1,0 +1,75 @@
+"In linear search, what specific scenario constitutes the best case?",The target key is located at the first index of the list.
+What is the best case time complexity for a linear search of $n$ elements?,$O(1)$
+Which two scenarios represent the worst case for a linear search algorithm?,The target element is at the last index or is not present in the list.
+What is the worst case time complexity for a linear search of $n$ elements?,$O(n)$
+What is the mathematical definition of average case analysis for an algorithm?,The sum of the time taken for all possible cases divided by the total number of cases.
+"For a list of $n$ elements, what is the average number of comparisons required for a linear search?",$\frac{n+1}{2}$
+"In a Binary Search Tree (BST), what search target results in the best case scenario?",The root element.
+What is the best case time complexity for searching in a Binary Search Tree?,$O(1)$
+"In a Binary Search Tree, what search target results in the worst case scenario?",A leaf element.
+What is the minimum worst case time complexity for searching a BST with $n$ nodes?,$O(\log n)$
+Under what condition does a Binary Search Tree exhibit a maximum worst case time complexity of $O(n)$?,When the tree is skewed (resembling a linked list).
+Why is average case analysis performed less frequently than worst case analysis?,It is mathematically complex and often yields results similar to the worst case.
+"Which data structure property dictates that for every node, smaller elements are on the left and larger elements are on the right?",Binary Search Tree
+"If a startup uses a nested loop ($O(n^2)$) to track riders, what happens when the number of riders reaches 100,000?",The application will likely crash due to exponential increases in processing time and server costs.
+What spatial data structure can be used to divide city blocks into four quadrants for efficient rider tracking?,Quadtree
+How does Google Maps determine junctions where traffic congestion is high?,By analyzing the density of mobile phone signals transmitted to data centers from that location.
+Google Maps represents roads and intersections as a network of _____.,Connections (Graphs)
+Which specific algorithms does Google Maps use to provide multiple route options to a user?,Shortest path algorithms.
+Spotify utilizes _____ and _____ to predict if a user will like a specific artist based on other users' tastes.,Matrices; vectors
+How does Spotify use Natural Language Processing (NLP) for its recommendation engine?,"It categorizes blogs, news articles, and metadata about artists to determine their specific ""vibe."""
+Spotify employs _____ to analyze sound waves and identify similar audio patterns between different songs.,Convolutional Neural Networks
+Concept: Decomposition,"Definition: Breaking a complex problem down into smaller, manageable sub-steps (e.g., breaking sandwich making into opening, spreading, and assembling)."
+Concept: Pattern Recognition,Definition: Identifying repeating sequences or characteristics to apply previously learned solutions to new problems.
+Concept: Abstraction,Definition: Focusing solely on the information necessary to solve a problem while ignoring irrelevant background details.
+What is the goal of Algorithm Formulation?,"To create a perfect, step-by-step list of instructions that cannot be misinterpreted by a system."
+What is the primary difference in memory allocation between standard Arrays and Linked Lists?,"Arrays use continuous memory allocation, while Linked Lists use non-continuous (dynamic) allocation."
+What are the two structural components of a node in a Singly Linked List?,The data (information) and the address (reference) of the next node.
+Singly Linked Lists allow for _____ traversal only.,One-way (Forward)
+"In a Singly Linked List, which variable stores the address of the first node?",The Head pointer.
+What value is stored in the 'next' field of the final node in a Singly Linked List?,None (or NULL)
+"In Python, which keyword is used to create a custom data type for a node?",class
+What is the purpose of the `__init__` method in a Python Node class?,To initialize the node's data and set its next pointer reference.
+What is the purpose of the `self` parameter in Python methods?,It represents the specific instance (object) of the class currently being operated on.
+Why must the `Head` pointer remain at the start of the Singly Linked List during traversal?,"Moving the `Head` forward results in losing the address of previous nodes, making them inaccessible."
+Which temporary pointer logic is used to advance through a Singly Linked List nodes in a loop?,`temp = temp.next`
+What is the time complexity of inserting a new node at the beginning of a Singly Linked List?,$O(1)$
+"To insert a node at the beginning of an SLL, the new node's 'next' pointer must be set to the current _____.",Head pointer address.
+What is the time complexity of inserting a node at the end of a Singly Linked List if no tail pointer is maintained?,$O(n)$
+"During traversal for printing an SLL, what loop condition ensures the pointer stops after the last node is processed?",`while temp is not None`
+"When inserting in the middle of an SLL, why must the new node be linked to the next node *before* the previous node is linked to the new node?",To prevent losing the address of the remaining part of the list.
+What is the time complexity for searching for a specific value within a Singly Linked List?,$O(n)$
+"When deleting a node in an SLL, which extra pointer is necessary to reconnect the list?",A 'Previous' pointer (to track the node before the target).
+How is a node bypassed and effectively deleted in a Singly Linked List?,The 'next' pointer of the previous node is updated to the address of the target node's 'next' node.
+What specific action must be taken if the first node (Head) of an SLL is the one to be deleted?,The Head pointer must be updated to point to the second node in the list.
+"In SLL deletion, what must the previous node's 'next' pointer be set to when deleting the final node?",None
+Why is a Binary Search Tree considered more efficient for searching than a Linear Search?,A balanced BST allows for $O(\log n)$ search time by halving the search space at each step.
+Which real-world application uses Linked List logic to allow users to move back and forth through visited pages?,Web browsers.
+"In Python code, the expression `temp.next = None` indicates that `temp` is now the _____.",Last node (Tail).
+What happens if a programmer fails to update the 'next' pointer of a predecessor during an SLL deletion?,"The list remains unchanged, and the target node is not actually removed from the sequence."
+The height of a balanced Binary Search Tree with $n$ nodes is approximately _____.,$\log n$
+The height of a skewed Binary Search Tree with $n$ nodes is _____.,$n$
+"In terms of efficiency, how does average case complexity usually compare to worst case complexity?","They often belong to the same complexity class (e.g., both are $O(n)$ for linear search)."
+"What determines the ""Minimum Worst Case"" time in a Binary Search Tree analysis?",The minimum possible height of the tree ($O(\log n)$).
+A balanced BST search requires approximately how many comparisons if it contains 8 elements?,3
+Which computational thinking pillar involves determining if water's chemical formula ($H_2O$) is relevant to the task of drinking?,Abstraction
+"In the robot sandwich analogy, what error occurred when given the command ""Take two slices of bread out of the bag""?",The robot might tear one slice into two pieces because it lacks the context of distinct slices.
+"When using the `insert_at_middle` function, what does the parameter `x` typically represent?",The target data value after which the new node should be placed.
+Which asymptotic notation is used to represent the tight bound or exact class of a function?,Theta ($\theta$)
+Is it mathematically correct to use Big-O notation for a best-case analysis?,"Yes, because notations describe functions, and any case can generate a function."
+What is the primary limitation of a Singly Linked List compared to a Doubly Linked List?,It cannot be traversed in reverse.
+"What data structure logic powers the ""Play Next"" functionality in music apps like Spotify?",Singly Linked List
+"In Python SLL implementation, how do you specify a default value of `None` for a node's next pointer in the constructor?",By setting the parameter `next=None` in the `__init__` method signature.
+What is the time complexity of accessing an element by index in a standard Array?,$O(1)$
+What is the time complexity of accessing an element by index in a Singly Linked List?,$O(n)$
+"In the coin weighing algorithm, how many groups should 9 coins be divided into to find the heavy fake in the fewest steps?",3 groups of 3 coins each.
+How many weighing steps are required to find one heavy fake coin among 9 total using an optimal grouping strategy?,2 steps.
+The coin weighing example demonstrates that proper data organization can reduce steps from $n$ to _____.,$\log n$
+"What is the role of a ""Reference Variable"" in Python regarding Linked Lists?",It acts as a pointer by storing the memory address of a node object.
+"In SLL deletion, what instruction is used to stop the loop once the target node is found and removed?",`break`
+"Which SLL operation requires the most logic to handle ""corner cases"" like the start or end of the list?",Deletion
+What happens to the memory of a node that is no longer pointed to by any part of a Linked List?,It becomes eligible for garbage collection as it is no longer accessible.
+Why does a linear search have an average complexity of $O(n)$ even though the average comparisons are $\frac{n+1}{2}$?,"In asymptotic notation, constant coefficients and smaller terms are ignored, leaving the highest order term $n$."
+Google Maps identifies traffic by considering the number of mobile phones at a junction as a _____ on the road network.,Weight
+"If searching for a key not in a list of $n$ elements, how many comparisons are made in a linear search?",$n$
+"The ""Worst Case"" of an algorithm provides a _____ on the resources required.",Upper bound (Maximum guarantee)
