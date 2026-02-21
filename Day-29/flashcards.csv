@@ -1,0 +1,69 @@
+What is the primary definition of 'Computational Thinking' for engineers?,"A systematic, step-by-step approach to thinking through a problem and its solution before writing code."
+Name the four essential elements of Computational Thinking.,"Decomposition, Pattern Recognition, Abstraction, and Algorithmic Formation."
+What does the process of 'Decomposition' involve?,"Breaking down a large, complex problem into smaller, more manageable parts or features."
+Provide an example of Decomposition for a Food Delivery App.,"Dividing the app into sub-systems like secure login, restaurant listing, cart/checkout, and payment."
+"In Computational Thinking, what is 'Pattern Recognition'?","Identifying repeating trends, similarities, or logical sequences within data or problems."
+"What is the next number in the logical sequence: $2, 4, 6, 8, 10, \dots$?",12 (even numbers with a distance of 2).
+"What is the next number in the logical sequence: $1, 4, 9, 16, 25, \dots$?","36 (square of the position: $1^2, 2^2, 3^2, 4^2, 5^2, 6^2$)."
+"What is the logic behind the Fibonacci series: $1, 1, 2, 3, 5, 8, 13, \dots$?",Each number is the sum of the two preceding numbers.
+How is 'Abstraction' defined in the context of problem-solving?,Focusing only on essential information while ignoring unnecessary details that do not impact the core solution.
+"In programming, how do libraries like NumPy or Pandas demonstrate Abstraction?","They provide simple functions for complex tasks, hiding the internal mathematical logic from the user."
+What is 'Algorithmic Formation'?,"Developing a logical, step-by-step procedure or set of rules to solve a specific problem."
+What is the first step in an algorithm to find the maximum value in an array?,Assume the first element of the array is the current maximum.
+What is 'Meta Thinking'?,"The process of 'thinking about thinking,' or analyzing the data and requirements within a problem statement."
+What are 'Invariants' in problem-solving?,"Conditions or rules within an algorithm that never change, regardless of the input data."
+"In Meta Thinking, what does it mean to 'Compress the State'?",Filtering out 'noise' or irrelevant data points to focus on the variables that actually affect the outcome.
+What is the 'Minimal Information Needed' principle?,Identifying the absolute smallest set of essential data required to solve a mathematical or logical problem.
+A standard node in a Doubly Linked List (DLL) consists of which three parts?,"The data (information), a pointer to the next node, and a pointer to the previous node."
+What is the primary advantage of a Doubly Linked List over a Singly Linked List?,It allows for bidirectional traversal (both forward and backward).
+"In a Doubly Linked List, how is the first node (head) uniquely identified?",Its 'previous' pointer is set to $None$ (or $null$).
+"In a Doubly Linked List, how is the last node (tail) uniquely identified?",Its 'next' pointer is set to $None$ (or $null$).
+What real-world software feature is commonly implemented using a Doubly Linked List?,The 'Undo' and 'Redo' functionality in text editors or the 'Back' and 'Forward' buttons in browsers.
+"When inserting a new node at the beginning of a DLL, what must the original head's 'previous' pointer be updated to?",It must point to the new node.
+How many pointers must be adjusted to insert a node in the middle of a Doubly Linked List?,Four pointers must be updated.
+"To delete the first node of a DLL, where must the 'head' pointer be moved?",To the second node ($head.next$).
+What is a Singly Circular Linked List?,A linked list where the last node points back to the head node instead of $None$.
+What is a Doubly Circular Linked List?,"A DLL where the last node's 'next' points to the head, and the head's 'previous' points to the last node."
+What is a common termination condition for traversing a Circular Linked List?,The loop continues until the 'next' pointer of the current node equals the head node ($t.next == head$).
+Which OS scheduling algorithm is a classic application of Circular Linked Lists?,The Round Robin scheduling algorithm.
+"In a Doubly Circular Linked List, what does $head.previous$ point to?",The last node of the list.
+Why is it important for engineers to focus on efficiency (Time and Space) in DSA?,"Because multiple solutions can solve a problem, but the most efficient one performs faster and uses less memory."
+"In the 'Ali's Age' meta-thinking example, why is 'cricket' considered noise?",His hobbies do not impact the mathematical calculation of when he will turn 25.
+What is the risk of moving the 'head' pointer itself during list traversal?,"The reference to the start of the list is lost, making it impossible to access earlier nodes."
+"In the logic of a DLL, if $node.next$ is $None$, what does this indicate?",The node is the current end (tail) of the linked list.
+"The logical sequence Red, Green, Yellow, Red, Green, $\dots$ represents which type of linked list structure?",A Circular Linked List.
+Term: CRUD operations in Linked Lists.,"Create (insertion), Read (traversal/display), Update, and Delete."
+"In a DLL, what does $temp.previous = t$ signify in an insertion operation?",It links the new node ($temp$) back to the existing node ($t$).
+How does Abstraction help a driver operate a car?,The driver focuses on the steering wheel and pedals without needing to understand the internal combustion engine.
+What does 'Thinking about Thinking' help an engineer avoid?,It helps avoid solving the wrong problem by focusing on essential data and logical invariants.
+"In the 'Finding Maximum' algorithm, what is the 'return' value?",The final value stored in the 'max' variable after comparing all elements.
+Why does an engineer need to identify 'Invariants' like 'No team plays twice at the same time'?,To set mandatory logic constraints that the algorithm must satisfy to be valid.
+"In Python, how is an empty Doubly Linked List represented in a class?",By initializing $self.head = None$.
+"When deleting a node in the middle of a DLL, which node's 'previous' pointer must be updated to bypass the deleted node?",The pointer of the node immediately following the one being deleted.
+What is the 'Dining Philosopher' problem used to illustrate?,A scenario that can be modeled and solved using a Circular Linked List.
+"In the tea-making algorithm, what is 'Boil Water' categorized as?",A procedural step in the algorithmic formation.
+What happens to the 'next' pointer of the last node in a standard DLL?,It always points to $None$.
+Why is it necessary to update four pointers when inserting in the middle of a DLL?,To maintain the bidirectional links between the new node and its two neighbors.
+"In a circular singly linked list, what is the $next$ pointer of the last node?",The $head$ node.
+What is the purpose of a 'temporary pointer' during linked list traversal?,To iterate through the nodes without losing or modifying the original 'head' pointer.
+"What is the next number in the sequence: $1, 2, 3, 5, 8, \dots$?",13 (Fibonacci sequence).
+What is the 'Decomposition' of the payment feature in a delivery app?,"Identifying specific methods like Cash, Card, PayPal, or Stripe based on the user's location."
+"In a DLL, if you want to find the node before $t$, which property do you access?",$t.previous$ (or $t.prev$).
+"In the context of 'Meta Thinking', what does the 'Ali is 20' problem illustrate?",How to extract essential variables (Current Age) while ignoring irrelevant context (Location).
+How do you traverse a DLL backwards from the tail?,By following the 'previous' pointers of each node until you reach a node where 'previous' is $None$.
+What does $while\ t.next\ !=\ head$ prevent in a circular list traversal?,It prevents the traversal from entering an infinite loop by stopping at the last node.
+"When creating a new node in Python for a DLL, which function is typically used for initialization?",The $__init__$ (constructor) function.
+What logic handles the 'End' case in a DLL search algorithm?,Checking if the current node's 'next' pointer is $None$.
+"In the tournament scheduler example, what constitutes 'Compressed State'?",Keeping only the team names and match counts while discarding player names or team owners.
+What is the relationship between 'Complexity' and 'Decomposition'?,"Decomposition reduces complexity by breaking a huge problem into small, solvable steps."
+Which node in a DLL has its 'next' pointer as $None$ and its 'previous' pointer pointing to another node?,The last node (tail) of a list with more than one element.
+"In a Circular Linked List, what is the value of the 'last' node's $next$ reference?",The address of the first node ($head$).
+What is 'Systematic Thinking' compared to in the source material?,A recipe used by engineers to reach a solution.
+"If a DLL has only one node, what are the values of its $next$ and $prev$ pointers?",Both pointers are $None$.
+"In DLL insertion at the end, what is the new node's $prev$ pointer set to?",The address of the old last node.
+"In DLL insertion at the end, what is the old last node's $next$ pointer updated to?",The address of the new node.
+What element of Computational Thinking helps an engineer ignore how EasyPaisa or JazzCash handles a transaction?,Abstraction.
+"In the 'Finding Max' algorithm, what is the 'Invariant' property of the 'max' variable?","At any step $i$, 'max' holds the largest value found in the first $i$ elements."
+"In a Doubly Circular Linked List, how do you get from the $head$ to the $tail$ in one step?",Access the $head.previous$ pointer.
+How does Pattern Recognition help during technical interviews?,"It allows the candidate to quickly identify the logic (e.g., squares, Fibonacci) without deep overthinking."
+What is the final goal of the Computational Thinking 'recipe'?,To produce an efficient Algorithmic Formation that can be translated into code.
