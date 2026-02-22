@@ -1,0 +1,50 @@
+What is the primary purpose of using Big O notation in computer science?,To measure and compare the efficiency of algorithms based on the number of operations they perform.
+Why is measuring code efficiency in seconds or clock time considered unreliable?,"It depends on specific hardware factors like CPU, GPU, and the operating system of the machine."
+"How does Big O notation provide a ""standard"" for engineers?",It allows efficiency to be analyzed independent of the hardware or processing power of a specific computer.
+"When calculating Big O, what does the variable $n$ typically represent?",The number of inputs provided to the algorithm.
+"In Big O analysis, why do engineers focus on the ""worst-case scenario""?",It ensures that the algorithm will not perform worse than a specific mathematical limit for any input.
+Term: Time Complexity,Definition: A mathematical representation of the number of operations an algorithm performs as a function of the input size.
+"When simplifying a mathematical equation into Big O notation, what happens to constant numbers (e.g., the $100$ in $n + 100$)?",They are ignored because they do not change the growth rate of the algorithm as $n$ becomes very large.
+Simplify the equation $5n + 2n + 100$ into its Big O representation.,$O(n)$
+"If an algorithm's operation count is represented by $n^2 + 5n$, why is the Big O notation $O(n^2)$?",Big O notation only keeps the term with the highest power because it dominates the growth as $n$ increases.
+"What is the Big O complexity of a single operation, such as printing a word or initializing a variable?",$O(1)$
+Concept: Constant Time,"Definition: The number of operations remains the same regardless of the size of the input $n$, represented as $O(1)$."
+What is the Big O complexity of a single for-loop that runs from $0$ to $n$?,$O(n)$
+Concept: Linear Time,"Definition: The number of operations increases proportionally with the input size $n$, represented as $O(n)$."
+"If $n = 5$ and a loop runs from $0$ to $n-1$, why are there $5$ operations?","Because the index $0$ is counted along with indices $1, 2, 3,$ and $4$."
+What is the Big O complexity of two independent for-loops that run sequentially (one after the other)?,$O(n)$
+How is the Big O complexity determined for nested loops (a loop inside a loop)?,By multiplying the number of iterations of the outer loop by the number of iterations of the inner loop.
+What is the Big O complexity of a loop running $n$ times that contains another loop also running $n$ times?,$O(n^2)$
+"In sequential loops, if one loop runs $n$ times and another runs $n$ times, the result is $2n$; why is this still $O(n)$?",The constant multiplier $2$ is dropped to focus on the linear growth rate.
+"What type of complexity occurs when a loop iterator is multiplied or divided (e.g., $i = i * 2$) at each step?",$O(\log n)$
+Concept: Logarithmic Time,"Definition: Complexity where the number of operations increases very slowly as $n$ grows, represented as $O(\log n)$."
+"If an input $n = 16$ results in only $4$ operations due to doubling the index at each step, what is the complexity type?",Logarithmic ($O(\log n)$).
+"What is the Big O complexity typically associated with recursive algorithms that branch out, like the Fibonacci series?",$O(2^n)$
+Concept: Exponential Time,"Definition: A ""danger zone"" complexity where operations double with every unit increase in $n$, represented as $O(2^n)$."
+"Which graph represents a ""vertical spike"" in run time as the number of inputs increases slightly?",The graph for Exponential Time ($O(2^n)$).
+Approximately how many operations can a standard computer perform per second according to the source material?,$10^8$
+What is the standard Big O complexity of most efficient sorting algorithms?,$O(n \log n)$
+Why might $O(n^2)$ be acceptable for a database of all universities in Pakistan but not for Google Search?,"The number of universities is small (e.g., under $500$), whereas Google handles millions of data points requiring faster response."
+"In the context of the stock market, why is high time complexity ($O(n^2)$ or worse) unacceptable?","Price data changes in milliseconds, and slow execution can lead to buying at the wrong price and losing money."
+The ability of a system like Google to return search results in under a second is primarily due to _____.,optimized algorithms and data structures
+"When $n$ is as large as $10^6$ (one million), why does $O(n^2)$ become impractical?","It would require $10^{12}$ operations, which takes much longer than the $1$ second a standard computer needs for $10^8$ operations."
+"Rule: If a code block contains a loop that ""halves"" or ""doubles"" its range each time, the complexity is _____.",$O(\log n)$
+"True or False: An engineer should always strive for $O(1)$ complexity, regardless of the problem's size or constraints.","False, as engineers must balance optimization effort with the actual requirements of the problem."
+What is the first step recommended for calculating the Big O of a piece of code?,Count how many times the innermost statement runs.
+How does solving $50$ to $70$ problems on platforms like LeetCode help with Big O analysis?,It trains the mind to intuitively recognize patterns like nested or sequential loops.
+"If $n < 500$, an algorithm with complexity $O(n^2)$ will perform at most _____ operations.","$250,000$"
+"In Big O notation, which is more efficient for large datasets: $O(n)$ or $O(n \log n)$?",$O(n)$
+How is $O(n \log n)$ complexity visually different from $O(n)$ on a graph?,It grows slightly faster than a straight linear line but much slower than a quadratic curve ($n^2$).
+"According to the source, why did Google choose highly optimized algorithms?",To ensure customer retention by providing search results almost instantly.
+"If an algorithm is described as having ""linearithmic"" complexity, its Big O is _____.",$O(n \log n)$
+What is the mathematical relationship between the equation $2^k = n$ and logarithmic notation?,$k = \log_2 n$
+"The Big O of a code block with three sequential, non-nested loops of size $n$ is _____.",$O(n)$
+"When analyzing code, should you create a formula for every single variable initialization?","No, you should focus on the parts of the code that scale with the input $n$ (like loops)."
+What happens to the execution time of an $O(n^2)$ algorithm if the input size $n$ doubles?,The execution time (number of operations) quadruples.
+What happens to the execution time of an $O(n)$ algorithm if the input size $n$ doubles?,The execution time (number of operations) also doubles.
+"In the example of a dictionary search, finding a word on the very first page is known as the _____ case.",best
+"True or False: $O(n^2)$ can be considered ""good"" if the input $n$ is very small.",True
+"If a platform like Facebook needs to search through billions of users, why is $O(n)$ search (comparing one by one) insufficient?","The number of operations would be in the billions, taking too much time for a simple login or search request."
+"What is the purpose of the ""Reverse Engineering"" rule described in the lecture?",To determine what Big O complexity is allowed based on the input size $n$ and the time limit (usually $1$ second).
+"If a problem involves ""recursion with branching,"" what is the likely complexity?",$O(2^n)$
+What is the Big O of an algorithm that always takes $5$ minutes to run regardless of whether $n$ is $10$ or $10$ million?,$O(1)$
