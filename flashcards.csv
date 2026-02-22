@@ -1,60 +1,50 @@
-What is the primary structural difference between a Singly Linked List (SLL) and a Doubly Linked List (DLL)?,"A DLL node contains an additional pointer to the previous node, allowing bidirectional traversal."
-Name the three distinct partitions of a Doubly Linked List node.,"Data (or information), the Next pointer, and the Previous pointer."
-Which real-world browser feature is a common application of a Doubly Linked List?,The forward and backward navigation buttons.
-How are 'Undo' and 'Redo' features in text editors typically implemented using data structures?,They utilize a Doubly Linked List to move back and forth through state changes.
-Why does a Doubly Linked List simplify the process of thinking about edge cases in programming?,It requires managing complex relations between nodes in both forward and backward directions.
-What is the default value of the Previous and Next pointers when a new node is first created in a DLL?,Both pointers are typically initialized to $None$ (or $null$).
-"In a Doubly Linked List, what is the value of the $prev$ pointer for the first node ($head$)?",The value is $None$.
-"In a Doubly Linked List, what is the value of the $next$ pointer for the last node?",The value is $None$.
-"When a Doubly Linked List is completely empty, what does the $head$ pointer point to?",It points to $None$.
-What is the identifying characteristic of a middle node in a standard Doubly Linked List?,Neither its $previous$ nor its $next$ pointer is $None$.
-Why is it beneficial to separate the `Node` class from the `DoublyLinkedList` class?,"It allows for the creation of multiple independent linked list objects, each with its own $head$ pointer."
-"In Python, what is the result of executing `head.data` if $head$ points to a Doubly Linked List node?",It accesses the information stored in the second (middle) partition of that node.
-What occurs when inserting the very first node into an empty Doubly Linked List?,"The $head$ pointer is updated to point to the new node, while the node's $next$ and $prev$ remain $None$."
-"To insert a node at the end of a DLL, what condition must be met by the traversal pointer $T$?",$T$ must point to a node where $T.next$ is $None$.
-"When appending a new node ($temp$) to the end of a DLL, what must $T.next$ be updated to point to?",It must point to the new node $temp$.
-"When appending a new node ($temp$) to the end of a DLL, what must $temp.prev$ be updated to point to?",It must point to the previous last node $T$.
-"When inserting a node at the beginning of a DLL, why is it critical to link the new node to the list before updating the $head$ pointer?",Updating $head$ first would cause the program to lose the address of the rest of the list.
-What is the first pointer update required when inserting a new node ($temp$) at the beginning of a non-empty DLL?,$temp.next$ must be set to point to the current $head$.
-"During insertion at the beginning of a DLL, what does $head.prev$ need to be set to before the $head$ pointer itself is moved?",It must be set to point to the new node $temp$.
-"In a DLL, what is the final step in the 'Insert at Beginning' procedure?",Updating the $head$ pointer to the address of the new node ($temp$).
-How does searching in a DLL differ from an SLL when preparing for a middle insertion or deletion?,"In a DLL, you do not need a separate 'previous' pointer variable because the node itself contains its predecessor's address."
-How many pointer updates are generally required to insert a node in the middle of a Doubly Linked List?,Four pointer updates are required.
-"In a middle insertion after node $T$, why should $temp.next$ be set to $T.next$ first?",To ensure the address of the succeeding node is preserved before $T.next$ is overwritten.
-Which pointer connects the new node ($temp$) to the node that was originally after $T$ during a middle insertion?,$temp.next$.
-Which pointer update connects the succeeding node back to the newly inserted $temp$ node?,$T.next.prev = temp$ (or $node\_after\_T.prev = temp$).
-Which pointer update connects the original node $T$ forward to the new node $temp$?,$T.next = temp$.
-Which pointer update connects the new node $temp$ back to the original node $T$?,$temp.prev = T$.
-What is the first check performed in a deletion function for a Doubly Linked List?,"Checking if the $head$ is $None$, indicating the list is empty."
-"When deleting the first node of a DLL, what is the new value of $head.next.prev$?",It becomes $None$.
-"To delete a middle node $T$, how is the preceding node's forward link updated?",$T.prev.next$ is set to $T.next$.
-"To delete a middle node $T$, how is the succeeding node's backward link updated?",$T.next.prev$ is set to $T.prev$.
-"When deleting the last node $T$ of a DLL, which pointer in the previous node must be updated?",$T.prev.next$ must be set to $None$.
-Why is the `return` statement used immediately after a successful deletion inside a search loop?,To terminate the function and prevent unnecessary further iterations or logic execution.
-What is the core concept of a Circular Linked List?,The last node of the list points back to the first node ($head$) instead of $None$.
-"In a Singly Circular Linked List, what does the $next$ pointer of the final node contain?",The address of the $head$ node.
-How does the termination condition of a traversal loop change in a Circular Linked List?,The loop stops when $T.next$ equals $head$ instead of $None$.
-Name an Operating System problem that is modeled using a Circular Linked List.,The Dining Philosophers problem.
-Which CPU scheduling algorithm relies on the cyclic nature of Circular Linked Lists?,The Round Robin algorithm.
-How does the Round Robin algorithm utilize a Circular Linked List?,"It cycles through processes, giving each a small amount of time before returning to the first process."
-"In a Circular Doubly Linked List, what does $head.prev$ point to?",It points to the last node of the list.
-"In a Circular Doubly Linked List, what does the $next$ pointer of the last node point to?",It points to the $head$ node.
-"When converting a standard DLL to a Circular DLL, how many total pointers must be modified at the boundaries?",Two: $last.next$ (to $head$) and $head.prev$ (to $last$).
-"To convert a standard Singly Linked List code to Circular, which keyword in the while loop is replaced by `self.head`?",The keyword $None$ (or $null$).
-"In the context of the video, what is the ultimate goal of learning steps and logic before writing code?","To master the algorithm, which makes writing the actual code trivial."
-"What logic handles deletion from the beginning, middle, and end in the provided DLL implementation?",A single function that uses conditional checks for $head$ and boundary positions to handle all cases.
-"During a middle deletion, if $T$ is the node to be removed, what does $T.prev.next$ represent?",The forward pointer of the node immediately preceding the one being deleted.
-What is the primary drawback of a Singly Linked List mentioned in the source?,The inability to backtrack or traverse in the reverse direction.
-"If a user wants to practice DLL logic further, what modification to the node structure is suggested?","Increasing the number of pointers to four (e.g., Forward, Backward, Top, Bottom)."
-What is the purpose of a temporary pointer like `T` in linked list operations?,To traverse the list without losing the reference to the $head$ node.
-"In a DLL, what identifies a node as NOT being the last node?",Its $next$ pointer is not equal to $None$.
-"True or False: In a Circular Linked List, the list has a definite starting node but no definite 'null' termination.",True.
-"When traversing a Circular Linked List, why must you use $T.next \ne head$ instead of $T \ne head$ as a loop condition?",Using $T \ne head$ would prevent the loop from starting if $T$ is initialized to $head$.
-"In the deletion logic, if the data is not found at the current node $T$, what is the next step?",Advance the pointer using $T = T.next$.
-"In a DLL, if you are at node $N$, how do you access the data of the node immediately before it?",Using the expression $N.prev.data$.
-What identifies the beginning of a Doubly Linked List in a traversal from right to left?,Reaching a node where the $previous$ pointer is $None$.
-The process of visiting every node in a linked list is known as _____.,Traversing.
-Which part of the DLL node is updated to link a list in the reverse direction?,The $previous$ (or $prev$) pointer.
-"In the provided Python code, what does `self.head = temp` accomplish?",It reassigns the list's entry point to the node referenced by `temp`.
-What is the visual indicator used in the video to distinguish a DLL in print output?,"Double-sided arrows (e.g., `<->`) between node values."
-"In a Circular DLL, if you move backward from the $head$ node, which node do you reach?",The last node of the list.
+What is the primary purpose of using Big O notation in computer science?,To measure and compare the efficiency of algorithms based on the number of operations they perform.
+Why is measuring code efficiency in seconds or clock time considered unreliable?,"It depends on specific hardware factors like CPU, GPU, and the operating system of the machine."
+"How does Big O notation provide a ""standard"" for engineers?",It allows efficiency to be analyzed independent of the hardware or processing power of a specific computer.
+"When calculating Big O, what does the variable $n$ typically represent?",The number of inputs provided to the algorithm.
+"In Big O analysis, why do engineers focus on the ""worst-case scenario""?",It ensures that the algorithm will not perform worse than a specific mathematical limit for any input.
+Term: Time Complexity,Definition: A mathematical representation of the number of operations an algorithm performs as a function of the input size.
+"When simplifying a mathematical equation into Big O notation, what happens to constant numbers (e.g., the $100$ in $n + 100$)?",They are ignored because they do not change the growth rate of the algorithm as $n$ becomes very large.
+Simplify the equation $5n + 2n + 100$ into its Big O representation.,$O(n)$
+"If an algorithm's operation count is represented by $n^2 + 5n$, why is the Big O notation $O(n^2)$?",Big O notation only keeps the term with the highest power because it dominates the growth as $n$ increases.
+"What is the Big O complexity of a single operation, such as printing a word or initializing a variable?",$O(1)$
+Concept: Constant Time,"Definition: The number of operations remains the same regardless of the size of the input $n$, represented as $O(1)$."
+What is the Big O complexity of a single for-loop that runs from $0$ to $n$?,$O(n)$
+Concept: Linear Time,"Definition: The number of operations increases proportionally with the input size $n$, represented as $O(n)$."
+"If $n = 5$ and a loop runs from $0$ to $n-1$, why are there $5$ operations?","Because the index $0$ is counted along with indices $1, 2, 3,$ and $4$."
+What is the Big O complexity of two independent for-loops that run sequentially (one after the other)?,$O(n)$
+How is the Big O complexity determined for nested loops (a loop inside a loop)?,By multiplying the number of iterations of the outer loop by the number of iterations of the inner loop.
+What is the Big O complexity of a loop running $n$ times that contains another loop also running $n$ times?,$O(n^2)$
+"In sequential loops, if one loop runs $n$ times and another runs $n$ times, the result is $2n$; why is this still $O(n)$?",The constant multiplier $2$ is dropped to focus on the linear growth rate.
+"What type of complexity occurs when a loop iterator is multiplied or divided (e.g., $i = i * 2$) at each step?",$O(\log n)$
+Concept: Logarithmic Time,"Definition: Complexity where the number of operations increases very slowly as $n$ grows, represented as $O(\log n)$."
+"If an input $n = 16$ results in only $4$ operations due to doubling the index at each step, what is the complexity type?",Logarithmic ($O(\log n)$).
+"What is the Big O complexity typically associated with recursive algorithms that branch out, like the Fibonacci series?",$O(2^n)$
+Concept: Exponential Time,"Definition: A ""danger zone"" complexity where operations double with every unit increase in $n$, represented as $O(2^n)$."
+"Which graph represents a ""vertical spike"" in run time as the number of inputs increases slightly?",The graph for Exponential Time ($O(2^n)$).
+Approximately how many operations can a standard computer perform per second according to the source material?,$10^8$
+What is the standard Big O complexity of most efficient sorting algorithms?,$O(n \log n)$
+Why might $O(n^2)$ be acceptable for a database of all universities in Pakistan but not for Google Search?,"The number of universities is small (e.g., under $500$), whereas Google handles millions of data points requiring faster response."
+"In the context of the stock market, why is high time complexity ($O(n^2)$ or worse) unacceptable?","Price data changes in milliseconds, and slow execution can lead to buying at the wrong price and losing money."
+The ability of a system like Google to return search results in under a second is primarily due to _____.,optimized algorithms and data structures
+"When $n$ is as large as $10^6$ (one million), why does $O(n^2)$ become impractical?","It would require $10^{12}$ operations, which takes much longer than the $1$ second a standard computer needs for $10^8$ operations."
+"Rule: If a code block contains a loop that ""halves"" or ""doubles"" its range each time, the complexity is _____.",$O(\log n)$
+"True or False: An engineer should always strive for $O(1)$ complexity, regardless of the problem's size or constraints.","False, as engineers must balance optimization effort with the actual requirements of the problem."
+What is the first step recommended for calculating the Big O of a piece of code?,Count how many times the innermost statement runs.
+How does solving $50$ to $70$ problems on platforms like LeetCode help with Big O analysis?,It trains the mind to intuitively recognize patterns like nested or sequential loops.
+"If $n < 500$, an algorithm with complexity $O(n^2)$ will perform at most _____ operations.","$250,000$"
+"In Big O notation, which is more efficient for large datasets: $O(n)$ or $O(n \log n)$?",$O(n)$
+How is $O(n \log n)$ complexity visually different from $O(n)$ on a graph?,It grows slightly faster than a straight linear line but much slower than a quadratic curve ($n^2$).
+"According to the source, why did Google choose highly optimized algorithms?",To ensure customer retention by providing search results almost instantly.
+"If an algorithm is described as having ""linearithmic"" complexity, its Big O is _____.",$O(n \log n)$
+What is the mathematical relationship between the equation $2^k = n$ and logarithmic notation?,$k = \log_2 n$
+"The Big O of a code block with three sequential, non-nested loops of size $n$ is _____.",$O(n)$
+"When analyzing code, should you create a formula for every single variable initialization?","No, you should focus on the parts of the code that scale with the input $n$ (like loops)."
+What happens to the execution time of an $O(n^2)$ algorithm if the input size $n$ doubles?,The execution time (number of operations) quadruples.
+What happens to the execution time of an $O(n)$ algorithm if the input size $n$ doubles?,The execution time (number of operations) also doubles.
+"In the example of a dictionary search, finding a word on the very first page is known as the _____ case.",best
+"True or False: $O(n^2)$ can be considered ""good"" if the input $n$ is very small.",True
+"If a platform like Facebook needs to search through billions of users, why is $O(n)$ search (comparing one by one) insufficient?","The number of operations would be in the billions, taking too much time for a simple login or search request."
+"What is the purpose of the ""Reverse Engineering"" rule described in the lecture?",To determine what Big O complexity is allowed based on the input size $n$ and the time limit (usually $1$ second).
+"If a problem involves ""recursion with branching,"" what is the likely complexity?",$O(2^n)$
+What is the Big O of an algorithm that always takes $5$ minutes to run regardless of whether $n$ is $10$ or $10$ million?,$O(1)$
