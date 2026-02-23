@@ -1,0 +1,60 @@
+What is the primary data structure principle that a Stack supports?,LIFO (Last In First Out).
+What does the acronym LIFO stand for in data structures?,Last In First Out.
+How does the LIFO property define the order of element removal?,The element inserted most recently is the first one to be removed.
+What real-world object is commonly used to illustrate the Stack structure?,A stack of books on a table.
+"In a stack of books, which book is considered the easiest to remove without disturbing others?",The book at the very top.
+What is one common use case for Stacks in text editors?,Implementing Undo and Redo operations.
+How are Stacks utilized within web browsers?,To manage navigation history and calculate automatic parentheses.
+What is a 'Stack Trace' in the context of programming?,A report used during debugging to show the active function calls.
+How do programming languages use Stacks internally for functions?,To mount functions and manage variables during execution.
+Why is a strong foundation in Stacks necessary for mastering recursion?,Because recursion relies on a stack-based structure to manage function calls.
+Which existing Python data structure is primarily used to implement a Stack in the source material?,A List.
+What is the main difference between a standard List and a Stack implementation?,A Stack restricts insertion and deletion to a single position (the top).
+"In a Stack, what does the term 'untouched' imply regarding internal elements?",The internal elements cannot be seen or accessed directly.
+What is the function of the 'Push' operation in a Stack?,To insert a new element onto the top of the stack.
+What does the 'Pop' operation perform in a Stack?,It removes and returns the element at the top of the stack.
+What is the purpose of the 'Peak' (or Peek) operation?,To view the element at the top of the stack without removing it.
+What does the 'is_empty' function verify in a Stack?,Whether the stack contains any elements or is currently empty.
+Why is it unnecessary to check for 'overflow' when using a Python list to build a stack?,Python lists are dynamic and can grow in size as needed.
+"When implementing a Stack class, what does the `__init__` method initialize?",An empty list to store the stack's elements.
+"In the video's specific implementation, which list index is designated as the 'top' of the stack?",Index 0.
+What Python list method is used to 'push' an element to Index 0?,"The `insert(0, value)` method."
+"What happens to existing elements in a list when `insert(0, value)` is executed?",All existing elements are shifted one position to the right.
+"In the provided code, how is the `len` function of the Stack class implemented?",It returns the result of the built-in `len()` function called on the internal list.
+Which list operation is used for the `pop` function if Index 0 is the top?,The `pop(0)` method.
+What must be checked before performing a `peek` or `pop` operation?,Whether the stack is empty.
+"What Python keyword is used to signal an error state, such as an empty stack?",The `raise` keyword.
+What error message is raised by the `peek` function if the stack is empty?,"""stack is empty""."
+"In the implementation where Index 0 is the top, how is `peek` coded?",It returns `self.s[0]` after checking if the stack is not empty.
+Why is `self` used as a parameter in Stack class methods?,To allow methods to access the specific instance and its internal list.
+"In the video's implementation, if you push 10 then 20, what is at Index 0?",20.
+What is the alternative 'homework' method for 'pushing' elements to a stack using a list?,Using the `append()` method to add elements to the end of the list.
+"If `append()` is used for 'push', which list method is used for 'pop'?",The standard `pop()` method without arguments (removes from the end).
+How does the `pop()` method used in the source differ from `peek()`?,"The `pop()` method removes the element, while `peek()` only views it."
+"In a Stack, where do all insertions and deletions occur?",At the top of the stack.
+Why does the instructor suggest not spending more than a few days learning Stacks?,Because Stacks are comparatively easy and students should move on to more complex topics quickly.
+What is the benefit of the 'is_empty' check in a robust Stack implementation?,It prevents errors or exceptions when trying to access elements that don't exist.
+Concept: Stack Underflow,Definition: An error occurring when an application attempts to pop an item from an empty stack.
+Which built-in Python function is used to check the size of the underlying list in the `Stack` class?,The `len()` function.
+"In the example provided, pushing 10, 20, and 30 (with Index 0 as top) results in what list order?","$[30, 20, 10]$"
+"What is the expected output of `pop()` if the stack contains $[30, 20, 10]$ and Index 0 is the top?",30.
+Does a Stack allow random access to its elements by index?,"No, access is restricted to the top element only."
+How does the 'Undo' feature represent a Stack?,The most recent action performed is the first action to be reversed.
+What is the purpose of the `init` function within the `Stack` class definition?,To initialize the object's instance variables upon creation.
+"In the context of the video, what does `self.s` represent?",The internal list used to store the Stack's data.
+True or False: The `pop()` method in the video returns the value being deleted.,True.
+"What is the disadvantage of using `insert(0, value)` compared to `append()` for a large list?","It requires shifting all existing elements, which is less efficient."
+"In the video's example, after popping 30 from $[30, 20, 10]$, what is the new top element?",20.
+How is 'Push' logic encapsulated in the video's code?,"Inside a method named `push` that calls `self.s.insert(0, value)`."
+"In the video's code, what happens if `len(self.s) == 0` is true during a `pop` operation?","An exception is raised with the message ""stack is empty""."
+What is the outcome of pushing three values and then popping three times?,The stack becomes empty.
+The list method `pop(0)` removes the element at which position?,The first position (index 0).
+What is the primary goal of the 'homework' assignment given at the end of the video?,To implement a Stack using the end of a list as the top (using `append` and `pop`).
+"In the LIFO model, which element is the 'First Out'?",The element that was 'Last In'.
+Why is the Stack called a 'linear' data structure?,"Because elements are arranged in a sequential, one-after-another order."
+What is the role of the `print()` function in the video's test code?,To display the results of `peak` and `pop` operations to the console.
+Can a Stack be implemented using a Linked List instead of a standard Python List?,"Yes, although the source material focuses on implementation using a List."
+What does the code `stk = Stack()` do in the test script?,It creates a new instance (object) of the `Stack` class.
+"In the statement `self.s.pop(0)`, what does the `0` represent?",The index of the element to be removed.
+How does the 'Peak' operation help in parentheses matching?,It allows the program to check the most recent opening bracket without removing it.
+"What is the final state of the stack after pushing 10, 20, 30 and calling `pop()` twice?",The stack contains only the value 10.
