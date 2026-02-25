@@ -1,0 +1,52 @@
+What is the core structural difference between a standard queue and a circular queue?,"In a circular queue, the last position is connected back to the first position to form a circle."
+What primary problem does a circular queue solve in fixed-size memory environments?,It allows the reuse of memory spaces at the beginning of the array that were vacated by deleted elements.
+Which specific operating system algorithm commonly utilizes circular queues for process management?,The Round Robin scheduling algorithm.
+Why is the modulo operator ($\cup$) essential for circular queue implementation?,It allows pointers to wrap around to the start of the array once they reach the final index.
+What is the initial value assigned to both the 'front' and 'rear' pointers in a circular queue?,-1
+How do you create a fixed-size list of size '$n$' filled with placeholders in Python?,`[None] * n`
+What condition indicates that a circular queue is completely empty?,`self.front == -1`
+What is the mathematical condition to check if a circular queue of size '$s$' is full?,`(self.rear + 1) \% s == self.front`
+What happens to the 'front' and 'rear' pointers when the first element is inserted into an empty circular queue?,Both pointers are set to index $0$.
+"When adding an element to a non-empty, non-full circular queue, which pointer is updated?",The rear pointer.
+What formula is used to increment the 'rear' pointer to ensure it stays within a circular range of size '$n$'?,`(rear + 1) \% n`
+What does it mean if `self.front == self.rear` (and they are not -1)?,The circular queue currently contains exactly one element.
+From which pointer is an element always removed in a circular queue?,The front pointer.
+What happens to the pointers if the last remaining element in a circular queue is dequeued?,Both the front and rear pointers are reset to -1.
+"In a circular queue of size $7$, if the 'rear' is at index $6$, what is the next index after incrementing?",0
+Why are the `append()` and `pop()` methods avoided when implementing a circular queue in Python?,"They dynamically resize the list, which bypasses the memory reuse benefits of a fixed-size circular buffer."
+"In media applications like Spotify, what component relies on circular queues to manage data streams?",Audio buffers.
+What logic is used to update the 'front' pointer during a standard dequeue operation?,`self.front = (self.front + 1) \% self.size`
+How does a circular queue handle 'fair CPU usage' detection in server environments?,By organizing processes or tasks in a cyclic order for equitable resource allocation.
+What is the result of $x \% y$ if $x$ is less than $y$?,$x$
+What is the term used for inserting an element into a queue?,Enqueue (or NQ).
+What is the term used for removing an element from a queue?,Dequeue (or DQ).
+Why is 'pen and paper' visualization recommended for learning circular queues?,It makes the wrap-around logic and pointer movements easier to understand than just reading code.
+"In the provided Python code, where is the actual data value stored during an Enqueue operation?",`self.items[self.rear] = value`
+Which pointer movement marks the effective 'deletion' of an element in this implementation?,Incrementing the front pointer.
+What is the result of $5 \% 5$?,0
+What is the result of $0 \% 5$?,0
+How does the 'rear' pointer behave in a standard non-circular queue when it reaches the end of a fixed array?,"It cannot increment further, preventing new insertions even if the front of the array is empty."
+What game example is used to illustrate cyclic event organization?,Passing the pillow (or round chair game).
+What is the purpose of the `__init__` method in the `CircularQueue` class?,To initialize the fixed-size list and set the pointers to their starting values.
+What happens if a user tries to Enqueue an item when `(rear + 1) \% size == front`?,The operation fails and typically prints a 'Queue is Full' message.
+What happens if a user tries to Dequeue an item when `front == -1`?,The operation fails and typically prints a 'Queue is Empty' message.
+"If a circular queue has a size of $5$ and indices $0$ to $4$, what is the result of incrementing index $4$ using modulo?",0
+"In the `CircularQueue` class, why must variables be accessed as `self.front` or `self.rear`?",To ensure the code interacts with the attributes of the specific object instance being used.
+What is the index range of a circular queue with size '$n$'?,$0$ to $n-1$.
+Why is memory considered 'wasted' in a simple linear array queue after several deletions?,The space at the beginning of the array becomes unreachable by the rear pointer.
+What real-world engineering example involves a circular mechanism for sequential firing?,The revolving chamber of a gun.
+"When the circular queue is neither full nor empty, where does the new element go during NQ?",At the position of the newly incremented rear pointer.
+"In the context of the modulo operator, what is the 'remainder' of $10 \% 3$?",1
+"If size is $10$, what are the possible remainders generated by the modulo operator?",$0$ through $9$.
+What is the primary benefit of using a fixed-size list for a circular queue in Python?,It simulates the memory constraints of lower-level languages where circular queues are most critical.
+"During a Dequeue operation, what value is usually printed or returned before updating the front pointer?",The value currently stored at the front index (`self.items[self.front]`).
+What defines a 'Full' circular queue in terms of pointer positions?,The rear pointer is exactly one step behind the front pointer in the cyclic sequence.
+How does the 'circular' logic affect the complexity of the Enqueue operation compared to a linear queue?,It remains $O(1)$ because it only involves pointer arithmetic and a single assignment.
+"If a circular queue is initialized with size $5$, how many elements can it hold at maximum?",5
+"In the modulo logic for an index $i$, what does `(i + 1) \% size` produce if $i < size - 1$?",$i + 1$
+What physical analogy is used to describe the front and rear pointers moving in a circle?,Pointers chasing each other around a circular track.
+Why does a circular queue require the 'size' to be stored as an attribute?,The size is necessary to perform the modulo operation every time a pointer is incremented.
+What code snippet sets the `items` list to contain 'None' values based on the variable `size`?,`self.items = [None] * self.size`
+What is the final state of the pointers after a circular queue is created but before any elements are added?,`front = -1` and `rear = -1`
+How is 'Underflow' checked in the DQ function?,By verifying if `self.front == -1`.
+How is 'Overflow' checked in the NQ function?,By verifying if `(self.rear + 1) \% self.size == self.front`.
