@@ -1,0 +1,50 @@
+How is 'recursion' defined in the context of programming functions?,Recursion is defined as a function calling itself.
+Which Bollywood movie title is used as a mnemonic to explain a function calling itself?,The movie title is 'Kartik Calling Kartik'.
+What is the fundamental requirement for a problem to be solvable using recursion?,"The problem must be breakable into smaller, similar sub-problems."
+Any problem solved using a loop is referred to as _____ code.,Iterative
+What is the relationship between iterative code and recursive code in terms of compatibility?,Any iterative code can be converted into recursive code.
+What is a primary advantage of recursion over iterative loops in complex algorithmic problems?,It often results in shorter code and simpler implementation of complex logic.
+Why is recursion considered a necessary prerequisite for learning Tree data structures?,Tree algorithms rely heavily on recursive logic to traverse and manipulate nodes.
+What is the 'Base Case' in a recursive function?,It is the smallest version of the problem with a known answer that stops further recursive calls.
+What three elements are essential for writing a recursive program?,"A starting point (base case), core logic, and a terminating condition."
+What happens if a recursive function lacks a terminating condition?,"The function will enter an infinite loop of calling itself, likely causing a crash or hanging."
+"In Python, where should the terminating condition be placed within the function body?",It should be placed at the very beginning of the function before any recursive calls.
+"Why is a 'small parameter' used in a recursive call (e.g., calling $f(n - 1)$ from $f(n)$)?",To ensure the problem size decreases until it eventually reaches the base case.
+What mathematical notation represents the product of all integers from $1$ to $n$?,The notation is $n!$ (factorial of $n$).
+What is the recursive logic for calculating $5!$ based on the result of $4!$?,The logic is $5 \times 4!$.
+"In Python, what is the base case condition for a factorial function handling $0$ and $1$?",The condition is `if n == 0 or n == 1:`.
+What value should be returned by the base case of a factorial function?,The value $1$ should be returned.
+State the generalized recursive formula for the factorial of $n$.,The formula is $f(n) = n \times f(n - 1)$.
+"In an iterative factorial loop, why is the `fact` variable initialized to $1$ instead of $0$?",To prevent the entire product from becoming $0$ during multiplication.
+Why is the `return` keyword necessary when calling a function recursively?,It ensures the result from the sub-problem is passed back to the previous caller.
+"In recursion, what happens in RAM every time a function calls itself?",A new memory block is allocated to store that specific call's parameters and local variables.
+What is the value of $n$ inside a specific recursive memory block?,The value remains constant as the specific argument passed to that specific call.
+When is the memory allocated for a specific recursive call released?,It is released only after the function finishes its execution and returns a value.
+What is the term for the sum of previous two numbers in a sequence generating the next number?,This is the Fibonacci series rule.
+What are the first two numbers in a standard Fibonacci sequence starting with ones?,"The first two numbers are $1, 1$."
+"What is the recursive formula for the $n$-th Fibonacci number, $f(n)$?",The formula is $f(n) = f(n - 1) + f(n - 2)$.
+Which base case conditions would you use for a Fibonacci function to return $1$?,The conditions `n == 1` or `n == 2`.
+How many recursive calls are triggered within one execution of the Fibonacci function $f(n)$?,Two recursive calls are triggered ($n-1$ and $n-2$).
+"What is the $5$-th number in the Fibonacci sequence $1, 1, 2, 3, 5, 8, \dots$?",The $5$-th number is $5$.
+"What is the $7$-th number in the Fibonacci sequence $1, 1, 2, 3, 5, 8, 13, \dots$?",The $7$-th number is $13$.
+"In the Fibonacci recursion for $n=4$, into which two sub-calls does it initially break?",It breaks into $f(3)$ and $f(2)$.
+How does the 'stack' behavior of recursion return results to the original caller?,"Results are passed back in reverse order of the calls, from the base case up to the first caller."
+Why is 'patience' emphasized when learning recursion as a beginner?,Recursion involves complex thought processes and can take several days to fully grasp.
+What is a recommended way to improve understanding of recursion besides watching videos?,Discussing perspective and thought processes with others or on social media platforms like Twitter.
+How do you identify if a problem is solvable via recursion by looking at its range?,If solving the problem for a large range requires solving the same problem for a smaller range.
+What is the mathematical result of $4!$?,The result is $24$.
+"In the iterative code `for i in range(1, num + 1)`, why is `+1` added to `num`?","Because the Python `range` function excludes the stop value, and we need to include `num`."
+"If $fact(1)$ is the base case, what is the recursive step to find $fact(2)$?",$2 \times fact(1)$.
+What happens to the caller function while it waits for a recursive sub-call to return?,The caller function stays in memory and 'pauses' its execution at the call site.
+"In a Fibonacci recursion $f(n) = f(n-1) + f(n-2)$, which part represents the 'Logic'?",The addition of the two returned values.
+What is the consequence of placing code after a recursive call in a function?,That code will only execute after the recursive call returns (unwinding phase).
+How does recursion help a programmer handle problems that have an 'unknown' number of nested levels?,It naturally handles nesting by calling the same logic for each new level discovered.
+"What is the base case result for $f(2)$ in the Fibonacci sequence starting $1, 1$?",The result is $1$.
+True or False: A recursive function can have multiple base cases.,"True, as seen in the Factorial ($0, 1$) and Fibonacci ($1, 2$) examples."
+"What is the recursive formula for the sum of the first $n$ natural numbers, $S(n)$?",The formula is $S(n) = n + S(n - 1)$.
+What is the base case for summing the first $n$ natural numbers?,"The base case is $n = 1$, where the sum is $1$."
+What is the value of $3!$ calculated via recursion?,The value is $6$.
+"In the Fibonacci sequence, if $f(3) = 2$ and $f(4) = 3$, what is $f(5)$?",The value is $5$ ($2 + 3$).
+Why does recursion often require more memory than iteration?,Because each call adds a new frame to the call stack until the base case is reached.
+What is the result of $fact(0)$?,The result is $1$.
+What is the primary goal of performing a 'dry run' on recursive code?,To trace the memory allocation and value returns to understand how the final answer is reached.
