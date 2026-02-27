@@ -1,0 +1,62 @@
+What type of data structure is a Linked List described as in the source material?,It is a dynamic data architecture for managing data.
+Which type of memory allocation is used by a standard Array?,Contiguous memory allocation.
+How does the memory allocation of a Linked List differ from that of an Array?,Linked Lists use non-contiguous memory allocation where elements are scattered in memory.
+What is a major disadvantage of using a static Array with a pre-defined large size?,It consumes a fixed amount of memory even if most of the indices are empty.
+"In computer memory, where are Linked List nodes typically stored?",They are stored in heap memory.
+What are the two primary components contained within a single Node of a Singly Linked List?,A value and a reference to the next node.
+"In the context of a Linked List node, what information does the 'next' variable store?",It stores the memory address or reference of the subsequent node.
+How are Linked List 'references' distinguished from C++ pointers in the source material?,They are described as memory references that indicate the location of the next element rather than strict C++ pointers.
+What does a 'Null' value at the end of a Linked List signify?,It indicates that no further elements exist and the list has ended.
+What are the three specific types of Linked Lists mentioned in the lesson?,"Singly Linked List, Doubly Linked List, and Circular Linked List."
+The first node in a Linked List is conventionally referred to as the _____.,Head
+The final node in a Linked List is conventionally referred to as the _____.,Tail
+"By convention, what value does the 'Tail' node of a Singly Linked List point to?",Null
+Why is the Head node considered the representative of the entire Linked List?,Access to the Head node allows a program to traverse and access all other nodes in the list.
+What is the default value of the Head and Tail nodes when a Linked List is first initialized?,Null
+What is the initial value of the 'size' variable when a Linked List is created?,0
+Term: Node,Definition: A basic unit of a linked list containing data and a reference to another node.
+"When inserting a new node at the 'First' position, what must the new node's 'next' pointer point to?",The current Head node.
+What is the final step in the 'Insert at First' procedure after updating the new node's 'next' pointer?,Update the Head pointer to the new node.
+Why is it necessary to increment the 'size' variable after an insertion operation?,To keep an accurate count of the total elements currently in the list.
+"To display a Linked List, a temporary variable (temp) is usually initialized to point to the _____.",Head node
+What is the standard loop condition used when traversing a Linked List for display?,Continue the loop while the temporary pointer is not equal to Null.
+"During traversal, how is the temporary pointer 'temp' moved to the next position?",By setting temp equal to temp.next.
+"In the 'Insert at Last' operation, what does the current Tail's 'next' pointer get updated to?",The new node being inserted.
+"After setting the current Tail's next to a new node, what is the next step to complete the 'Insert at Last' operation?",Update the Tail pointer to point to the new node.
+"To insert a node at a specific index, you must first traverse the list to reach the node at _____.",Index - 1
+How do you link a new node to the rest of the list when inserting at a middle index?,Set the new node's next to the previous node's current next.
+"After connecting a new middle node to the subsequent node, what is the next pointer update required?",Set the previous node's next pointer to the new node.
+What is the primary action required to perform a 'Delete First' operation?,Move the Head pointer to the current Head's next node.
+"In memory management, what is the function of the 'Garbage Collector'?",It automatically identifies unreferenced memory and clears it to free up space.
+How does a 'Delete First' operation lead to the removal of the old head from memory?,"The node becomes unreferenced by the Head pointer, allowing the Garbage Collector to erase it."
+Why is 'Delete Last' more complex than 'Delete First' in a Singly Linked List?,It requires traversing the entire list to find the node immediately preceding the Tail.
+"To delete the Tail node, you must find a node 'temp' such that 'temp.next' equals the _____.",Tail
+What is the final pointer update when performing a 'Delete Last' operation?,Set the next pointer of the new Tail node to Null.
+How does maintaining a 'size' variable improve the performance of a 'getSize' function?,It allows for $O(1)$ time complexity by returning a value instead of $O(n)$ by traversing the list.
+"In a display function, what is printed after the final node's value to show the end of the list?",The word 'Null'.
+Which programming construct is used to define the structure of a Node in languages like Java or Python?,A Class.
+"According to the source, what is the best way to approach Linked List problem-solving before coding?",Visualizing the operations by drawing the nodes and pointer changes.
+Does a Linked List require its elements to be stored in a sorted order?,"No, it can be unsorted just like an array."
+"In the node initialization code, what is the purpose of a constructor?",To set the initial value of the node when it is created.
+What happens to the memory address of the 'next' node in a Tail node?,It is set to Null because there is no subsequent address to store.
+How does the system keep track of non-contiguous elements in a Linked List?,By utilizing the memory address mapping stored in each node's 'next' field.
+"In the example of an array of size 100 with only 5 elements, how many MB of memory are wasted if each index is 1 MB?",95 MB.
+What is the purpose of the 'Find' function in a Linked List implementation?,To traverse the list until a node with a specific value is located.
+Why are Linked Lists preferred for large-scale applications with varying data sizes?,They provide dynamic memory allocation that grows or shrinks as needed during operations.
+"When a 'temp' pointer reaches Null, what does it indicate about the traversal process?",The traversal of the entire Linked List is complete.
+What must be updated in a Linked List class when an element is removed from a specific index?,The 'size' variable must be decremented.
+True or False: The Head and Tail are separate types of objects from standard Nodes.,"False, they are simply names given to the first and last Node objects."
+Concept: Dynamic Memory Allocation,Definition: The process of assigning memory space during execution rather than at compile time.
+"If a user wants to find the index of a particular node, what must the function do?",Traverse the list while maintaining a counter until the target node is found.
+"In a 'Delete Last' operation, what becomes the 'new Tail'?",The node that was previously at the second-to-last position.
+How does a 'Delete at Index' operation bypass a node to remove it?,It sets the 'next' pointer of the previous node to point to the node following the one being deleted.
+"In the provided pseudo-code, what keyword is used to ensure the Node class is only accessible within the Linked List?",Private
+What is the time complexity of retrieving the size of a Linked List if the 'size' variable is NOT maintained?,Linear time or $O(n)$.
+What is the time complexity of inserting a node at the very beginning of a Linked List?,Constant time or $O(1)$.
+Why is the use of 'Asynchronous Activities' mentioned in the context of memory?,They can be used to initialize resources only when they are required by the algorithm.
+"In the 'Display' function, what is the 'temp' variable representing relative to the 'Head'?",It is a new variable that holds a reference to the same memory address as the Head.
+What happens if you attempt to access an index beyond the size of a static Array?,It results in an error because that memory index does not exist for that array.
+"In the node class example, what does 'this.value = value' accomplish?",It assigns the input data to the value field of the specific node instance.
+What does 'temp.next' represent in a traversal loop?,The reference to the node immediately following the current 'temp' node.
+"In the provided diagrams, what does an arrow between two nodes represent?",A memory mapping or pointer from one node to the next.
+Why is it important for the Tail's 'next' to be Null in logic operations?,It serves as the base case or stopping condition for loops and recursive calls.
