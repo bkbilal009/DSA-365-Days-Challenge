@@ -1,0 +1,60 @@
+"According to the source, what percentage of interview questions for technical roles often focus on tree data structures?",Approximately 50%.
+What type of data structure is used specifically when we need to form a hierarchical structure?,Tree or Graph.
+How are elements arranged and accessed in a linear data structure?,Elements are arranged one-by-one and can be fetched or stored continuously.
+Term: Traversal,Definition: The process of moving from one element to another within a data structure.
+"Which category of data structure includes Arrays, Linked Lists, Stacks, and Queues?",Linear data structures.
+"In terms of pathing, what is the primary difference between linear and non-linear data structures?","Linear structures have a sequential path, while non-linear structures offer multiple path options from a single element."
+List the two primary examples of non-linear data structures mentioned in the text.,Tree and Graph.
+How does the physical orientation of a 'root' in a data structure tree differ from a real-world tree?,"In data structures, the root is at the top, whereas in a real tree, the root is at the bottom."
+Term: Root Node,Definition: The first or topmost node in a tree structure from which all other nodes originate.
+Term: Leaf Node,Definition: An end node in a tree that has no children and represents a dead end in a path.
+Term: Intermediate Node,Definition: Nodes located between the root node and the leaf nodes within a tree hierarchy.
+"In a tree hierarchy, what is the level number assigned to the topmost or root node?",Level 0.
+Term: Siblings,Definition: Nodes that reside on the same level of a tree and share the same parent node.
+"In the corporate hierarchy example, what role typically occupies Level 0?",The CEO.
+"In a standard tree, what is the restriction regarding movement between a parent and a child node?","You can move from parent to child, but there is no direct path to move from child back to parent."
+Which programming techniques are required to enable 'backtracking' or moving from a child node to a parent node?,Recursion or a Stack.
+How do sibling nodes communicate with each other in a standard tree structure?,They cannot communicate directly; one must move up to the parent and then down to the sibling.
+What is the defining characteristic of a 'General Tree' regarding its children?,A node can have any number of child nodes.
+What is the maximum number of children any node can have in a Binary Tree?,Two.
+What is the specific ordering property of a Binary Search Tree (BST) for the left subtree?,All elements in the left subtree must be smaller than the root node.
+What is the specific ordering property of a Binary Search Tree (BST) for the right subtree?,All elements in the right subtree must be larger than the root node.
+"In a BST, if a node's parent is in the left subtree of the root, what condition must its value satisfy regarding the root?","It must be smaller than the root, regardless of whether it is a left or right child of its own parent."
+Term: Strict Binary Tree (Full Binary Tree),Definition: A binary tree where every node has either exactly zero or exactly two children.
+What is the primary restriction in a Strict Binary Tree regarding the number of children?,A node cannot have exactly one child.
+What condition must be met by previous levels in a Complete Binary Tree before nodes can be added to a new level?,All previous levels must be completely full.
+In what order must nodes be added to the last level of a Complete Binary Tree?,From left to right.
+Term: Skew Binary Tree,"Definition: A tree where every node has only one child, effectively forming a linear structure like a linked list."
+How is a 'Right Skewed Tree' defined?,A skew tree where all nodes are connected exclusively to the right side.
+Term: Degenerate Tree,"Definition: A tree where each level contains only one node, but the direction (left or right) can vary."
+Term: Extended Binary Tree,Definition: A tree where dummy nodes are added to make it a strict binary tree.
+What is the purpose of a 'dummy node' in an Extended Binary Tree?,To act as a placeholder in empty spots to satisfy the structural requirements of a strict binary tree.
+What are the two primary ways to represent a binary tree in memory?,Array representation and Linked List representation.
+What type of memory allocation does an Array use for tree representation?,Continuous memory allocation.
+"In array representation of a tree, in what sequence are levels stored?","Starting from Level 0, then Level 1, then Level 2, and so on."
+"When storing a tree level in an array, what is the horizontal order of the nodes?",From left to right.
+"If a parent node is stored at index $i$ in a 0-indexed array, what is the formula for the index of its left child?",$2i + 1$
+"If a parent node is stored at index $i$ in a 0-indexed array, what is the formula for the index of its right child?",$2i + 2$
+"Formula: Given a child node at index $i$ ($i > 0$), what is the formula for the index of its parent?",$\lfloor (i - 1) / 2 \rfloor$
+Why must a non-complete binary tree be converted into a complete tree (using dummy nodes) for array representation?,To ensure the mathematical formulas for parent/child indices remain valid and consistent.
+What is the significant drawback of using array representation for a sparse or non-complete binary tree?,Memory wastage due to empty spaces reserved for non-existent nodes.
+Which linked list type is most similar to the node structure of a tree?,Doubly Linked List.
+What are the three components of a tree node in a linked list representation?,"Left Pointer, Data, and Right Pointer."
+"In a linked list representation, how is the absence of a child node indicated within a pointer field?",By setting the pointer to 'None' (or Null).
+What is a major advantage of linked list representation over array representation for trees?,"It uses dynamic memory allocation, preventing memory wastage from empty levels."
+Why is linked list representation often preferred for complex or growing trees?,The size can grow dynamically without needing to pre-allocate a fixed contiguous block.
+Concept: Logical View vs. Physical View,"The logical view is the hierarchical diagram we imagine, while the physical view is how it is actually organized in RAM (linear)."
+How does the 'Physical View' of a tree in RAM differ from its 'Logical View'?,"The physical view is always linear, whereas the logical view is hierarchical."
+"In a Binary Search Tree, what is the relationship between a node and its entire right subtree?",The node's value must be smaller than every single value in its right subtree.
+"If a node has only one child, can it be part of a Strict Binary Tree?","No, because a Strict Binary Tree only allows 0 or 2 children per node."
+What is the root node index in a standard array representation of a binary tree?,Index 0.
+Why does a Skew Binary Tree behave like a linked list?,"Because each level contains only one node, creating a single sequential path."
+"In the Corporate structure example, which nodes would be considered 'Leaf Nodes'?",The employees at the bottom level who do not manage anyone else.
+What is the level relationship between a Parent node and its Child node?,"If the Parent is at level $L$, the Child is at level $L + 1$."
+Why is Recursion particularly useful for traversing trees?,It naturally handles the return to a parent node after completing the processing of its children.
+"In array representation, if an index is calculated for a child but that index is empty, what does it signify?",That the parent node does not have a child at that position (Left or Right).
+What term is used for the logic used to map a hierarchical structure onto a linear memory array?,Representation.
+"In a Complete Binary Tree, if the second level (Level 1) has only one node, can you add a node to Level 2?","No, Level 1 must be full (2 nodes) before starting Level 2."
+What is the defining trait of an 'Open List' tree (Generic Tree)?,There is no fixed limit on the number of children a node can have.
+"If a child node is at index 5 in an array, what is its parent's index?",Index 2 (since $\lfloor (5 - 1) / 2 \rfloor = 2$).
+"If a parent node is at index 2 in an array, what are the indices of its children?",Left Child: 5; Right Child: 6.
