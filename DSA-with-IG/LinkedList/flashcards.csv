@@ -1,0 +1,62 @@
+"In a Doubly Linked List (DLL), what are the three components stored within each node?","The value, the pointer to the next node, and the pointer to the previous node."
+What is the primary structural difference between a Singly Linked List and a Doubly Linked List?,"A Doubly Linked List includes a pointer to the previous node, while a Singly Linked List only points forward."
+Why is a Doubly Linked List considered more efficient than a Singly Linked List for accessing the second-to-last element?,It allows direct access via the $tail.previous$ pointer instead of requiring a full traversal from the head.
+What does the $head$ pointer represent in any linked list structure?,It acts as the entry point or reference for the entire list.
+Concept: Doubly Linked List (DLL),A data structure where nodes have references to both the next and the previous elements in the sequence.
+What is the result of attempting to access the $next$ property of a $null$ pointer?,It typically results in a null pointer error because $null$ has no properties.
+"In a Doubly Linked List, the $previous$ pointer of the $head$ node typically points to _____.",$null$
+"In a non-circular Doubly Linked List, the $next$ pointer of the $tail$ node points to _____.",$null$
+What is the purpose of maintaining a $size$ variable within a Linked List class?,To provide $O(1)$ access to the total number of nodes without traversing the list.
+"When implementing $insertFirst$ in a DLL, what must the $next$ pointer of the new node point to?",The current $head$ of the list.
+"In the $insertFirst$ operation for a DLL, what should the original $head.previous$ be updated to point to?",The new node being inserted.
+"During a DLL $insertLast$ operation, the new node's $previous$ pointer should be set to point to the _____.",Current $tail$ node.
+"To complete a DLL $insertLast$ operation, the old $tail.next$ must be updated to point to _____.",The new node.
+What is the time complexity of inserting a node at the head or tail of a DLL if references to both are maintained?,$O(1)$
+How does a Circular Linked List (CLL) differ from a linear linked list regarding the $tail$ node?,The $tail$ node's $next$ pointer links back to the $head$ node instead of pointing to $null$.
+"In a Circular Linked List, which node can serve as the starting point for traversal?",Any node in the list.
+What is a primary use case for using a Circular Linked List in software applications?,"Representing round-robin behaviors or handling unlimited, repeating traversals."
+"In a circular list containing only one node, what does that node's $next$ pointer point to?",The node itself.
+"To insert a node at a specific index in a DLL, why do we traverse to the $index - 1$ position?",To obtain a reference to the node immediately preceding the insertion point.
+"If we define $temp$ as the node at $index - 1$, what does $node.next = temp.next$ achieve during insertion?",It links the new node to the rest of the list following the insertion point.
+"During DLL index insertion, what logic connects the existing next node back to the new node?",$temp.next.previous = node$
+What logic connects the new node back to the node before it during index insertion?,$node.previous = temp$
+What final pointer update connects the $temp$ node (at $index-1$) forward to the new node?,$temp.next = node$
+"In the context of Linked Lists, what is a 'temporary node' ($temp$) used for?",Iterating through the list to find a specific position without moving the $head$ or $tail$ pointers.
+How should a developer handle the $size$ variable when a node is deleted from the list?,Decrement the variable ($size--$).
+What logic defines a 'Circular Doubly Linked List'?,The $tail.next$ points to $head$ and the $head.previous$ points to $tail$.
+Which algorithmic pattern is often solved using Circular Linked Lists on platforms like LeetCode?,Cycle detection or circle detection.
+Why is the choice of programming language considered secondary to understanding DSA logic?,The underlying architecture and algorithms remain consistent across all languages.
+What does a $while$ loop typically check for when traversing a standard linear linked list?,Whether the current node or its $next$ pointer is not $null$.
+"In a CLL, how can you prevent an infinite loop during a 'display' or 'print' traversal?",By stopping the traversal once the current node reaches the $head$ node again.
+What is the benefit of a Doubly Linked List when deleting a node if you only have a reference to that specific node?,"You can access the previous node directly to re-link the list, whereas an SLL requires traversing from the head."
+Term: Node,Definition: The basic unit of a linked list containing data and one or more pointers to other units.
+"In the provided transcript, what is suggested as a way to convert logic between languages like Java and Python?",Using Large Language Models (LLMs) like ChatGPT for syntax conversion.
+Which curated resource is mentioned for practicing 150 essential LeetCode problems?,NeetCode.
+What is the 'Striver A-Z' sheet primarily used for in coding preparation?,Pattern-based learning with a comprehensive list of over 450 problems.
+How does 'Size' variable maintenance improve list length queries?,It reduces the time complexity from $O(n)$ to $O(1)$.
+"When inserting into a CLL at the head, why must the $tail$ node be updated?",The $tail.next$ must point to the new $head$ to maintain the circular property.
+"To find the index of a specific node value, which operation is performed?",A linear search traversal through the list.
+What characterizes an 'unsorted' linked list?,A list where the data values do not follow a specific numerical or alphabetical order.
+"If you need to delete the last node of a DLL, what becomes the new $tail$?",The node previously pointed to by $tail.previous$.
+What happens to the $head$ pointer during an $insertFirst$ operation?,It is updated to point to the newly created node.
+Why is 'Storytelling' or visualizing 'Arrows' emphasized when learning linked list operations?,It helps in correctly sequencing pointer updates to avoid breaking list links or losing nodes.
+"In a DLL, what is the consequence of setting $node.next = head$ before setting $head.previous = node$?","Both are necessary, but the order ensures you don't lose the original head reference."
+What is the main disadvantage of a Doubly Linked List compared to a Singly Linked List?,It requires more memory to store the additional $previous$ pointer in every node.
+What is an 'edge case' mentioned in the text for linked list pointer manipulation?,Attempting to access a property of a node that is currently $null$.
+Concept: Head Node,"The first node in a linked list, used as a reference to traverse or modify the list."
+Concept: Tail Node,"The final node in a linked list, often used to make additions to the end of the list efficient."
+How does the $count$ variable function in a $while$ loop during index-based insertion?,It tracks the number of nodes traversed to stop exactly at the desired position.
+What is the first step in creating a new node for insertion?,Instantiating the Node class with a given value.
+"In a CLL, why is there no 'null' terminator?","Because the end of the list is connected back to the beginning, creating a continuous loop."
+What type of data structure is a Linked List classified as?,"A linear, dynamic data structure."
+When is the $head$ updated to $null$?,When the last remaining node in the linked list is deleted.
+How is $temp = head$ utilized at the start of a function?,It creates a pointer to start traversal from the beginning without modifying the main $head$ pointer.
+What is the complexity of traversing a Doubly Linked List from head to tail?,$O(n)$
+"In the context of the transcript, what is 'pseudo-code'?",Simplified code logic written to focus on the algorithm rather than specific language syntax.
+"If a list has 1 million items, how does DLL help in accessing the end?",It allows direct backward traversal from the $tail$ pointer.
+What must be done to the $next$ pointer of the new node in $insertLast$?,It must be set to $null$ (or $head$ if circular).
+"In the expression $temp = temp.next$, what is the action being performed?",Advancing the traversal pointer to the next node in the list.
+Why is the $previous$ pointer set to $null$ for a new $head$ in a DLL?,Because there is no element preceding the first node.
+What does $node.value$ refer to?,The actual data stored within a specific node.
+Which pointer must be updated to $null$ when deleting the first node of a DLL?,The $previous$ pointer of the new $head$ (the original second node).
+What is the role of the 'Garbage Collector' in linked list deletion?,It automatically reclaims memory from nodes that are no longer reachable by any pointers.
