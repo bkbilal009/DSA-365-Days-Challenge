@@ -1,0 +1,70 @@
+What is the defining characteristic of a binary tree regarding its children?,"Each node can have at most two children ($0$, $1$, or $2$)."
+How is traversal typically performed in an array data structure?,"By using a loop to increment indices one by one (e.g., $i=0, 1, 2...$)."
+How is traversal typically performed in a linked list?,By using a loop to follow the 'next' pointer from one node to the next.
+Why is tree traversal studied explicitly as a separate topic compared to linear data structures?,Because trees are non-linear and can be traversed in multiple distinct ways.
+"Mathematically, how many different ways can three unique nodes be arranged/printed if there are no priority rules?",There are $3! = 6$ possible arrangements.
+"To simplify tree traversal algorithms, which priority rule is standardly adopted regarding left and right children?",The left child is always visited/printed before the right child.
+"In tree traversal, the three main traversal types are categorized based on the position of which node?",The root node.
+What is the sequence of visits in a Pre-order traversal?,Root node $\rightarrow$ Left subtree $\rightarrow$ Right subtree.
+What is the sequence of visits in an In-order traversal?,Left subtree $\rightarrow$ Root node $\rightarrow$ Right subtree.
+What is the sequence of visits in a Post-order traversal?,Left subtree $\rightarrow$ Right subtree $\rightarrow$ Root node.
+In which traversal type is the root node visited first?,Pre-order traversal.
+In which traversal type is the root node visited last?,Post-order traversal.
+Why is recursion an effective tool for implementing tree traversals?,"Because subtrees are smaller versions of the main tree, making the overall task similar to the sub-tasks."
+"In a linked list representation of a binary tree node, what are the three essential components?","A left pointer, a right pointer, and the data/value."
+What is the standard default value for the left and right pointers when a new tree node is initialized?,None (or null).
+"In Python, how is the 'data' part of a node typically initialized in the `__init__` constructor?",By assigning the passed value to an attribute like `self.data` or `self.val`.
+"When implementing recursive traversal, what is the critical base case check to prevent errors on leaf nodes?",Checking if the current root node is `None`.
+Where is the `print(root.data)` statement placed in a Pre-order traversal function?,"At the beginning of the function, before recursive calls to the subtrees."
+Where is the `print(root.data)` statement placed in an In-order traversal function?,Between the recursive call to the left subtree and the recursive call to the right subtree.
+Where is the `print(root.data)` statement placed in a Post-order traversal function?,"At the end of the function, after both recursive calls to the subtrees are completed."
+"If a tree has Root(1), Left(3), and Right(5), what is the Pre-order traversal?","$1, 3, 5$."
+"If a tree has Root(1), Left(3), and Right(5), what is the In-order traversal?","$3, 1, 5$."
+"If a tree has Root(1), Left(3), and Right(5), what is the Post-order traversal?","$3, 5, 1$."
+What happens to the program's memory state during a recursive tree traversal call?,New memory (a stack frame) is allocated for each call until the base case is reached.
+How is a right-child node '8' of node '5' (which is the right child of 'root') accessed in code?,Via `root.right.right`.
+What is the role of the `end` parameter in Python's `print()` function during traversal display?,It allows specifying a custom separator (like a space) instead of a newline between values.
+"In the provided example, why was the value $8$ printed after $5$ in the In-order traversal?","Because $8$ was the right child of $5$, and In-order visits the root ($5$) before the right child ($8$)."
+What determines when a specific recursive call's memory is released?,Memory is released once the function completes all its instructions and returns.
+Process: Pre-order Dry Run on Root(1) with Left(3) and Right(5). Step 1: Visit Root.,The value $1$ is printed immediately.
+Process: In-order Dry Run on Root(1) with Left(3) and Right(5). Step 1: Visit Left Subtree.,The function calls itself for node $3$ before printing $1$.
+Process: Post-order Dry Run on Root(1) with Left(3) and Right(5). Step 3: Visit Root.,The value $1$ is printed only after the subtrees for $3$ and $5$ are fully processed.
+Why is 'Binary Search Tree' mentioned as being different from a general 'Binary Tree' in the context of traversal?,"Binary Search Trees have specific ordering rules for values, whereas general Binary Trees do not."
+"In the code `preorder(root.left)`, what effectively happens to the 'root' variable in the next recursive call?",The left child becomes the new 'root' for that specific instance of the function.
+What is the primary drawback of using an array representation for trees mentioned in the source?,It has several drawbacks (like memory inefficiency) compared to the linked list representation.
+"If the code is `if root is not None: ...`, what occurs if the function is called with an empty tree?",The function does nothing and returns immediately.
+How does the 'pre' in 'Pre-order' logically relate to the root node?,It signifies that the root is visited 'pre' (before) its children.
+How does the 'post' in 'Post-order' logically relate to the root node?,It signifies that the root is visited 'post' (after) its children.
+How does the 'in' in 'In-order' logically relate to the root node?,It signifies that the root is visited 'in' between the left and right children.
+"In the example tree, node $3$ has left child $2$ and right child $4$. What is the In-order of this sub-tree?","$2, 3, 4$."
+"In the example tree, node $3$ has left child $2$ and right child $4$. What is the Post-order of this sub-tree?","$2, 4, 3$."
+"In the example tree, node $3$ has left child $2$ and right child $4$. What is the Pre-order of this sub-tree?","$3, 2, 4$."
+"When printing the tree [Root:1, Left:3, Right:5], if the output is $1, 3, 5$, which traversal was used?",Pre-order Traversal.
+"When printing the tree [Root:1, Left:3, Right:5], if the output is $3, 5, 1$, which traversal was used?",Post-order Traversal.
+"When printing the tree [Root:1, Left:3, Right:5], if the output is $3, 1, 5$, which traversal was used?",In-order Traversal.
+"In the full example tree, why does $2$ appear before $3$ in In-order traversal?","Because $2$ is the left child of $3$, and In-order visits the left child before the root."
+"In the full example tree, why does $4$ appear before $3$ in Post-order traversal?","Because $4$ is the right child of $3$, and Post-order visits both children before the root."
+"If a node has only a right child, how does In-order traversal behave?",It visits the root node first (since the left is empty) and then the right subtree.
+"If a node has only a left child, how does Post-order traversal behave?",It visits the left subtree first and then the root node (since the right is empty).
+What is the purpose of a constructor (like `__init__` in Python) in tree implementation?,To initialize a node's data and set its child pointers to a default state (None).
+How many pointers are stored in a standard binary tree node using linked list representation?,Two pointers (left and right).
+"In the function `preorder(root)`, what does the parameter `root` represent?",The current node being processed in the recursive call.
+Which traversal logic is most intuitive for 'visiting the parent before the children'?,Pre-order Traversal.
+Which traversal logic is most intuitive for 'visiting all children before the parent'?,Post-order Traversal.
+"What is the result of applying Pre-order traversal to the example tree: 1(Root), 3(Left), 5(Right), 3->2(Left), 3->4(Right), 5->8(Right)?","$1, 3, 2, 4, 5, 8$."
+"What is the result of applying In-order traversal to the example tree: 1(Root), 3(Left), 5(Right), 3->2(Left), 3->4(Right), 5->8(Right)?","$2, 3, 4, 1, 5, 8$."
+"What is the result of applying Post-order traversal to the example tree: 1(Root), 3(Left), 5(Right), 3->2(Left), 3->4(Right), 5->8(Right)?","$2, 4, 3, 8, 5, 1$."
+"If we want to traverse a tree using the logic 'Left Subtree $\rightarrow$ Root $\rightarrow$ Right Subtree', which function should we call?",The In-order traversal function.
+"If we want to traverse a tree using the logic 'Root $\rightarrow$ Left Subtree $\rightarrow$ Right Subtree', which function should we call?",The Pre-order traversal function.
+"If we want to traverse a tree using the logic 'Left Subtree $\rightarrow$ Right Subtree $\rightarrow$ Root', which function should we call?",The Post-order traversal function.
+"In the source material, what was the first step taken to 'test' the traversal code?",Manually creating a tree structure by linking node objects together.
+Code Snippet: `root.left = Node(3)`. What does this line do?,It creates a new node with value $3$ and assigns its address to the `left` attribute of the `root` object.
+"In the recursive call `inorder(root.left)`, if `root.left` is `None`, what is the immediate effect?","The function enters the base case check, finds it is `None`, and returns without doing anything."
+Why does the root node ($1$) appear in the middle of the In-order output?,"Because the In-order algorithm processes the entire left subtree ($2, 3, 4$) before visiting the root ($1$)."
+"In the example, node $5$ had no left child. How did In-order traversal handle this?","It attempted to visit the left child, did nothing, then proceeded to visit the root ($5$)."
+What is the relationship between the number of recursive calls and the number of nodes in the tree?,There is at least one recursive call for every node (and its None children).
+Term: Linked List Representation of Trees.,Definition: A method of representing trees where each node is an object containing data and pointers to its children.
+"Cloze: In Pre-order traversal, the _____ node is printed before its subtrees are traversed.",root
+"Cloze: In _____ traversal, the root node is the very last element to be printed.",Post-order
+Cloze: Tree traversal is a way to visit every node in a _____ data structure.,non-linear
+The standard approach to visiting children in this source is always _____ child followed by _____ child.,left; right
