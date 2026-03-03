@@ -1,0 +1,77 @@
+What is the defining characteristic of a Binary Tree regarding its child nodes?,Every node can have at most two child nodes.
+True or False: A Binary Tree must have left children smaller than the root and right children larger than the root.,"False, that specific property applies only to Binary Search Trees."
+What is the primary motivation for using a Binary Search Tree (BST) over a standard Binary Tree?,To reduce the time complexity of searching for elements.
+What is the time complexity of searching for an element in a standard Binary Tree with $n$ nodes?,$O(n)$
+Why is the search time complexity in a standard Binary Tree $O(n)$?,"In the worst case, every node in the tree must be visited to find the target element."
+Searching in an array or a linked list typically takes $O(n)$ time; what complexity does a BST offer for the same operation?,$O(\log n)$
+What is the fundamental property of the left subtree in a Binary Search Tree?,All elements in the left subtree must be smaller than the root node.
+What is the fundamental property of the right subtree in a Binary Search Tree?,All elements in the right subtree must be larger than the root node.
+"In a BST, if a node with value 40 is the left child of a root with value 50, what is the constraint on the right child of the 40 node?",It must be greater than 40 but smaller than 50.
+How does a BST drastically reduce search time during each comparison step?,It skips half of the remaining tree (either the left or right subtree) based on the comparison.
+The maximum number of comparisons needed to search for an element in a BST is equal to the _____ of the tree.,height
+What is the mathematical relationship between the height of a balanced tree and the number of nodes $n$?,Height is approximately $\log n$.
+"According to the source, what percentage of tree-related interview questions are likely to be about Binary Search Trees?",99%
+"In a BST, if the target value is smaller than the current root node, in which direction should the search continue?",To the left subtree.
+"In a BST, if the target value is larger than the current root node, in which direction should the search continue?",To the right subtree.
+Which two BST operations have almost identical recursive code structures?,Insertion and Searching.
+Why is the deletion operation in a BST considered more complex than insertion or searching?,It requires handling multiple specific cases to maintain BST properties.
+"When creating a BST from a list of numbers, what happens to the first number received?",It is designated as the root node of the tree.
+"During BST insertion, how do you determine when you have found the correct spot to place a new node?",When you reach a position that is currently 'Null' or 'None'.
+"If the sequence 20, 30, 15 is inserted into an empty BST, where will 15 be located relative to 20?",As the left child of 20.
+"If the sequence 20, 30, 25 is inserted into an empty BST, where will 25 be located relative to 30?",As the left child of 30.
+What specific traversal of a BST results in elements being printed in increasing (sorted) order?,Inorder Traversal.
+How can you verify if a given binary tree is a valid Binary Search Tree using traversal?,Perform an Inorder Traversal and check if the output is in strictly increasing order.
+"In Python, which function is used within a class to allocate memory and initialize a new node?",The `__init__` function (constructor).
+What three attributes are typically defined in a BST node class?,"Left pointer, Right pointer, and Data/Value."
+"In a recursive `insert` function, what is the base case for when a new node should be created?",When the current `root` (or current node pointer) is `None`.
+Why is it recommended to return the root node at the end of a BST modification function?,"To ensure the caller has the updated reference to the tree, especially if the root itself changed."
+"In the provided recursive insertion logic, what happens if the value to be inserted is already present in the BST?",The function returns the current root without making any changes (ignores duplicates).
+"In the recursive step `root.left = insert(root.left, value)`, what is the purpose of the assignment?",To connect the newly created node (returned by the base case) to its parent's left pointer.
+What is the time complexity of searching for a single element in a BST?,$O(\log n)$
+What is the time complexity of inserting a single element into an existing BST?,$O(\log n)$
+What is the total time complexity to create a BST containing $n$ elements from scratch?,$O(n \log n)$
+"In the search function, what does it mean if the recursion reaches a `None` node without finding the target value?",The element is not present in the tree.
+Why is a `return` statement necessary after printing 'Element Found' in a search function?,To terminate the function and prevent the execution of subsequent logic/comparisons.
+What error might occur if a search function checks `root.data` without first verifying `if root is None`?,A Null Pointer Exception (or `AttributeError` in Python).
+Concept: BST Search Efficiency,"Efficiency is high because at every level, only one comparison is made, effectively halving the search space."
+"In BST insertion, if the value is greater than the root's data, the function recursively calls itself on the _____.",right child (root.right)
+"In BST insertion, if the value is less than the root's data, the function recursively calls itself on the _____.",left child (root.left)
+"If an Inorder Traversal outputs `12, 15, 18, 20`, what is the value of the root's predecessor in the sorted sequence?",18
+Which BST property ensures that the rightmost node in the entire tree is the maximum value?,The property that all right-subtree elements are greater than their respective root nodes.
+Which BST property ensures that the leftmost node in the entire tree is the minimum value?,The property that all left-subtree elements are smaller than their respective root nodes.
+"In the context of the video, 'Creation' of a BST is essentially a series of _____ operations.",insertion
+True or False: The search time in a BST depends on the total number of nodes in the tree rather than the height.,"False, it depends on the height (which is $\log n$ for balanced trees)."
+What is the benefit of using recursion for BST operations?,"The same logic (compare, then move left or right) is repeated for subtrees, which fits the recursive structure of trees."
+"In the `search` code, if `root.data == value`, the element has been _____.",found
+"In Python code, what is passed to the `insert` function the very first time it is called for an empty tree?",`None` (representing the empty root).
+"If you insert 50, then 40, then 45, what is the parent of 45?",The node with value 40.
+"If you insert 50, then 60, then 55, where does 55 go?",To the left of node 60.
+What happens if you search for 100 in a BST where the maximum value is 50?,The search will follow right pointers until it hits `None` and return 'Not Found'.
+Why is BST search faster than searching in a Linked List?,"Linked Lists require linear traversal ($O(n)$), while BSTs allow skipping subtrees ($O(\log n)$)."
+The sequence of nodes visited while searching for a value in a BST is known as the _____.,search path
+A BST where every node has only a right child essentially behaves like a _____.,linked list (skewed tree)
+What is the purpose of the `value` parameter in the `Node` class constructor?,To initialize the data field of the newly created node.
+How do you 'test' if the `insert` function worked correctly based on the video's advice?,Perform an Inorder Traversal and check if the output is sorted.
+"In the provided Python code, `self.left` and `self.right` are initialized to _____ by default.",`None`
+"If the `insert` function is called with `insert(root.right, 40)`, what does `root.right` represent in the next recursive call?",The new `root` (current node) for that specific subtree.
+"In the search logic, if the value is neither found at the current node nor is the node `None`, what is the next step?",Compare the value with the current node's data to decide whether to search left or right.
+"True or False: In a BST, the left child of a node can be equal to the node's value.","False (the video assumes unique elements, though rules can be modified for duplicates)."
+Why does the height of the tree determine the number of comparisons in $O(\log n)$?,Because you perform at most one comparison per level of the tree.
+What is the time complexity of Inorder Traversal in a BST?,"$O(n)$, as it must visit every node once."
+"When a node is returned in the search function, why do we use `return` in the recursive call like `return search(root.left, value)`?",To pass the 'Found/Not Found' result back up through the recursion stack.
+"In a BST with root 20 and left child 15, if we insert 18, it becomes the _____ child of 15.",right
+"In a BST with root 20 and right child 30, if we insert 25, it becomes the _____ child of 30.",left
+What is the result of searching for a value that is smaller than the smallest element in the BST?,The search will traverse all the way to the leftmost `None` and return 'Not Found'.
+Why is the Inorder Traversal property specific to BSTs and not all Binary Trees?,Because it relies on the specific 'left < root < right' ordering of elements.
+"If a BST is 'skewed' (looks like a line), what does the search time complexity become?",$O(n)$
+"In the code, the base case `if root is None: return Node(value)` handles _____.",empty trees and the point of insertion for new leaves.
+What is the logical opposite of 'Element Found' in the search function?,"'Element Not Found', triggered when `root is None`."
+True or False: A BST's search time is always $O(\log n)$ regardless of its shape.,"False, it is $O(\log n)$ for balanced trees but can be $O(n)$ for skewed trees."
+"If you insert nodes in strictly increasing order (e.g., 10, 20, 30, 40), what shape will the BST take?",A right-skewed tree (effectively a linked list).
+"If you insert nodes in strictly decreasing order (e.g., 40, 30, 20, 10), what shape will the BST take?",A left-skewed tree.
+"In the search function code, the line `if root.data > value:` leads to searching the _____ subtree.",left
+"In the search function code, the line `if root.data < value:` leads to searching the _____ subtree.",right
+What is the primary objective of 'Dividing the work by 2' at each step in a BST?,To achieve logarithmic time complexity ($O(\log n)$).
+"To print all BST elements in descending order, one would modify Inorder Traversal to visit _____.","Right, then Root, then Left."
+"In the code `root.right = insert(root.right, value)`, what happens if `root.right` was already a valid node?","The recursive call continues deeper, and eventually the existing `root.right` is reassigned to itself."
+"According to the video, if a programmer doesn't know how to _____ their code, they cannot be a 'good programmer'.",test
