@@ -1,0 +1,53 @@
+What is the primary property of an inorder traversal performed on a Binary Search Tree (BST)?,The elements are printed in increasing (sorted) order.
+What does the term 'Inorder Successor' refer to in the context of a BST traversal?,The next element that appears after a specific node in an inorder traversal.
+What does the term 'Inorder Predecessor' refer to in the context of a BST traversal?,The element that immediately precedes a specific node in an inorder traversal.
+How is the Inorder Successor of a node located within the tree structure of a BST?,Move one step to the right and then find the leftmost node in that subtree.
+How is the Inorder Predecessor of a node located within the tree structure of a BST?,Move one step to the left and then find the rightmost node in that subtree.
+How many primary cases are defined for deleting a node from a Binary Search Tree?,Three
+"In BST deletion, what defines Case 1?",The deletion of a leaf node (a node with zero children).
+"In BST deletion, what defines Case 2?",The deletion of a node that has exactly one child (either left or right).
+"In BST deletion, what defines Case 3?",The deletion of a node that has two child nodes.
+Why is deleting a leaf node (Case 1) considered simple?,It is an independent element with no dependencies or children to manage.
+What is required from the parent node to successfully delete a leaf node in a BST?,The parent node must set its pointer to the target node to $null$.
+"When deleting a node with one child (Case 2), what happens to that child?",The parent of the deleted node takes responsibility for (connects to) the deleted node's child.
+"To delete a node with one child, which two addresses must the algorithm typically possess?",The address of the node's parent and the address of the node's child.
+Why can the code for Case 2 (one child) usually handle Case 1 (zero children) automatically?,"If the node has no children, returning its $null$ right child to the parent effectively handles the leaf deletion."
+"In the deletion code, what is the base case for the recursion if the tree is empty?","If the $root$ is $None$, return $None$."
+"If $value < root.data$ during a deletion search, in which direction should the recursion proceed?",To the left subtree ($root.left$).
+"If $value > root.data$ during a deletion search, in which direction should the recursion proceed?",To the right subtree ($root.right$).
+"When the node to be deleted is found and its left child is $null$, what value should be returned to the parent?",The right child node ($root.right$).
+"When the node to be deleted is found and its right child is $null$, what value should be returned to the parent?",The left child node ($root.left$).
+What is the strategy for deleting a node with two children (Case 3)?,Replace the node's data with its Inorder Successor's data and then delete the Successor node.
+Why is the Inorder Successor used to replace a deleted node in Case 3?,It ensures that the tree maintains the Binary Search Tree property after replacement.
+"In the `getSuccessor` helper function, what is the first navigational step?",Set the current node to $root.right$.
+What loop condition is used in `getSuccessor` to find the leftmost node?,$while\ current.left\ is\ not\ None$
+"After copying the successor's data to the target node in Case 3, what is the next recursive step?",Call the delete function on the right subtree to remove the original successor node.
+Why is the `delete` function's return value assigned back to $root.left$ or $root.right$?,To update the parent's pointers with the potentially new subtree root after a deletion.
+"The node to be deleted has no left child. If it also has no right child, what does the expression `return root.right` provide?","It returns $null$ (or $None$), effectively deleting the node."
+"In Case 3 deletion, which child of the target node will always contain the Inorder Successor?",The right child.
+"When using `getSuccessor(root)`, what is the specific node passed to the function?",The node that is intended to be deleted.
+"In a recursive `delete(root, value)` function, what must be returned at the very end of the function?",The $root$ node of the (possibly modified) tree.
+How does the algorithm find the node to delete if the target value is not at the current root?,By recursively calling the delete function on the left or right subtrees based on a comparison.
+Why must the parent's pointer be updated when deleting a node?,To prevent the deleted node from remaining connected to the tree structure.
+What is the benefit of replacing a node with its Inorder Predecessor instead of the Successor?,It is an alternative valid strategy that also maintains the BST property.
+"In the provided logic, if a node has both children, which helper function is called first?",`getSuccessor()`
+"If a node is found where $root.data == value$, and it has two children, what is the first action taken?",Locate the Inorder Successor node.
+"In the code `root.data = successor.data`, what is being achieved?",The value of the node to be deleted is overwritten by the value of its inorder successor.
+What is the time complexity category for searching for a node to delete in a BST?,"$O(h)$, where $h$ is the height of the tree."
+"Which specific code structure is used to decide between searching left, searching right, or deleting the current node?",An $if-elif-else$ block.
+What happens if the `delete` function is called on a value that does not exist in the BST?,The recursion eventually hits a $null$ root and returns the original tree unchanged.
+"In `getSuccessor`, why do we only move right once before going left?",Because the successor is the smallest value in the right subtree.
+"If a node has only a right child, which conditional check in the code handles its deletion?",`if root.left is None:`
+"If a node has only a left child, which conditional check in the code handles its deletion?",`elif root.right is None:`
+The process of moving through the tree to find a deletion point is a form of _____.,Searching
+"When deleting the original successor node in Case 3, why is the successor guaranteed to have at most one child?","Because it is the leftmost node of the right subtree, meaning it cannot have a left child."
+"In the instruction `root.right = delete(root.right, successor.data)`, why is the search started at `root.right`?",The successor is known to be located within the right subtree of the current node.
+Why is it important to use $elif$ instead of multiple $if$ statements when checking deletion cases?,To ensure only one deletion logic path is executed for a single node.
+"If a BST contains nodes $[6, 8, 9, 10, 20]$, what is the inorder successor of $10$?",$20$
+"If a BST contains nodes $[6, 8, 9, 10, 20]$, what is the inorder predecessor of $10$?",$9$
+True or False: Deleting a node in a BST always requires shifting every node in the tree.,False
+What is the final step in the `getSuccessor` function before returning?,Return the current node reached after the $while$ loop finishes.
+"In Case 3, if the successor node is a leaf, which specific Case logic will actually remove it during the recursive call?",Case 1 (Zero children logic).
+"What is the significance of returning the $root$ in the `delete` function call `root.left = delete(root.left, val)`?",It preserves the link between the current node and its potentially modified left child.
+"If the `delete` function returns $null$ for a leaf node, what is assigned to the parent's child pointer?",$null$ (or $None$).
+How does the algorithm handle a tree with only one node during deletion?,"It identifies the node, sees both children are $null$, and returns $None$ to the caller."
