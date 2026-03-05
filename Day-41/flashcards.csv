@@ -1,0 +1,53 @@
+How is a graph represented mathematically in terms of sets?,As an ordered set containing pairs of elements.
+"In a graph, what are the individual points or nodes called?",Vertices (singular: vertex).
+What is the term for the connection between two vertices in a graph?,An edge.
+"In the set $B = \{(1, 2), (2, 4), (3, 6)\}$, how many graph edges are represented?",Three edges.
+What defines an 'undirected graph'?,"A graph where edges have no specific direction, making them two-way connections."
+How is a 'directed graph' visually distinguished from an undirected one?,Edges are represented with arrows to indicate a one-way path.
+What is a 'weighted graph'?,"A graph where each edge has an assigned numerical value representing distance, cost, or time."
+What are the two primary methods for representing a graph in computer memory?,Matrix representation and List representation.
+"If a graph has $V$ vertices, what are the dimensions of its adjacency matrix?",$V \times V$ (a square matrix).
+"In a standard adjacency matrix, what does a value of 0 indicate?",The absence of an edge between two vertices.
+"In a non-weighted adjacency matrix, what does a value of 1 represent?",The presence of an edge between two vertices.
+Why does an undirected graph result in a 'symmetric matrix'?,"Because an edge between $u$ and $v$ exists in both directions ($u, v$ and $v, u$), mirroring the matrix across the diagonal."
+"In a directed graph adjacency matrix, where is an edge from vertex 1 to vertex 2 recorded?","At Row 1, Column 2."
+How is weight stored in a weighted graph's adjacency matrix?,The weight value is written at the intersection of the source row and destination column instead of the number 1.
+What does the 'source' (Row) and 'destination' (Column) represent in a graph matrix?,"The 'source' is the starting vertex of an edge, and the 'destination' is the ending vertex."
+Which Python code snippet creates a list of 4 zeros using the repetition operator?,`[0] * 4`
+How do you initialize a $V \times V$ matrix of zeros in Python using list comprehension?,`[[0] * V for _ in range(V)]`
+"In the Python `Graph` class, what is the purpose of the `self.size` variable?",To store the number of vertices for boundary checking and iteration.
+"When implementing `add_edge(self, src, dest)`, what is the lower boundary check for the indices?",The indices must be greater than or equal to 0.
+What upper boundary condition must the `src` and `dest` indices meet in the `add_edge` method?,They must be less than the total number of vertices (`self.size`).
+"To represent an undirected edge between `src` and `dest` in code, which two assignments are needed?",`matrix[src][dest] = 1` and `matrix[dest][src] = 1`.
+How is a directed edge from `src` to `dest` implemented in an adjacency matrix in Python?,`self.matrix[src][dest] = 1`
+What is the simplest way to remove an edge from an adjacency matrix?,Assign the value 0 to the specific matrix coordinates of that edge.
+"In the `print_graph` method, what does `map(str, row)` accomplish?",It converts every integer in a matrix row into a string format.
+What is the function of `' '.join(...)` when printing the graph matrix in Python?,It concatenates the string elements of a row into a single string with spaces in between.
+What is a 'Dense Graph'?,A graph containing a high number of edges relative to the number of vertices.
+What is a 'Sparse Graph'?,A graph with relatively few edges compared to the total possible connections.
+What is the major disadvantage of using an adjacency matrix for a Sparse Graph?,Significant memory wastage due to storing many zeros for non-existent edges.
+Under what condition is Matrix Representation highly recommended?,When the graph is a Dense Graph.
+What is the time complexity to check if an edge exists between two vertices in an adjacency matrix?,$O(1)$ (Constant time).
+What is the space complexity of an adjacency matrix for a graph with $V$ vertices?,$O(V^2)$.
+"In Python's `for _ in range(self.vertex)`, what does the underscore `_` represent?",A placeholder variable indicating that the loop index is not used within the loop body.
+"In a symmetric matrix for an undirected graph, where are the self-loops located?",Along the principal diagonal.
+How would you modify `add_edge` to support weighted graphs in Python?,Accept a `weight` parameter and assign it to the matrix: `self.matrix[src][dest] = weight`.
+Why can a directed graph matrix be non-symmetric?,Because an edge from $u$ to $v$ does not guarantee a corresponding edge from $v$ to $u$.
+What error message is printed in the provided Python code if an edge is added with out-of-bounds indices?,"""Invalid edge""."
+Concept: Adjacency Matrix,Definition: A 2D array representation of a graph where indices represent vertices and cell values represent edges.
+The principal diagonal of a graph matrix represents edges where the source and destination are the _____.,Same vertex (self-loops).
+"If a graph has 5 vertices, what is the valid range for the vertex indices?",0 to 4.
+How does an adjacency matrix handle multiple edges between the same two nodes in a simple implementation?,"It usually only stores one value (1 or the weight), making it difficult to represent multiple edges."
+"In Python, which list method or structure is used to hold the rows of the adjacency matrix?",A nested list (list of lists).
+What is the purpose of the `__init__` method in the `Graph` class?,To define the number of vertices and initialize the adjacency matrix with zeros.
+"In the context of the transcript, what is the 'bi-directional' nature of undirected graphs?",It means you can travel from vertex A to B and from B back to A using the same edge.
+Why is the matrix representation of a graph always a square matrix?,Because every vertex needs to be represented as both a potential source (row) and a potential destination (column).
+"If a weighted graph has an edge with distance 15 km from node 0 to node 3, what is stored at `matrix[0][3]`?",15
+Which Python built-in function is used to create a sequence of numbers from 0 to $V-1$ for matrix initialization?,`range(V)`
+"In the `print_graph` code, why is `space.join` used instead of just printing the list?","To provide a clean, readable output format without brackets and commas."
+How many ones are added to the matrix for a single edge in an undirected graph?,Two (one at $[src][dest]$ and one at $[dest][src]$).
+What is the benefit of the Adjacency Matrix for adding or removing edges?,"It is extremely fast and simple, requiring only a single assignment operation."
+"In the provided example graph with 4 vertices, what size matrix is generated?",$4 \times 4$ matrix.
+What does 'Matrix Representation' use to represent connections between vertices?,A two-dimensional array or list.
+"When a graph's edges are 'Set elements' as pairs, what does the pair $(1, 2)$ signify?",An edge connecting vertex 1 and vertex 2.
+"If the adjacency matrix is $M$, the condition for symmetry is $M[i][j] = \dots$?",$M[j][i]$
