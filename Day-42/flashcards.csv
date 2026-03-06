@@ -1,0 +1,50 @@
+What is another commonly used name for the 'link list representation' of a graph?,Adjacency List representation
+"In an Adjacency List, the main list of vertices acts as the _____ point for connections.",Source
+"In an Adjacency List, the elements inside the linked list attached to a vertex represent the _____.",Destinations
+"True or False: In an Adjacency List, every linked list must have the same size.",False
+"In an undirected graph, if an edge exists between vertex $1$ and vertex $2$, how many updates are required in the Adjacency List?",Two
+"When adding an edge $(1, 2)$ in a directed graph where $1$ is the source, which vertex's list is updated?",Vertex $1$
+Which Python data structure is used to store vertices as unique keys in the provided implementation?,Dictionary
+Which Python data structure is used to store the set of destinations for each vertex key?,List
+What is a primary advantage of the Adjacency List representation regarding memory?,It prevents memory wastage by only storing existing edges.
+For which type of graph is the Adjacency List representation more memory-efficient than a Matrix representation?,Sparse graphs
+What term describes a graph with a very high number of edges?,Dense graph
+Why is the Adjacency Matrix preferred over the Adjacency List for dense graphs?,Adjacency lists can become very large and consume more memory than a matrix if edges are numerous.
+What is a major structural advantage of using a list-based representation over a matrix for dynamic graphs?,It is easier to add or delete vertices and edges dynamically.
+"In C++, an Adjacency List can be implemented as an array of _____.",Pointers
+"In Java, which data structure is recommended for implementing an Adjacency List where vertices are keys?",Map
+"In the Python `__init__` method, what symbol is used to initialize the `adj_list` as a dictionary?",Curly braces `{}`
+What must be checked before adding a new vertex to the dictionary to maintain graph integrity?,If the vertex is not already present in the dictionary.
+Code snippet: `self.adj_list[vertex] = []`. What does the `[]` represent in this context?,An empty list for storing future destination nodes.
+What are the two standard parameters passed to an `add_edge` function (excluding `self`)?,Source and Destination
+Why is `self` included as a parameter in the graph methods?,To allow the method to point to a specific instance or object of the Graph class.
+"In the Python implementation, which function is called inside `add_edge` to ensure the source and destination exist as vertices?",`add_vertex`
+Which list method is used to add a destination to a source's adjacency list in Python?,`.append()`
+"In an undirected graph implementation, if we execute `adj_list[source].append(destination)`, what is the corresponding second line of code?",`adj_list[destination].append(source)`
+What Python method returns all the keys (vertices) from the adjacency list dictionary?,`.keys()` (or iterating directly over the dictionary)
+Term: In-degree,The number of edges directed toward a specific vertex.
+Term: Out-degree,The number of edges directed away from a specific vertex.
+"In an undirected graph, how is the total degree of a vertex calculated from the Adjacency List?",By finding the length of the list associated with that vertex.
+What happens if you try to add a duplicate key to a Python dictionary?,The dictionary does not allow duplicate keys; it would typically overwrite or require a check.
+"In the `print_graph` function, what is the purpose of the nested loop or list access?",To retrieve and display all neighbors for each individual vertex.
+"In a directed graph, if there is an edge from $A$ to $B$, vertex $A$ is the source and vertex $B$ is the _____.",Destination
+How does the 'dynamic' nature of Adjacency Lists benefit vertex deletion compared to a Matrix?,"Deleting a vertex in a matrix requires rebuilding the entire 2D array, whereas a list only requires removing a key and references."
+"When a vertex is first added using `add_vertex`, what is the initial value of its associated adjacency list?",An empty list `[]`
+"If vertex $4$ is connected to $1, 2, 3,$ and $5$ in an undirected graph, what is the degree of vertex $4$?",$4$
+What is the memory complexity of a graph with $V$ vertices and $E$ edges in an Adjacency List representation?,The space is proportional to the number of vertices and edges ($V + E$).
+"When printing the graph, what does the 'arrow' symbol typically represent in the output string?",A direct connection between the source vertex and its list of destinations.
+"In the provided Python code, why is `if vertex not in self.adj_list` used in the `add_vertex` method?",To ensure uniqueness and prevent resetting an existing vertex's adjacency list to empty.
+"If we want to represent a directed graph, we should skip the line of code that appends the _____ to the _____ list.",Source; Destination
+A graph with very few edges relative to the number of vertices is called a _____ graph.,Sparse
+"In the `print_graph` method, which object is iterated over to get every vertex name?",The keys of the `adj_list` dictionary.
+"If $G_1$ and $G_2$ are two separate graph objects, what prevents `add_edge` from mixing their data?",The `self` pointer ensures the method acts on the dictionary instance belonging to that specific object.
+"Which representation is easier for writing code when dealing with simple, dense graphs and fixed vertex counts?",Matrix representation
+"In the adjacency list, the last node of each linked list in a traditional implementation points to _____.",None (or Null)
+How does an Adjacency List display the 'out-degree' of a vertex in a directed graph?,The out-degree is equal to the number of items in the list for that specific vertex.
+"If the list for vertex $A$ contains $[B, C]$, can we automatically assume the list for vertex $B$ contains $A$?",Only if the graph is undirected.
+"In the Python implementation, the line `for vertex in self.adj_list` iterates through the _____ of the dictionary.",Keys
+True or False: The order of elements in a vertex's adjacency list typically does not affect the graph's logical structure.,True
+"When implementing the Adjacency List in Python, what is the benefit of using a Dictionary over a simple List of Lists?",It allows for non-integer vertex names (like strings) and faster lookup of vertex keys.
+What would happen if the `add_vertex` call was missing inside the `add_edge` function?,The program would raise a 'KeyError' when trying to append a destination to a non-existent source key.
+"In a visual Adjacency List, if vertex $5$ has an empty list, what does this imply about its connections?",It has no outgoing edges (out-degree is $0$).
+What is the result of $In\text{-}degree + Out\text{-}degree$ for a vertex in a directed graph?,The total degree of the vertex.
