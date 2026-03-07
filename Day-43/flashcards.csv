@@ -1,0 +1,60 @@
+What are the two primary ways to represent a graph in computer memory mentioned in the text?,Adjacency matrix and adjacency list (linked list).
+What is the fundamental structural difference between a tree and a graph?,"Graphs can contain cycles or cyclic representations, whereas trees cannot."
+True or False: Every graph can be considered a tree.,False.
+"In the context of graph theory, what defines a 'cycle'?",A path where the traversal returns to a vertex that has already been visited.
+How do trees and graphs differ regarding their starting node for traversal?,"Trees always start at a fixed root node, while graphs can start at any vertex."
+Why is the output of a tree traversal (like pre-order) considered unique globally?,The starting root node and the rules for navigation are fixed.
+Why might two different students produce different valid outputs for a graph traversal starting from the same node?,There is no fixed order for visiting neighboring nodes in a graph.
+What does the acronym DFS stand for?,Depth First Search.
+What is the core priority of the Depth First Search algorithm?,To explore as deep as possible along a path before backtracking.
+"In DFS, what action is taken when the algorithm reaches a 'dead end'?",Backtracking to a previous node to find alternative paths.
+"According to the material, which real-world scenario is a classic application for DFS?",Navigating out of a maze or 'bhul bhulaiya'.
+What is the purpose of 'marking' locations while using DFS to solve a maze?,To track which areas have already been visited and avoid walking in circles.
+Which data structure is essential for implementing the iterative version of DFS?,Stack.
+Why is a stack specifically used in the DFS algorithm?,To store nodes for backtracking when a path reaches its end.
+"Besides an explicit stack, what other programming technique can be used to implement DFS?",Recursion.
+Why is a 'visited array' necessary during a graph traversal?,To keep track of visited nodes and prevent infinite loops caused by cycles.
+"If a graph has $n$ vertices, what should be the size of the visited array?",$n$.
+What is the typical initial value stored in a visited array before traversal starts?,False (or zero).
+"In Python, which built-in data structure is commonly used to function as a stack?",List.
+Which Python list method corresponds to the 'push' operation in a stack?,`append()`.
+Which Python list method corresponds to the 'pop' operation in a stack?,`pop()`.
+"In the provided code, how is the visited array initialized for a graph with `self.size` vertices?",`visited = [False] * self.size`.
+What is the first step when starting the DFS algorithm with a source node?,Push the source node onto the stack.
+"While the stack is not empty, what is the first action taken inside the DFS loop?",Pop a vertex from the stack.
+Under what condition is a vertex printed and marked as 'True' in the visited array?,If its current status in the visited array is `False`.
+"When using an adjacency matrix, how do you find all vertices connected to current vertex $V$?",Iterate through the row of vertex $V$ and check for cells containing the value 1.
+"In the code `if self.matrix[V][i] == 1 and not visited[i]:`, what is being checked?",Whether vertex $i$ is connected to $V$ and has not been visited yet.
+What happens to a neighbor of the current vertex if it is already marked as 'visited'?,It is ignored to prevent redundant processing or cycles.
+When does the DFS algorithm terminate?,When the stack becomes empty.
+What is the 'Minimum Spanning Tree' (MST) in the context of DFS?,A tree-like subgraph formed by the paths visited during traversal that contains no cycles.
+Term: Adjacency Matrix,Definition: A 2D array where the value at $\text{matrix}[source][destination]$ indicates the presence of an edge.
+Process: Backtracking,Definition: The process of returning to a previous decision point or node to explore new branches.
+"In the Python `range(0, self.size)` function, why is `self.size` used as the limit?","The range function is exclusive of the stop value, correctly covering indices from $0$ to $\text{size} - 1$."
+How is the 'source' or starting vertex determined in a graph traversal?,It is explicitly selected or passed as a parameter by the user.
+What prevents DFS from entering an infinite loop in a cyclic graph?,Checking the visited array before processing a node.
+"In the provided example, why was vertex 5 printed before vertex 3?",Because vertex 5 was reachable from vertex 6 (a deeper path) before the algorithm backtracked to reach 3.
+"Cloze: Every _____ is a graph, but not every graph is a tree.",Tree
+"Cloze: In DFS, we prioritize searching in _____ before moving to the next neighbor at the current level.",Depth
+"Cloze: In Python, `stack.pop()` removes the _____ element added to the list.",Last
+What does a value of 0 in the adjacency matrix signify?,There is no direct edge between the corresponding source and destination vertices.
+What is the relationship between recursion and a stack in DFS?,Recursion uses the internal system call stack to manage the same backtracking logic as an explicit stack.
+Why does the code use `visited[i] = True` immediately after printing a vertex?,To ensure the algorithm knows the vertex has been processed and does not visit it again.
+Concept: MST (Minimum Spanning Tree),Example: The collection of edges traversed by DFS that connects all reachable vertices without forming cycles.
+"In the iterative DFS code, why are neighbors 'appended' to the stack?",To ensure they are available for the next iteration of the depth-first exploration.
+What is the effect of having no unvisited neighbors at a current vertex?,"The `while` loop continues to the next `pop()` operation, effectively backtracking."
+How many times is a single vertex printed in a correct DFS implementation?,Exactly once.
+Which Python operator is used in the code to repeat the `False` value to fill a list of a specific size?,The multiplication operator (`*`).
+"In the matrix-based DFS, which variable acts as the fixed 'row' while searching for neighbors?",The current vertex $V$ popped from the stack.
+Why is DFS considered a non-unique traversal for graphs?,The sequence of output depends on the arbitrary order in which edges are stored or processed.
+"If a graph has 5 nodes labeled 0 to 4, what is the value of `self.size`?",5.
+What is the logic for selecting the next node to visit in a stack-based DFS?,"The node that was most recently added to the stack is visited next (Last-In, First-Out)."
+How does the code distinguish between a 'source' and 'destination' in the matrix?,The row index represents the source and the column index represents the destination.
+What is the purpose of the `if not visited[V]:` check immediately after popping from the stack?,To prevent processing a node that was pushed onto the stack multiple times before being visited once.
+"In the code example, what does `print(v, end="" "")` achieve?",It prints the vertex value followed by a space instead of a newline.
+True or False: DFS can only be implemented using an adjacency matrix.,False.
+How does the visited array help in memory management during traversal?,"It ensures each node is processed only once, preventing unnecessary cycles and redundant memory usage."
+What is the significance of the `while stack:` loop condition?,It ensures the algorithm continues as long as there are nodes to explore or backtrack to.
+Process: Adding an edge in the provided Graph class.,The `add_edge` method sets the matrix value at indices $[u][v]$ and $[v][u]$ to 1 for an undirected graph.
+What is the benefit of the iterative DFS approach over the recursive approach according to the instructor?,It provides a better understanding of how the algorithm works internally.
+"In the context of the transcript, what is the 'source' parameter in `dfs(self, source)`?",The vertex index where the traversal begins.
