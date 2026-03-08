@@ -1,0 +1,54 @@
+What type of data structure is a Stack considered based on its organizational principle?,A linear data structure.
+Why is a Stack often called an 'Abstract Data Structure' in Python?,It is not a built-in type and must be implemented using arrays or linked lists.
+The Stack data structure operates on the _____ principle.,LIFO (Last In First Out)
+"In the LIFO principle, which element is the first to be removed from the data structure?",The element that was added most recently.
+Identify two common software features that utilize the Stack data structure for managing operations.,Browser back buttons and 'Undo/Redo' operations in editors.
+What is the purpose of the 'Push' operation in a Stack?,To add an element to the top of the stack.
+Which Stack operation is used to remove the element currently at the top?,Pop
+What is the function of the 'Peak' operation in a Stack?,To view the element at the top without removing it.
+"What is the time complexity for Stack operations like Push, Pop, and Peak?",$O(1)$
+"Why do Stack operations (Push, Pop, Peak) maintain a time complexity of $O(1)$?","Operations are only performed on the top element, which can be accessed directly."
+The Queue data structure follows the _____ principle.,FIFO (First In First Out)
+What real-world scenario best illustrates the FIFO principle used in Queues?,A ticket counter line.
+Name two computing tasks where a Queue is used to manage the order of execution.,Print job scheduling and CPU task scheduling.
+"In a Queue, what is the 'Enqueue' operation used for?",To add an element to the data structure.
+Which operation in a Queue is responsible for removing an element?,Dequeue
+How does a Priority Queue differ from a standard Queue?,"Processing order depends on the priority assigned (e.g., by the CPU) rather than just arrival time."
+What does the term 'DQ' (or Deque) stand for in data structures?,Double-Ended Queue
+What unique functionality does a Deque provide compared to a standard Queue?,Elements can be added or removed from both the front and the back.
+List two specific types of algorithmic problems where a Deque is commonly implemented.,Sliding window problems and palindrome checks.
+Which two built-in Python data structures are primarily used to implement Hashing?,Dictionaries and Sets.
+"In Python, how does a Dictionary differ from a standard Array in terms of element access?",Dictionaries use user-defined keys for indexing instead of fixed numerical indices.
+What are the two components of a basic entry in a Python dictionary?,Key and Value.
+What is the average time complexity for accessing a value in a dictionary using its key?,$O(1)$
+How does a Set differ from a Dictionary in Python?,A Set is a collection of unique values without associated keys.
+Why can't elements in a Python Set be accessed directly by an index like a List?,Sets are unordered collections and do not support direct indexing.
+"To access specific elements in a Set by index, what conversion must first be performed?",The Set must be converted into a List or Array.
+What is the definition of a 'Hash Collision'?,When two different keys generate the same hash or map to the same index/location.
+What happens in a basic Python dictionary if you assign a new value to an existing key?,The existing value is overwritten by the new value.
+Under what condition does the time complexity of a hash search degrade from $O(1)$ to $O(n)$?,When a hash collision occurs and the system must search through multiple entries.
+How can an array be used within a dictionary value to handle potential hash collisions?,By storing multiple associated data points (like a list of hobbies) under a single key.
+Concept: Recursion,Definition: A programming technique where a function calls itself to solve a problem with a repeating pattern.
+What are the two essential parts required for a successful recursive function?,The Base Case and the Recursive Case.
+What is the primary purpose of a 'Base Case' in a recursive function?,To terminate the recursion and prevent an infinite loop.
+What does the 'Recursive Case' of a function represent?,"The small, repeating portion of the problem where the function calls itself."
+In what specific data structures is recursion heavily used for navigation?,Graphs and Trees.
+Why is recursion preferred over iteration in some mathematical problems like factorials?,It reduces code complexity and length by following natural mathematical patterns.
+What is the recursive formula for calculating the factorial of $n$ ($n!$)?,$n \times \text{factorial}(n-1)$
+"For a factorial recursive function, what should be the Base Case to ensure a correct result?","If $n = 1$, return 1."
+How does recursion manage its internal states during execution?,It uses a 'call stack' to save the state of each function call until a result is returned.
+When does a recursive function actually start calculating the final result?,Once the Base Case is reached and the function begins returning values back up the call stack.
+"In a recursive 'Count Down' function from $n$ to 0, what is the Base Case?",Checking if $n$ is equal to 0.
+What is a common real-life structural example of recursion mentioned in the material?,A folder directory containing sub-folders and files.
+What is the main risk of failing to define a Base Case in a recursive function?,Infinite recursion leading to a processing or stack overflow error.
+How does the memory usage of Recursion generally compare to Iteration (loops)?,Recursion uses more memory because it maintains a call stack for every function call.
+"In terms of logic, what must be true about the problem to use recursion effectively?",The problem must be divisible into smaller sub-problems that follow the same pattern.
+What is the base case for a recursive function that sums numbers from $n$ down to 0?,"If $n = 0$, return 0."
+"If a recursive function for $n!$ has a base case that returns 0, what will the final result always be?",0 (because any number multiplied by 0 is 0).
+Which sorting or searching structures might be explored layer-by-layer using recursion?,Trees (Tree Traversal).
+"When reversing a string recursively, what does the base case typically check for?",If the length of the string is 1.
+"In Python slicing notation for recursion, what does `str[1:]` achieve?","It returns the string starting from the second character to the end, effectively removing the first character."
+"In Python slicing, what does `str[:-1]` achieve when used in recursion?",It returns the string with the last character removed.
+What determines whether Recursion or Iteration is more efficient for a specific task?,It depends on the nature of the problem and the specific constraints of the environment.
+Why might recursion be difficult for a human to 'map' mentally for large values of $n$?,The mind struggles to track multiple layers of expanding function calls and states simultaneously.
+"In a recursive function to add numbers, why is 'return n + sum(n-1)' used instead of just calling 'sum(n-1)'?",The 'return' ensures that the current value of $n$ is added to the result of the next call as the stack resolves.
