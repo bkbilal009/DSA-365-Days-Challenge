@@ -1,0 +1,75 @@
+What is the full form of the graph traversal algorithm BFS?,Breadth-First Search.
+What is the full form of the graph traversal algorithm DFS?,Depth-First Search.
+Which tree traversal method is conceptually identical to Breadth-First Search in a graph?,Level Order Traversal.
+What primary data structure is used to implement Breadth-First Search?,A Queue.
+What primary data structure is used to implement Depth-First Search?,A Stack.
+"In BFS, how does the algorithm move through the graph relative to a starting node?",It visits all neighbors at the current level before moving to the next level.
+Which traversal algorithm is described by the analogy of ripples expanding outward when a stone is thrown into water?,Breadth-First Search (BFS).
+Why is the output of a BFS traversal not necessarily unique for a single graph?,It depends on the starting node choice and the order in which neighbors are visited.
+What is the purpose of a 'visited' array during BFS traversal?,To keep track of which nodes have already been processed and prevent infinite loops.
+How is the 'visited' array typically initialized in Python for a graph with $V$ vertices?,`[False] * V`
+"In BFS, when should a neighbor node be marked as 'True' in the visited array?",As soon as it is inserted into the Queue.
+What happens in BFS if the algorithm reaches a node with no unvisited neighbors?,It removes the next node from the front of the queue to continue the traversal.
+What Python library provides the `deque` class for an efficient queue implementation?,The `collections` module.
+Which specific function in Python's `deque` removes an element from the front (left) side?,`popleft()`
+Which function is used to add an element to the end (right) of a queue in Python?,`append()`
+"In an adjacency matrix, what value typically indicates that an edge exists between two vertices?",1
+"If a graph has $V$ vertices, what are the dimensions of its adjacency matrix representation?",$V \times V$
+What is the first step in the BFS algorithm implementation?,Enqueue the starting node and mark it as visited.
+What condition determines when the main loop of the BFS algorithm should terminate?,When the queue becomes empty.
+"In a BFS implementation using an adjacency matrix, how do you find the neighbors of vertex $V$?",By iterating through row $V$ of the matrix and checking for values equal to 1.
+How many times is each vertex added to the queue in a standard BFS traversal?,Exactly once.
+Concept: Level Order Traversal,"A method where nodes are visited level by level, starting from the root and moving from left to right."
+"If node A is at Level 0 and node B is at Level 2, is it possible for B to be printed before A in BFS?","No, lower-level nodes are always processed before higher-level nodes."
+What is the benefit of using BFS when exploring paths?,It checks every possible approach at the current phase before moving deeper.
+"In an undirected graph, if an edge exists between Source ($S$) and Destination ($D$), which matrix cells are set to 1?",`matrix[S][D]` and `matrix[D][S]`
+The logic `while q:` in Python is equivalent to checking if the queue is _____.,Not empty.
+What does BFS stand for?,Breadth-First Search.
+"If a graph has vertices numbered $0$ to $7$, how many elements will the visited array contain?",8
+Why is `popleft()` preferred over `pop(0)` for a standard Python list when implementing a queue?,"`popleft()` in a `deque` is $O(1)$, while `pop(0)` in a list is $O(n)$."
+"In BFS, what is the 'breadth' being referred to?",The width of the graph at a specific distance from the source node.
+"In the BFS code example, which variable represents the currently visiting vertex popped from the queue?",$V$
+"True or False: In BFS, two nodes in the same level can be printed in any order relative to each other.",True.
+What is the standard time complexity for finding the neighbors of a single node in an adjacency matrix of size $V$?,$O(V)$
+"In the BFS algorithm, what action follows printing the current vertex?",Enqueuing all its unvisited neighbors.
+How does BFS differ from DFS in terms of how it reaches 'dead ends'?,DFS explores a path to a dead end before backtracking; BFS explores all paths simultaneously level by level.
+What does `self.size` represent in the provided Graph class implementation?,The total number of vertices in the graph.
+"If the source node is 0, and it is connected to 1 and 2, what nodes are at Level 1?",1 and 2.
+Which traversal would you use if you needed to explore every possibility at Step 1 before moving to Step 2?,Breadth-First Search (BFS).
+"In Python list slicing/multiplication, what does `[False] * 5` produce?","`[False, False, False, False, False]`"
+The `deque` constructor `dq([source])` initializes the queue with _____.,The starting node (source).
+What parameter is changed in the `print()` function to keep BFS output on a single line with spaces?,"The `end` parameter (e.g., `end="" ""`)."
+"In BFS, if node $X$ is added to the queue before node $Y$, which node's neighbors will be added to the queue first?",Node $X$'s neighbors.
+What does an 'unweighted graph' imply for BFS traversal regarding shortest paths?,BFS will always find the shortest path in terms of the number of edges.
+"When implementing BFS, why is the 'visited' status checked before enqueuing a neighbor?","To ensure nodes are not added to the queue multiple times, which would cause redundancy or cycles."
+"In the water ripple analogy, what does the 'stone' represent?",The starting vertex or source node.
+Is it possible for a student to get a different BFS result than another student if they use different starting nodes?,"Yes, the starting node dictates the order of level discovery."
+What is the result of `matrix[source][i] == 1 and not visited[i]` in the BFS loop?,It identifies a neighbor that has not yet been visited.
+How many total edges were in the final complex graph example used in the source?,9
+"In the final example, if node 0 is Level 1, what level are nodes 2 and 7?",Level 5.
+What happens to the Queue after the last node (with no unvisited neighbors) is processed?,The Queue becomes empty and the traversal ends.
+"In the Python `range()` function used in the source, `range(0, self.size)`, what is the increment value?",1 (default).
+Term: Source Node,Definition: The starting vertex from which the traversal algorithm begins.
+Which traversal algorithm is better suited for finding if a path exists between two nodes in a very deep graph?,Depth-First Search (DFS).
+Which traversal algorithm is better suited for finding the shortest path in an unweighted graph?,Breadth-First Search (BFS).
+What is the relationship between the number of levels and the distance from the source in BFS?,The level number typically represents the minimum number of edges from the source to that node.
+"In the code, what does `visited[i] = True` right after `q.append(i)` achieve?",It prevents node $i$ from being added to the queue again by other neighbors.
+What does the `popleft()` function return?,The element that was at the front of the queue.
+"If `size = 7`, what is the index of the last element in the `visited` array?",6
+How is a graph represented in the provided source material code?,Using an adjacency matrix (List of Lists).
+"In the Graph class, what does the `add_edge` method do?",It sets the connection between two vertices to 1 in the adjacency matrix.
+"In a BFS traversal of a graph with 3 levels, when is the first node of Level 3 printed?",Immediately after all nodes of Level 2 have been processed and printed.
+Can BFS be implemented using recursion in the same simple way as DFS?,"No, BFS is naturally iterative because it requires a Queue to track levels."
+What is the effect of changing the starting node from 0 to 3 in a BFS traversal?,The entire traversal order and level assignments will change.
+"In BFS, if node $A$ is the parent of node $B$, is it possible for $B$ to be visited before $A$?","No, a parent node must be visited and processed to discover its children."
+What does the logic `if not visited[i]` check for?,It checks if the Boolean value at index $i$ in the visited array is `False`.
+"In the adjacency matrix, what does a $0$ at `matrix[1][2]` signify?",There is no direct edge between vertex 1 and vertex 2.
+What is the role of the `collections.deque` object in the provided Python code?,It serves as the queue for storing vertices to be visited.
+"In the water ripple analogy, what do the widening circles represent in terms of graph traversal?",The increasing 'breadth' of the search at each step.
+What is the result of applying BFS to a disconnected graph component that does not contain the source node?,Those nodes will remain unvisited and their status in the visited array will remain `False`.
+"In BFS, how many times is the visited status of a node checked?",Once for every edge connected to it.
+How does BFS handle cycles in a graph?,The visited array prevents the algorithm from re-processing nodes that are part of a cycle.
+What is the difference between a tree's Level Order Traversal and a graph's BFS?,A graph's BFS requires a visited array to handle cycles and multiple paths to the same node.
+What happens if a node is added to the queue but its 'visited' status is not updated until it is popped?,It may be added to the queue multiple times if it has multiple neighbors currently being processed.
+"In the provided code, why is `self` passed to the `bfs` function?","To access the graph's internal data, such as the adjacency matrix and the size of the graph."
+"If the BFS output is `0 1 3 4 5`, which node was the starting vertex?",0
