@@ -1,0 +1,52 @@
+"In the context of data structures, what is the fundamental definition of an array?",An array is a collection of similar types of elements stored in contiguous memory locations.
+Which memory allocation strategy is used by arrays to store elements?,Contiguous memory allocation.
+What is the standard starting index for elements in an array?,The starting index is 0.
+How do Python arrays differ from arrays in C++ or Java regarding element types?,"Python arrays can be heterogeneous (storing different data types), whereas C++ and Java arrays are typically homogeneous."
+What are the two primary modules used to work with arrays in Python?,The 'array' module and the 'NumPy' module.
+"In the Python 'array' module, what is the purpose of a 'type code'?",A type code defines the specific data type and size of the elements stored in the array.
+Which type code represents a signed integer of 2 bytes in the Python 'array' module?,The type code 'i'.
+Which type code represents a 4-byte or 8-byte floating-point number in the Python 'array' module?,The type codes 'f' (4 bytes) or 'd' (8 bytes).
+What is the syntax to create an array using the 'array' module after importing it as 'import array'?,"array.array(type_code, [elements])"
+What Python function is used to determine the total number of elements in an array?,The len() function.
+"How does the 'range(0, 6)' function behave regarding the upper limit?","It includes 0 but excludes 6, generating values from 0 to 5."
+What is the primary characteristic of an 'enhanced' for loop in Python compared to a range-based loop?,It iterates directly over the elements of the array rather than using an index.
+Which method is used to reverse the order of elements in a Python array in-place?,The reverse() method.
+How does the append() method modify an array?,It adds a single new element to the end of the array.
+"What is the function of the insert(index, value) method in a Python array?",It adds an element at a specific index and shifts all subsequent elements to the right.
+What is the effect of using the pop() method without any arguments on an array?,It removes and returns the last element of the array.
+How does the remove(value) method differ from the pop(index) method?,"The remove() method deletes the first occurrence of a specific value, while pop() deletes an element at a specific index."
+"In Python slicing, what does the syntax 'array[2:5]' retrieve?","Elements from index 2 up to, but not including, index 5."
+What does a negative index like '-3' represent in Python array slicing?,It refers to the third element from the end of the array.
+Which slicing syntax is used to create a reversed copy of an entire array?,The syntax array[::-1].
+Why is the NumPy module generally preferred over the 'array' module for complex tasks?,NumPy provides more functionality and supports multi-dimensional arrays.
+What command is used to install the NumPy library via the terminal?,pip install numpy
+How does NumPy handle an array containing both integers and a float?,"It performs upcasting, converting all integer elements into floats to maintain homogeneity."
+"What is the purpose of the linspace(start, stop, num) function in NumPy?",It creates an array of 'num' equally spaced samples over a specified interval including the stop value.
+"How does the arange(start, stop, step) function in NumPy differ from linspace() regarding the 'stop' value?","The arange() function excludes the stop value, whereas linspace() includes it by default."
+Which NumPy function creates an array of a specified size where every element is 0?,The zeros() function.
+Which NumPy function creates an array of a specified size where every element is 1?,The ones() function.
+"What is the purpose of the full(shape, value) function in NumPy?",It creates an array of a given shape filled with a specific constant value.
+What is a 2D array conceptually composed of?,A collection of 1D arrays.
+What is a 3D array conceptually composed of?,A collection of 2D arrays.
+Which method is used to find the index of the first occurrence of a specific element in a Python array?,The index() method.
+What happens in Python if you call index(x) and 'x' is not present in the array?,The program throws an error or exception stating the value is not in the array.
+How is a 0D array defined in NumPy?,It is an array containing a single scalar element.
+Which type code is used for Unicode characters in the Python 'array' module?,The type code 'u'.
+"In the 'array' module, which attribute can be accessed to verify the data type of an existing array?",The .typecode attribute.
+"When using slicing with 'array[start:stop:step]', what does the 'step' parameter define?",The increment between each index for the slice.
+What is the effect of the 'from array import *' statement?,It allows the creation of arrays using 'array()' directly without the 'array.' prefix.
+"In the 'array' module, which type codes represent 4-byte signed and unsigned integers respectively?",Signed uses 'l' and unsigned uses 'L'.
+What is the primary advantage of using a dynamic array in Python?,Its size can be increased or decreased automatically without manual memory management.
+How does NumPy facilitate 'heterogeneous' behavior through strings?,"If a string is added to a numeric NumPy array, it may convert all elements to strings to accommodate the data."
+"In NumPy's linspace(10, 20, 11), what is the resulting common difference between elements?",The common difference is 1.0.
+What parameters are required for the NumPy logspace() function?,"Start, stop, and the number of elements, distributed on a logarithmic scale."
+"To create a 2D array in NumPy, what is the required structural input?",A nested list where each inner list represents a row (1D array).
+"When taking user input to fill an array, which Python function converts the string input to a number?",The int() function.
+What logic allows copying an array while doubling its values in a single line?,Using a loop or comprehension to iterate through the old array and appending 'x * 2' to the new one.
+Why is the index() function considered a search operation?,It iterates through the array to locate and return the position of a target value.
+"In a 3D array structure, what does the outermost square bracket represent?",The 3D array level containing multiple 2D arrays.
+What is the result of 'array.pop(0)'?,The first element of the array is removed and returned.
+True or False: The insert() method in Python arrays overwrites existing data.,False; it shifts existing data to make room for the new element.
+How can you manually update an element at index 'i' without using methods like insert()?,By using the assignment syntax: array_name[i] = new_value.
+Which module allows for the creation of multi-dimensional arrays in Python?,The NumPy module.
+What is the common alias used when importing the NumPy library?,The alias 'np'.
