@@ -1,0 +1,50 @@
+"In Data Structures and Algorithms, how are trees fundamentally different from arrays or stacks?","Trees store data in a non-linear, hierarchical structure rather than a linear sequence."
+What real-world analogy is used to describe the hierarchical storage of folders or GitHub repositories?,A tree structure.
+"In a tree data structure, what is the primary function of a 'node'?",It serves as the container where the actual data is stored.
+What term describes the connections or arrows that link one node to another?,Edges.
+What is the 'root node' of a tree?,The top-level node from which all other branches and nodes originate.
+Which specific node type is defined by having no further branches or children extending from it?,Leaf node.
+What is the criteria for a node to be classified as a 'parent node'?,It must have at least one branch or child node extending from it.
+"In the hierarchy of an organization, which role represents the 'root node' of a tree structure?",The CEO.
+How is the 'height' ($H$) of a tree calculated?,By counting the maximum number of edge steps from the root to the furthest leaf node.
+How is the 'size' of a tree determined?,"By calculating the total count of all nodes within the tree, including the root, parents, and leaves."
+What is the defining rule for the number of children in a Binary Tree?,Every node can have a maximum of two children.
+"A valid Binary Tree node can have a child count of _____, _____, or _____.","Zero, one, or two."
+"In a Binary Tree, which direction is prioritized when starting to build or fill nodes from the root?",The left side.
+Why is searching for a specific value in an array generally faster than in a tree?,"Arrays allow direct access via indices, whereas trees require traversal through multiple nodes."
+"During a tree traversal, how many times is each individual node typically processed or 'read' before an answer is finalized?",Three times.
+What characterizes a 'Balanced Tree' in terms of its subtree heights?,The height difference between the left and right subtrees is at most one.
+Define a 'Complete Tree' regarding its levels and filling order.,"All levels are full except possibly the last, which must be filled from left to right."
+What is the specific requirement for a 'Full Binary Tree' regarding its child nodes?,Every node must have exactly zero or two children.
+How is a 'Perfect Tree' identified structurally?,All internal nodes have two children and all leaf nodes are at the exact same level.
+Why do large-scale companies (like FAANG) rely heavily on complex data structures like trees?,To efficiently manage and organize massive amounts of interconnected user data and digital footprints.
+"In Python Object-Oriented Programming (OOP), what class is commonly created to represent a tree element?",A Node class.
+"When initializing a tree node in Python, what are the three standard attributes assigned to 'self'?","Value, left, and right."
+"In a recursive function to count nodes, what is the base case return value if the current node is 'None'?",Zero.
+"To calculate the total size of a tree recursively, you add 1 to the sum of the _____ and the _____.",Left child count; right child count.
+Concept: Sub-tree,"A smaller tree structure existing within a larger tree, consisting of a node and all of its descendants."
+What happens to a tree's classification if a node in a Binary Tree is given a third child?,It ceases to be a valid Binary Tree.
+"In the provided Python implementation, what is the default value of 'self.left' and 'self.right' upon node creation?",None.
+The maximum number of edges from the root to the deepest leaf is the definition of tree _____.,Height
+Which non-linear data structure is described as being 'linked list-like' but with branches?,A tree.
+Under what condition is a 'leaf node' considered a 'parent node'?,A leaf node can never be a parent node because it has no children.
+"If a tree has a total of 10 nodes, what is its mathematical 'size'?",10.
+Why are trees considered slower than Linked Lists for basic element access?,Tree traversal is more complicated and often requires visiting nodes multiple times.
+"In a Complete and Balanced Tree, if the last level is not full, the nodes must be flush to the _____ side.",Left
+What is the relationship between the 'root' and a 'child node'?,The child node is a direct descendant connected to the root via an edge.
+"In a Full Binary Tree, a node cannot have exactly _____ child.",One
+Term: Edge,Definition: The directional connection between two nodes in a tree hierarchy.
+Why is 'OOP' (Object-Oriented Programming) knowledge important for mastering DSA?,It provides the conceptual framework (classes/objects) needed to implement complex data structures like trees.
+"If a tree is divided down the center from the root and both sides have an equal number of nodes and levels, it is a _____.",Perfect Tree (or Perfect Balanced Tree).
+A node located at the very end of a branch with no children is called a _____.,Leaf node.
+What is the primary advantage of using a tree over an array for storing hierarchical data?,It naturally mirrors organizational and nested relationships that linear arrays cannot represent.
+"In the recursive count function `countNodes(node)`, the expression `1 + leftCount + rightCount` accounts for the current node plus its _____.",Descendants (or children subtrees).
+True or False: A Binary Tree must have every level completely filled to be considered valid.,False (it only requires a maximum of two children per node).
+What is the 'top level' of a hierarchical data system called?,The root.
+"If a Binary Tree starts building from the root, which child is typically created first?",The left child.
+A tree that has a height difference of zero and all levels filled is categorized as a _____ tree.,Perfect
+The total number of nodes in a tree is known as its _____.,Size
+"In a tree, nodes that originate from the same parent are called _____.",Children (or siblings).
+How does a tree's 'hierarchical' nature differ from a 'linear' structure like a queue?,"Hierarchical structures have levels of authority or nesting, whereas linear structures process items in a simple sequence."
+Can a root node also be a parent node?,"Yes, if it has children nodes connected to it."
+"In the context of GitHub, what do the 'packages' and 'functions' within a repository represent in a tree model?",Child nodes and branches within the repository's root folder.
