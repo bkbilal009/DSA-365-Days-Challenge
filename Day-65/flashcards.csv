@@ -1,0 +1,60 @@
+What is the general definition of 'sorting' in computer science?,"Arranging elements in a specific order, typically increasing or decreasing."
+Selection Sort gets its name because the algorithm performs a _____ of a specific element to place it in its correct position.,selection
+"In the context of Selection Sort, what two specific types of elements can be 'selected' to sort an array in increasing order?",The minimum element or the maximum element.
+"To sort an array in increasing order using the minimum element, where should that element be moved?",To the first position of the unsorted portion.
+"To sort an array in increasing order using the maximum element, where should that element be moved?",To the last position of the unsorted portion.
+How is the minimum element identified in an array during the first pass of Selection Sort?,By assuming the first element is the minimum and comparing it sequentially with every subsequent element.
+"When searching for a minimum, if the current 'min' variable is 25 and the next element is 20, what action is taken?",The 'min' variable is updated to 20.
+What is the Python syntax for swapping the values of two variables $A$ and $B$ in a single line?,"$A, B = B, A$"
+"After the first iteration of Selection Sort (searching for the minimum), which element is guaranteed to be in its correct final position?",The smallest element in the array.
+What happens to the 'remaining' elements after the first minimum is placed in the first position?,The same selection process is repeated on the remaining unsorted elements.
+"In sorting, what does the term 'iteration' refer to?","One complete cycle of a repeating process, such as finding the minimum and swapping it."
+"In Selection Sort, how many elements are placed in their correct positions after the second iteration?",Two elements.
+Selection Sort typically uses how many nested loops?,Two.
+What is the primary role of the outer loop ($i$) in the Selection Sort implementation?,To track the current position that needs to be filled with the correct sorted element.
+What is the primary role of the inner loop ($j$) in Selection Sort?,To find the minimum (or maximum) element within the unsorted portion of the array.
+"If the outer loop index is $i$, why does the inner loop start at index $i$?",Because all elements before index $i$ are already sorted and should be ignored.
+"In the provided Python code, why is the inner loop termination point set to $n$ instead of $n-1$ in the `range()` function?",To ensure the loop includes the element at index $n-1$.
+"Before starting the inner loop to find a minimum, what value is typically assigned to the `min_index` variable?",The current index of the outer loop ($i$).
+"Instead of storing the actual minimum value, why does the algorithm store the index of the minimum element?",To facilitate the swap operation between the target position and the minimum element's location.
+"Inside the inner loop, what is the condition to update the `min_index` if we are searching for the minimum?",If the element at the current inner loop index is smaller than the element at `min_index`.
+"Once the inner loop finishes, which two elements are swapped?",The element at the current outer loop index ($i$) and the element at the identified `min_index`.
+Why is it unnecessary to check the very last element of the array in the outer loop?,"Because if $n-1$ elements are correctly placed, the last element is automatically in its correct position."
+How can the Selection Sort code be modified to sort in decreasing order using the minimum element?,By swapping the identified minimum element with the last available position instead of the first.
+"To sort in decreasing order by selecting the maximum element, where should that element be moved?",To the first position of the unsorted portion.
+What is the time complexity of Selection Sort in the worst case?,$O(n^2)$
+Why is the time complexity of Selection Sort $O(n^2)$?,"Because it uses two nested loops, each running approximately $n$ times."
+"In Python, if `a = [64, 25, 12, 22, 11]`, what is the result of `len(a)`?",5
+"In the logic `if a[min] > a[j]: min = j`, what does the variable `min` represent?",The index of the smallest element found so far in the current pass.
+"If an array is already sorted, does Selection Sort still perform $O(n^2)$ comparisons?","Yes, because the nested loops execute regardless of the initial order."
+"To change the sorting order from increasing to decreasing by only modifying the comparison operator, what change is made?",Change the 'greater than' ($>$) sign to a 'less than' ($<$) sign in the comparison logic.
+Selection Sort is generally considered inefficient for large datasets due to its _____ time complexity.,$O(n^2)$
+"During the third iteration ($i=2$) of Selection Sort, which index range does the inner loop search for the minimum?",From index 2 to the end of the array.
+"In the selection sort process, what is the 'sorted boundary'?","The index $i$ in the outer loop, where everything to the left is already sorted."
+"If the minimum element found is already at index $i$, what happens during the swap step?","The element is swapped with itself, effectively remaining in the same position."
+What is the primary difference between Bubble Sort and Selection Sort in terms of element movement?,"Bubble Sort moves elements through adjacent swaps, while Selection Sort selects one element and moves it directly to its target spot."
+"In the Python range function `range(i, n)`, if $i=2$ and $n=5$, what values are generated?","2, 3, and 4."
+True or False: Selection Sort can be implemented to find the maximum element and place it at the end to sort in ascending order.,True
+"Selection Sort is an _____ algorithm, meaning it does not require significant extra memory beyond the original array.",in-place
+Concept: Selection Sort Outer Loop,Definition: A loop that iterates through the array to define the current target position for the next sorted element.
+Concept: Selection Sort Inner Loop,Definition: A loop that scans the unsorted portion of the array to find the index of the minimum (or maximum) value.
+What is the state of an array of size 1 in Selection Sort?,It is always considered sorted.
+"If the input list is `[15, 64, 25, 20]`, what is the first swap performed by Selection Sort for ascending order?","15 is compared with everything, and since it is the minimum, it swaps with itself (or remains at index 0)."
+How does the size of the 'unsorted' portion of the array change with each iteration of the outer loop?,It decreases by one element.
+"In Python, the line `n = len(a)` is used to determine the _____ of the list.",size (or length)
+"If $i$ is the outer loop variable, what code snippet initializes the search for the minimum element's index?",`min_index = i`
+What is the effect of the comparison `if a[min_index] > a[j]:` when sorting in ascending order?,It checks if a smaller element exists at index $j$ than the one currently at `min_index`.
+"If $n$ is the total number of elements, the outer loop index $i$ typically runs from 0 to _____.",$n-1$
+What is the total number of comparisons in Selection Sort for an array of size $n$?,Approximately $\frac{n(n-1)}{2}$.
+"Which sorting algorithm is described by 'find the smallest, swap to the front, repeat'?",Selection Sort
+"To sort in decreasing order by selecting the maximum, the comparison `if a[max_index] < a[j]:` would be used to update the _____.",maximum index
+"In Selection Sort, if we are at the $k$-th iteration, how many elements are in the 'unsorted' part?",$n - k$ elements.
+"In the Python code `a[i], a[min] = a[min], a[i]`, what happens if $i$ equals `min`?",No effective change occurs as the element is swapped with itself.
+Selection Sort is characterized by having a high number of _____ but a low number of _____ compared to algorithms like Bubble Sort.,comparisons; swaps
+How many swaps are performed in total in a single full execution of Selection Sort on $n$ elements?,At most $n-1$ swaps.
+"If the array is `[5, 4, 3, 2, 1]`, what is the first swap in Selection Sort (ascending)?",5 and 1 are swapped.
+"If the array is `[5, 4, 3, 2, 1]`, what is the second swap in Selection Sort (ascending)?",4 and 2 are swapped.
+What variable typically marks the start of the unsorted sub-array in Selection Sort?,The outer loop index ($i$).
+"In Selection Sort, does the 'min' variable update inside the inner loop or outer loop?",Inside the inner loop.
+Does Selection Sort's performance improve if the array is partially sorted?,"No, it consistently performs the same number of comparisons regardless of initial order."
+What is the value of the outer loop index $i$ during the final iteration of Selection Sort for an array of length $n$?,$n-2$ (since the last element is automatically sorted).
