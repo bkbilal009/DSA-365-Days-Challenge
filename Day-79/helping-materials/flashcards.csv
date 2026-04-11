@@ -1,0 +1,60 @@
+How is the Two Pointer pattern formally defined?,"It is a technique where two variables, acting as pointers, traverse a linear data structure simultaneously from different positions."
+Name the three primary linear data structures where the Two Pointer pattern is typically applied.,"The structures are Arrays, Strings, and Linked Lists."
+"In the context of computer science patterns, what does a 'pointer' represent?",A pointer acts as an index or a reference to a specific element's position within a data structure.
+What are the three possible directions pointers can move relative to each other in this pattern?,"Pointers can move toward each other, away from each other, or in the same direction."
+The mnemonic 'PCS' summarizes common use cases for Two Pointers; what do these letters represent?,"They stand for Partitioning, Comparison, and Searching."
+How do pointers move in a 'Fast and Slow' Two Pointer configuration?,One pointer moves multiple steps per iteration while the other moves only one step.
+Which specific problem can be solved by using a fast pointer moving at twice the speed of a slow pointer in a Linked List?,This approach is used to find the middle element of the Linked List.
+What is the primary condition for a string to be classified as a palindrome?,The string must read exactly the same forward and backward.
+Why is the brute-force approach of reversing a string to check for a palindrome considered inefficient regarding space?,It requires $O(n)$ extra memory to create and store the new reversed string.
+What is the space complexity of a Two Pointer palindrome check performed 'in-place'?,"The space complexity is constant, or $O(1)$."
+"When checking a palindrome with two pointers, what is the initial position of the 'right' pointer $j$?","The pointer $j$ is initialized at the last index, calculated as $length - 1$."
+"In a Two Pointer palindrome algorithm, what condition causes the loop to terminate successfully?",The loop terminates when the left pointer $i$ is no longer less than the right pointer $j$.
+What is the character comparison condition that triggers an early return of 'False' in a palindrome check?,The check fails if the character at the left pointer does not match the character at the right pointer ($s[i] \ne s[j]$).
+How does the Two Pointer pattern improve the time complexity of finding a pair with a target sum in a sorted array compared to brute force?,It reduces the time complexity from $O(n^2)$ to $O(n)$.
+Concept: In-place Algorithm,Definition: A process that updates or solves a problem within the original data structure without creating extra copies or auxiliary structures.
+"In the 'Target Sum' problem on a sorted array, what should you do if the current sum is less than the target?",You should increment the left pointer to increase the total sum.
+"In the 'Target Sum' problem on a sorted array, what should you do if the current sum is greater than the target?",You should decrement the right pointer to decrease the total sum.
+What is the main benefit of 'Early Stopping' in Two Pointer algorithms?,It avoids unnecessary iterations by returning a result as soon as a mismatch or terminating condition is found.
+How can Two Pointers be used to remove duplicates from a clustered sorted array?,A fast pointer scans for new unique values while a slow pointer updates the array's unique positions.
+Which Two Pointer technique is most effective for detecting a cycle within a Linked List?,The Fast and Slow (Floyd's Cycle-Finding) pointer technique is used.
+"In the 'Two Input' template, what is the loop condition when merging two structures of lengths $n$ and $m$?",The loop continues as long as both pointers are within their respective bounds ($i < n$ and $j < m$).
+What step must be taken in the 'Two Input' template after the primary comparison loop ends?,The algorithm must exhaustively process any remaining elements in the pointer that has not yet reached the end.
+What is the time complexity of merging two sorted arrays using the Two Pointer exhaustion template?,"The time complexity is $O(n + m)$, where $n$ and $m$ are the lengths of the two arrays."
+"When moving pointers 'Away From Each Other', what is the typical starting position?",Pointers typically start from the middle of the structure and move toward the outer boundaries.
+"In a same-direction pointer scenario, how is the 'Slow' pointer typically updated?","It is updated only when a specific condition is met, such as finding a non-duplicate element."
+What data structure requirement is essential for the standard $O(n)$ Two Pointer Target Sum solution?,The input array must be sorted.
+Which Two Pointer approach is commonly used to find the longest palindromic substring by expanding from a center?,The 'Away From Each Other' movement pattern is used.
+"If a Fast pointer moves two nodes for every one node the Slow pointer moves, where is the Slow pointer when the Fast pointer reaches the end?",The Slow pointer is located at the middle node of the Linked List.
+The Two Pointer pattern is primarily used to optimize algorithms by eliminating _____ iterations.,unnecessary
+"In a Two Pointer palindrome check, why is $O(1)$ space complexity achieved?",No new string or data structure is created during the comparison process.
+What is the role of the 'left' pointer in the standard converging Two Pointer template?,It tracks elements starting from the beginning of the structure (index 0).
+What is the role of the 'right' pointer in the standard converging Two Pointer template?,It tracks elements starting from the end of the structure (index $n-1$).
+"During the 'Target Sum' search, if the sum of elements at $i$ and $j$ equals the target, what is the typical next step?",The algorithm returns the indices or values found at those two pointer positions.
+Why is the Two Pointer pattern considered a 'Linear' technique?,It operates on linear data structures and usually results in linear ($O(n)$) time complexity.
+"In the context of the course, how does a student prove they have completed Day 1?",They are instructed to comment 'Day 1 Done' to maintain consistency.
+How can the 'Fast and Slow' pointer pattern be used to detect a cycle in a Linked List?,"If the fast pointer eventually catches up to and meets the slow pointer, a cycle exists."
+"In the exhaustion template for merging, if pointer $i$ finishes first, what happens to pointer $j$?",All remaining elements starting from index $j$ are appended to the resulting data structure.
+What is the standard loop condition for two pointers moving in the same direction towards the end of an array?,The loop usually continues as long as the 'fast' pointer is less than the array length.
+"Compared to brute-force nested loops, what change does the Two Pointer pattern make to the loop structure?",It replaces nested loops with a single loop that manages two indices.
+What determines if an algorithm is 'In-place' in a Two Pointer scenario?,It is determined by whether the problem is solved within the existing array without allocating new $O(n)$ space.
+"When checking a palindrome, if the string length is 5, what are the starting values of $i$ and $j$?",The values are $i = 0$ and $j = 4$.
+"In a string comparison problem, what does 'traversing from different positions' imply?","It means the pointers start at distinct locations, such as the beginning and the end of the string."
+What is the 'Early Stopping' logic in a non-palindrome result?,The function returns 'False' immediately upon finding a single character mismatch.
+"In a Linked List, how do you move a pointer named $P$ to the next node?",The operation is $P = P.next$.
+Why is the Two Pointer pattern specifically useful for sorted arrays?,The sorted nature allows the algorithm to make logical decisions about which pointer to move to reach a target value.
+How does the 'PCS' mnemonic help in problem-solving?,"It acts as a trigger to identify if the Two Pointer pattern can be used for Partitioning, Comparing, or Searching."
+"When merging two arrays, why is there a second loop for each array after the main loop?",To ensure any elements remaining in either array after the other is exhausted are included in the final result.
+What is the advantage of 'Linear Time Complexity' in large-scale data processing?,It allows the program to scale efficiently as the input size $n$ increases compared to quadratic growth.
+"In the Two Pointer template, the 'Condition' inside the loop usually determines _____.",how and when to increment or decrement the pointers.
+Is the Two Pointer pattern restricted to a single data structure?,"No, it is a versatile technique applicable to any linear data structure."
+What is the time complexity for checking a palindrome of length $n$ using two pointers?,The time complexity is $O(n)$.
+"If a 'Fast' pointer moves at a speed of 2 and a 'Slow' pointer moves at a speed of 1, how is this typically implemented in code?","In each iteration, the fast pointer is updated twice ($j = j + 2$) and the slow pointer once ($i = i + 1$)."
+"In the context of strings, what is 'Exhausting the pointers'?",It refers to the state where pointers have traversed the entire string and reached the termination condition.
+What is the typical result of the Two Pointer logic used for the 'Remove Duplicates' problem?,A modified array where all unique elements are moved to the front and the new length is returned.
+"If $i$ and $j$ are pointers at opposite ends of a string, which pointer is decremented?",The 'right' pointer $j$ is decremented.
+"If $i$ and $j$ are pointers at opposite ends of a string, which pointer is incremented?",The 'left' pointer $i$ is incremented.
+"When merging two sorted lists, what is the element-level comparison condition?",The algorithm compares $List1[i]$ with $List2[j]$ to determine which element is smaller and should be added next.
+Can the Two Pointer pattern be applied to a non-linear data structure like a Tree?,"The source material specifically defines its use for linear data structures like Arrays, Strings, and Linked Lists."
+What is the primary objective of using the Two Pointer pattern during technical interviews?,"It is used to optimize time and space complexity, demonstrating an understanding of efficient data traversal."
+"In the Fast and Slow pointer pattern, what happens if the Fast pointer hits a 'null' value in a Linked List?",It signifies the end of the list and marks the termination of the search for the middle node or a cycle.
