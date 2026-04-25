@@ -1,0 +1,32 @@
+Problem : **Geeks For Geeks**
+
+'''
+class Node:
+    def __init__(self):
+        self.data = None
+        self.next = None
+'''
+
+
+class Solution:
+    def splitList(self, head):
+        #code here
+        # T:O(n) & S:O(1)
+        
+        slow = head
+        fast = head.next
+        
+        while (fast != head) and (fast.next != head):
+            slow = slow.next
+            fast = fast.next
+            
+            if (fast.next != head):
+                fast = fast.next
+                
+        #slow >> 4
+        #fast >> 9
+        
+        fast.next = slow.next
+        slow.next = head
+        
+        return (head, fast.next)
